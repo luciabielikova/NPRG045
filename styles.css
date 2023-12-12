@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#animalDetails {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form{
+}
+
+.div#search{
+    width: 400px;
+}
+
+#search {
+    --padding: 14px;
+    font-size: 25px;
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 25px;
+    background: #f6f6f6;
+    outline: none;
+    border: none;
+}
+
+#search-input{
+    font-size: 40px;
+    font-family: 'Lexend',sans-serif;
+    color: #333333;
+    outline: none;
+    border: none;
+    background: black;
+    width: 300px;
+    margin: var(--padding);
+}
+
+.li{
+    font-size: 25px;
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 25px;
+    background: #f6f6f6;
+    outline: none;
+    border: none;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
