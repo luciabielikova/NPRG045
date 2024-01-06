@@ -1,0 +1,30 @@
+[
+  {
+    "id_c": 1,
+    "name_c": "Afrika"
+  },
+  {
+    "id_c": 2,
+    "name_c": "Asie"
+  },
+  {
+    "id_c": 3,
+    "name_c": "Jižní Amerika"
+  },
+  {
+    "id_c": 4,
+    "name_c": "Severní Amerika"
+  },
+  {
+    "id_c": 5,
+    "name_c": "Austrálie"
+  },
+  {
+    "id_c": 6,
+    "name_c": "v přírodě nežije"
+  },
+  {
+    "id_c": 7,
+    "name_c": "Evropa"
+  }
+]
