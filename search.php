@@ -18,9 +18,9 @@
         <?php
         include 'db.php';
         global $continents;
-        foreach ($continents as $c)
+        foreach ($continents as $continent)
         {
-            echo '<input type="checkbox" id="continent" value="'. $c .'"><label for="continent">'. $c .'</label><br>';
+            echo '<input type="checkbox" id="continent" value="'. $continent .'"><label for="continent">'. $continent .'</label><br>';
         }
         ?>
     </div>
@@ -38,7 +38,7 @@
         $zVyhladavania = '';
     }
     function vytvorOdkazNaZvieratko($animal){
-        return '<li><a href="detail.php">'.$animal['title'] .'</a></li>';
+        return '<li><a href="detail.php?title='.$animal['title'].'">'.$animal['title'] .'</a></li>';
     }
 
     $vyhovujuceZvieratka = getAnimalByTitle($zVyhladavania);
@@ -48,9 +48,8 @@
             echo vytvorOdkazNaZvieratko($animal);
         }
         echo '</ol>';
+
     }
-
-
 
     ?>
 </div>
