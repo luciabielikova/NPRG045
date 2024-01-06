@@ -12,14 +12,16 @@
     <?php
 
 
-    include 'db.php';
+    require_once 'db.php';
 
     $title = isset($_GET['title']) ? $_GET['title'] : '';//nejaky redirect
     if ($title === ''){
         require ('redirect.php');
 
     }
+    $animal = getAnimalDetail($title);
 
+    echo createAnimalHTML($animal);
 
     function createAnimalHTML($animal) {
         $html = '<div class="animal">';
@@ -32,19 +34,22 @@
         }
         $html .= '<p><b>ZÁKLADNÍ INFORMACE</b></p>';
         if (isset($animal['classes'])) {
-            $html .= '<p><b>Třída:</b>' . $animal['classes'] . '</p>';
+            $html .= '<p><b>Třída: </b>' . $animal['classes'] . '</p>';
         }
         if (isset($animal['order'])) {
-            $html .= '<p><b>Řád:</b>' . $animal['order'] . '</p>';
+            $html .= '<p><b>Řád: </b>' . $animal['order'] . '</p>';
+        }
+        if (isset($animal['continents'])) {
+            $html .= '<p><b>Kontinenty: </b>' . $animal['continents'] . '</p>';
         }
         if (isset($animal['spread_note'])) {
-            $html .= '<p><b>Rozšíření:</b>' . $animal['spread_note'] . '</p>';
+            $html .= '<p><b>Rozšíření: </b>' . $animal['spread_note'] . '</p>';
         }
         if (isset($animal['description'])) {
-            $html .= '<p><b>Popis:</b><br>' . $animal['description'] . '</p>';
+            $html .= '<p><b>Popis: </b><br>' . $animal['description'] . '</p>';
         }
         if (isset($animal['biotop'])) {
-            $html .= '<p><b>Biotop:</b> ' . $animal['biotop'] . '</p>';
+            $html .= '<p><b>Biotop: </b> ' . $animal['biotop'] . '</p>';
         }
         if (isset($animal['food'])) {
             $html .= '<p><b>Potrava:</b> ' . $animal['food'] . '</p>';
@@ -58,15 +63,6 @@
         $html .= '</div>';
         return $html;
     }
-
-
-
-    foreach (get_animals() as $animal) {
-        if ($animal['title'] === htmlspecialchars($title)){
-            echo createAnimalHTML($animal);
-        }
-    }
-
 
 
     ?>

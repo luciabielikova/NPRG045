@@ -1,30 +1,30 @@
 [
   {
-    "id_c": 1,
-    "name_c": "Afrika"
+    "id": 1,
+    "continent": "Afrika"
   },
   {
-    "id_c": 2,
-    "name_c": "Asie"
+    "id": 2,
+    "continent": "Asie"
   },
   {
-    "id_c": 3,
-    "name_c": "Jižní Amerika"
+    "id": 3,
+    "continent": "Jižní Amerika"
   },
   {
-    "id_c": 4,
-    "name_c": "Severní Amerika"
+    "id": 4,
+    "continent": "Severní Amerika"
   },
   {
-    "id_c": 5,
-    "name_c": "Austrálie"
+    "id": 5,
+    "continent": "Austrálie"
   },
   {
-    "id_c": 6,
-    "name_c": "v přírodě nežije"
+    "id": 6,
+    "continent": "v přírodě nežije"
   },
   {
-    "id_c": 7,
-    "name_c": "Evropa"
+    "id": 7,
+    "continent": "Evropa"
   }
 ]

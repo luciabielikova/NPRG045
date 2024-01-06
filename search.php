@@ -11,16 +11,32 @@
 <body>
 <form method="POST">
     <div id="search">
-        <span class="search-icon material-symbols-outlined">search</span>
-        <input type="search-input" name="search" id="search" placeholder="Hledat...">
+        <input type="search-input" name="title" id="search" placeholder="Podle nazvu...">
+
     </div>
     <div id = "complexSearch">
         <?php
         include 'db.php';
-        global $continents;
-        foreach ($continents as $continent)
+        global $allContinents,$allBiotopes,$allOrders,$allClasses;
+        echo 'kontinenty <br>';
+        foreach ($allContinents as $continent)
         {
-            echo '<input type="checkbox" id="continent" value="'. $continent .'"><label for="continent">'. $continent .'</label><br>';
+            echo '<input type="checkbox" id="'. $continent .'" value="'. $continent .'" name="continents[]"><label for="'. $continent .'" checked >'. $continent .'</label><br>';
+        }
+        echo 'biotopy <br>';
+        foreach ($allBiotopes as $biotope)
+        {
+            echo '<input type="checkbox" id="'. $biotope .'" value="'. $biotope .'" name="continents[]"><label for="'. $biotope .'" checked>'. $biotope .'</label><br>';
+        }
+        echo 'trida <br>';
+        foreach ($allClasses as $class)
+        {
+            echo '<input type="checkbox" id="'. $class .'" value="'. $class .'" name="continents[]"><label for="'. $class .'" checked>'. $class .'</label><br>';
+        }
+        echo 'rad <br>';
+        foreach ($allOrders as $order)
+        {
+            echo '<input type="checkbox" id="'. $order .'" value="'. $order .'" name="continents[]"><label for="'. $order .'" checked>'. $order .'</label><br>';
         }
         ?>
     </div>
@@ -28,29 +44,70 @@
 
 
 
-<div id="animalDetails">
+<div>
     <?php
-    $zVyhladavania = '';
-    if (isset($_POST['search'])) {
-        $zVyhladavania = htmlspecialchars($_POST['search']);
-    }
-    else{
-        $zVyhladavania = '';
-    }
     function vytvorOdkazNaZvieratko($animal){
         return '<li><a href="detail.php?title='.$animal['title'].'">'.$animal['title'] .'</a></li>';
     }
+    function form_handler()
+    {
+        global $hladanyNazov, $continents,$hladanyRad,$hladanaTrieda ;
 
-    $vyhovujuceZvieratka = getAnimalByTitle($zVyhladavania);
-    if (count($vyhovujuceZvieratka) > 0) {
+        if (isset($_POST['title'])) {
+            $hladanyNazov = htmlspecialchars($_POST['title']);
+        }
+        else{
+            $hladanyNazov = '';
+        }
+        if (isset($_POST['order'])) {
+            $hladanyRad = htmlspecialchars($_POST['order']);
+        }
+        else{
+            $hladanyRad = '';
+        }
+        if (isset($_POST['classes'])) {
+            $hladanaTrieda = htmlspecialchars($_POST['classes']);
+        }
+        else{
+            $hladanaTrieda = '';
+        }
+        if (isset($_POST['continents'])) {
+            $continents = $_POST['continents'];
+        }
+        else
+        {
+            $continents = getAllContinents();/////////////////////////////////////////////////////////////////////////////////////
+        }
+
+    }
+form_handler();
+    global $hladanyNazov, $continents,$hladanyRad,$hladanaTrieda ;
+
+    $byTitle = getAnimalsBySearchedTitle($hladanyNazov);
+
+    $byOrder = getAnimalsByOrder($byTitle, '');
+
+    /*if (count($vyhovujuceZvieratka) > 0) {
         echo '<ol>';
         foreach ($vyhovujuceZvieratka as $animal) {
             echo vytvorOdkazNaZvieratko($animal);
         }
         echo '</ol>';
+    }*/
 
+    $vyhovujuceZvieratka = getAnimalsByContinent($byTitle,$continents);
+
+    function listOfFoundAnimals($vyhovujuceZvieratka)
+    {
+        if (count($vyhovujuceZvieratka) > 0) {
+            echo '<ol>';
+            foreach ($vyhovujuceZvieratka as $animal) {
+                echo vytvorOdkazNaZvieratko($animal);
+            }
+            echo '</ol>';
+        }
     }
-
+    listOfFoundAnimals($vyhovujuceZvieratka)
     ?>
 </div>
 </body>
