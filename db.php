@@ -1,134 +1,137 @@
 <?php
 
-function getAllAnimals()
-{
-    $animalfile = 'lexikon_zvirat.json';
-    $jsonString = file_get_contents($animalfile);
-    return json_decode($jsonString, true);
+require_once 'filesManager.php';
+
+$allAnimals = getAllAnimals();
+
+$allContinents = getAllContinents();
+
+$allBiotopes = getAllBiotopes();
+
+$allClasses = getAllClasses();
+
+$allOrders = getAllOrders();
+
+/*
+$classesArray = array();
+
+$allOrders = array();
+
+$foundOrders = array();
+
+//nelubi sa mi to mat niekde ulozene, ale zaroven sa mi nelubi to hladat zakazdym
+//anyway, to treba v javascripte
+//<a href="<?php $_SERVER['PHP_SELF']; ?>">Recargar</a>?????????????????????????????????????????????????
+
+
+function type(){
+    $file = 'jsons/classesFromWeb.json';
+    $jsonString = file_get_contents($file);
+    $data = json_decode($jsonString, true);
+    global $classesArray,$ordersArray;
+
+    foreach ($data as $row){
+        if ($row['type'] == 'class' )
+        {
+            array_push($classesArray, $row);
+        }
+        elseif($row['type'] == 'order')
+        {
+            array_push($ordersArray, $row);
+
+        }
+
+    }
 }
 
+function getOrdersForClass($classTitle)
+{
+    global $classesArray, $ordersArray;
+    $classID = 0;
+    foreach ($classesArray as $row)
+    {
+        if ($row['title'] == $classTitle)
+        {
+           $classID = $row['id_total'] ;
+        }
+    }
+    foreach ($ordersArray as $row)
+    {
+        if ($row['id_reference'] == $classID){
+           array_push( $foundOrders, $row['title']);
+        }
+    }
+    return $foundOrders;
+}
+
+*/
+
+
+
+function getAnimalsBySearchedTitle($searchedTitle, $animals)
+{
+    $suitableAnimals = array();
+    foreach ($animals as $animal) {
+        $pattern = '/' . $searchedTitle . '/i';
+        if (isset($animal['title'])) {
+            if (preg_match_all($pattern, $animal['title'], $matches)) {
+                array_push($suitableAnimals, $animal);
+            }
+        }
+    }
+    return $suitableAnimals;
+}
+
+
+function getAnimalsByContinent($foundAnimals,$wantedContinents)
+{
+    $suitableAnimals = array();
+    foreach ($foundAnimals as $animal) {
+        if (isset($animal['continents'])) {
+            if (in_array($animal['continents'], $wantedContinents)) {
+                array_push($suitableAnimals, $animal);
+            }
+        }
+    }
+    return $suitableAnimals;
+}
+
+function getAnimalsByClass($foundAnimals,$wantedClasses)
+{
+    $suitableAnimals = array();
+    foreach ($foundAnimals as $animal) {
+        if (isset($animal['classes'])) {
+            if (in_array($animal['classes'], $wantedClasses)) {
+                array_push($suitableAnimals, $animal);
+            }
+        }
+    }
+    return $suitableAnimals;
+}
+
+
+
+function getAnimalsByOrder($foundAnimals,$wantedOrders)
+{
+    $suitableAnimals = array();
+    foreach ($foundAnimals as $animal) {
+        if (isset($animal['order'])) {
+            if (in_array($animal['order'], $wantedOrders)) {
+                array_push($suitableAnimals, $animal);
+            }
+        }
+    }
+    return $suitableAnimals;
+}
+
+
 function getAnimalDetail($title){
-    foreach (getAllAnimals() as $animal) {
+    global $allAnimals;
+    foreach ($allAnimals as $animal) {
         if ($animal['title'] === htmlspecialchars($title)){
             return $animal;
         }
     }
 }
-
-
-function getAllContinents(){
-    $continentsFile = 'continents.json';
-    $jsonString = file_get_contents($continentsFile);
-    $ContinentsData = json_decode($jsonString, true);
-    $continentTitles = array();
-    foreach ($ContinentsData as $continent){
-        array_push($continentTitles, $continent['continent']);
-    }
-    return $continentTitles;
-}
-
-$allContinents = getAllContinents();
-
-function getAllBiotopes(){
-    $biotopesFile = 'biotop.json';
-    $jsonString = file_get_contents($biotopesFile);
-    $BiotopesData = json_decode($jsonString, true);
-    $biotopTitles = array();
-    foreach ($BiotopesData as $biotop){
-        array_push($biotopTitles, $biotop['biotop']);
-    }
-    return $biotopTitles;
-}
-
-$allBiotopes = getAllBiotopes();
-
-function getAllClasses(){
-    $classesFile = 'classes.json';
-    $jsonString = file_get_contents($classesFile);
-    $ClassesData = json_decode($jsonString, true);
-    $ClassesTitles = array();
-    foreach ($ClassesData as $class){
-        array_push($ClassesTitles, $class['classes']);
-    }
-    return $ClassesTitles;
-}
-
-$allClasses = getAllClasses();
-
-function getAllOrders(){
-    $ordersFile = 'order.json';
-    $jsonString = file_get_contents($ordersFile);
-    $OrdersData = json_decode($jsonString, true);
-    $orderTitles = array();
-    foreach ($OrdersData as $continent){
-        array_push($orderTitles, $continent['order']);
-    }
-    return $orderTitles;
-}
-
-$allOrders = getAllOrders();
-
-
-
-
-
-
-function getAnimalsBySearchedTitle($zVyhladavania)
-{
-    $vyhovujuceZvieratka = array();
-    foreach (getAllAnimals() as $animal) {
-        $pattern = '/' . $zVyhladavania . '/i';
-        if (isset($animal['title'])) {
-            if (preg_match_all($pattern, $animal['title'], $matches)) {
-                array_push($vyhovujuceZvieratka, $animal);
-            }
-        }
-    }
-    return $vyhovujuceZvieratka;
-}
-
-function getAnimalsByOrder($foundAnimals,$zVyhladavania)
-{
-    $vyhovujuceZvieratka = array();
-    foreach ($foundAnimals as $animal) {
-        $pattern = '/' . $zVyhladavania . '/i';
-        if (isset($animal['order'])) {
-            if (preg_match_all($pattern, $animal['title'], $matches)) {
-                array_push($vyhovujuceZvieratka, $animal);
-            }
-        }
-    }
-    return $vyhovujuceZvieratka;
-}
-
-
-function getAnimalsByClass($foundAnimals,$zVyhladavania)
-{
-    $vyhovujuceZvieratka = array();
-    foreach ($foundAnimals as $animal) {
-        $pattern = '/' . $zVyhladavania . '/i';
-        if (isset($animal['classes'])) {
-            if (preg_match_all($pattern, $animal['title'], $matches)) {
-                array_push($vyhovujuceZvieratka, $animal);
-            }
-        }
-    }
-    return $vyhovujuceZvieratka;
-}
-
-function getAnimalsByContinent($foundAnimals,$wantedContinents)
-{
-    $vyhovujuceZvieratka = array();
-    foreach ($foundAnimals as $animal) {
-        if (isset($animal['continents'])) {
-            if (in_array($animal['continents'], $wantedContinents)) {
-                array_push($vyhovujuceZvieratka, $animal);
-            }
-        }
-    }
-    return $vyhovujuceZvieratka;
-}
-
-
 
 ?>

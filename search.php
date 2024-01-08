@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Zoo</title>
 
 </head>
@@ -18,27 +17,32 @@
         <?php
         include 'db.php';
         global $allContinents,$allBiotopes,$allOrders,$allClasses;
-        echo 'kontinenty <br>';
+        echo '<br>kontinenty <br>';
         foreach ($allContinents as $continent)
         {
-            echo '<input type="checkbox" id="'. $continent .'" value="'. $continent .'" name="continents[]"><label for="'. $continent .'" checked >'. $continent .'</label><br>';
+            echo '<input type="checkbox" id="'. $continent .'" value="'. $continent .'" name="continents[]"><label for="'. $continent .'"  >'. $continent .'</label>';
         }
-        echo 'biotopy <br>';
+        echo '<br>biotopy <br>';
         foreach ($allBiotopes as $biotope)
         {
-            echo '<input type="checkbox" id="'. $biotope .'" value="'. $biotope .'" name="continents[]"><label for="'. $biotope .'" checked>'. $biotope .'</label><br>';
+            echo '<input type="checkbox" id="'. $biotope .'" value="'. $biotope .'" name="biotopes[]"><label for="'. $biotope .'">'. $biotope .'</label>';
         }
-        echo 'trida <br>';
+        echo '<br>trida <br>';
         foreach ($allClasses as $class)
         {
-            echo '<input type="checkbox" id="'. $class .'" value="'. $class .'" name="continents[]"><label for="'. $class .'" checked>'. $class .'</label><br>';
+            echo '<input type="checkbox" id="'. $class .'" value="'. $class .'" name="classes[]"><label for="'. $class .'">'. $class .'</label>';
         }
-        echo 'rad <br>';
+        echo '<br>rad <br>';
         foreach ($allOrders as $order)
         {
-            echo '<input type="checkbox" id="'. $order .'" value="'. $order .'" name="continents[]"><label for="'. $order .'" checked>'. $order .'</label><br>';
+            echo '<input type="checkbox" id="'. $order .'" value="'. $order .'" name="orders"><label for="'. $order .'" >'. $order .'</label>';
         }
+        echo '<br>';
+
+
+
         ?>
+        <input type="submit">
     </div>
 </form>
 
@@ -51,63 +55,65 @@
     }
     function form_handler()
     {
-        global $hladanyNazov, $continents,$hladanyRad,$hladanaTrieda ;
+        global $searchedTitle, $chosenContinents,$chosenOrders,$chosenClasses, $allClasses, $allOrders, $allContinents, $allBiotopes ;
 
         if (isset($_POST['title'])) {
-            $hladanyNazov = htmlspecialchars($_POST['title']);
+            $searchedTitle = $_POST['title'];
         }
         else{
-            $hladanyNazov = '';
-        }
-        if (isset($_POST['order'])) {
-            $hladanyRad = htmlspecialchars($_POST['order']);
-        }
-        else{
-            $hladanyRad = '';
-        }
-        if (isset($_POST['classes'])) {
-            $hladanaTrieda = htmlspecialchars($_POST['classes']);
-        }
-        else{
-            $hladanaTrieda = '';
+            $searchedTitle = '';
         }
         if (isset($_POST['continents'])) {
-            $continents = $_POST['continents'];
+            $chosenContinents = $_POST['continents'];
         }
         else
         {
-            $continents = getAllContinents();/////////////////////////////////////////////////////////////////////////////////////
+            $chosenContinents = $allContinents;
         }
-
+        if (isset($_POST['biotopes'])) {
+            $chosenBiotopes = $_POST['biotopes'];
+        }
+        else
+        {
+            $chosenBiotopes = $allBiotopes;
+        }
+        if (isset($_POST['classes'])) {
+            $chosenClasses = $_POST['classes'];
+        }
+        else{
+            $chosenClasses = $allClasses;
+        }
+        if (isset($_POST['order'])) {
+            $chosenOrders = ($_POST['order']);
+        }
+        else{
+            $chosenOrders = $allOrders;
+        }
     }
 form_handler();
-    global $hladanyNazov, $continents,$hladanyRad,$hladanaTrieda ;
+    $url = 'search.php?';
 
-    $byTitle = getAnimalsBySearchedTitle($hladanyNazov);
+    global $searchedTitle, $chosenContinents,$chosenOrders,$chosenClasses, $allAnimals ;
 
-    $byOrder = getAnimalsByOrder($byTitle, '');
+    $suitableAnimals = getAnimalsBySearchedTitle($searchedTitle, $allAnimals);
+    $suitableAnimals = getAnimalsByClass($suitableAnimals, $chosenClasses);
+    $suitableAnimals = getAnimalsByOrder($suitableAnimals, $chosenOrders);
+    $suitableAnimals = getAnimalsByContinent($suitableAnimals,$chosenContinents);
 
-    /*if (count($vyhovujuceZvieratka) > 0) {
-        echo '<ol>';
-        foreach ($vyhovujuceZvieratka as $animal) {
-            echo vytvorOdkazNaZvieratko($animal);
-        }
-        echo '</ol>';
-    }*/
-
-    $vyhovujuceZvieratka = getAnimalsByContinent($byTitle,$continents);
-
-    function listOfFoundAnimals($vyhovujuceZvieratka)
+    function listOfFoundAnimals($suitableAnimals)
     {
-        if (count($vyhovujuceZvieratka) > 0) {
+        if (count($suitableAnimals) > 0) {
             echo '<ol>';
-            foreach ($vyhovujuceZvieratka as $animal) {
+            foreach ($suitableAnimals as $animal) {
                 echo vytvorOdkazNaZvieratko($animal);
             }
             echo '</ol>';
         }
+        else{
+            echo 'pre zvolene kriteria nemame zvieratko';
+        }
     }
-    listOfFoundAnimals($vyhovujuceZvieratka)
+    listOfFoundAnimals($suitableAnimals)
     ?>
 </div>
 </body>
