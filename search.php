@@ -35,12 +35,9 @@
         echo '<br>rad <br>';
         foreach ($allOrders as $order)
         {
-            echo '<input type="checkbox" id="'. $order .'" value="'. $order .'" name="orders"><label for="'. $order .'" >'. $order .'</label>';
+            echo '<input type="checkbox" id="'. $order .'" value="'. $order .'" name="orders[]"><label for="'. $order .'" >'. $order .'</label>';
         }
         echo '<br>';
-
-
-
         ?>
         <input type="submit">
     </div>
@@ -53,9 +50,11 @@
     function vytvorOdkazNaZvieratko($animal){
         return '<li><a href="detail.php?title='.$animal['title'].'">'.$animal['title'] .'</a></li>';
     }
+
+
     function form_handler()
     {
-        global $searchedTitle, $chosenContinents,$chosenOrders,$chosenClasses, $allClasses, $allOrders, $allContinents, $allBiotopes ;
+        global $searchedTitle, $chosenBiotopes, $chosenContinents,$chosenOrders,$chosenClasses, $allClasses, $allOrders, $allContinents, $allBiotopes ;
 
         if (isset($_POST['title'])) {
             $searchedTitle = $_POST['title'];
@@ -83,22 +82,23 @@
         else{
             $chosenClasses = $allClasses;
         }
-        if (isset($_POST['order'])) {
-            $chosenOrders = ($_POST['order']);
+        if (isset($_POST['orders'])) {
+            $chosenOrders = ($_POST['orders']);
         }
         else{
             $chosenOrders = $allOrders;
         }
     }
-form_handler();
+    form_handler();
     $url = 'search.php?';
 
-    global $searchedTitle, $chosenContinents,$chosenOrders,$chosenClasses, $allAnimals ;
+    global $searchedTitle,$chosenBiotopes, $chosenContinents,$chosenOrders,$chosenClasses, $allAnimals ;
 
     $suitableAnimals = getAnimalsBySearchedTitle($searchedTitle, $allAnimals);
+    $suitableAnimals = getAnimalsByContinent($suitableAnimals,$chosenContinents);
+    $suitableAnimals = getAnimalsByBiotope($suitableAnimals, $chosenBiotopes);
     $suitableAnimals = getAnimalsByClass($suitableAnimals, $chosenClasses);
     $suitableAnimals = getAnimalsByOrder($suitableAnimals, $chosenOrders);
-    $suitableAnimals = getAnimalsByContinent($suitableAnimals,$chosenContinents);
 
     function listOfFoundAnimals($suitableAnimals)
     {
