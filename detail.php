@@ -12,7 +12,7 @@
     <?php
 
 
-    require_once 'db.php';
+    require_once 'funkcie.php';
 
     $title = isset($_GET['title']) ? $_GET['title'] : '';//nejaky redirect
     if ($title === ''){

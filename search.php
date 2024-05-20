@@ -5,117 +5,75 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="styles.css">
     <title>Zoo</title>
-
+    <script src="script.js"></script>
 </head>
 <body>
-<form method="POST">
-    <div id="search">
-        <input type="search-input" name="title" id="search" placeholder="Podle nazvu...">
 
+    <form method="POST">
+        <div id="searchTitle">
+            <?php
+            $posledneHladane = (isset($_POST['title']) && $_POST['title'] !== "") ? 'value=' . $_POST['title'] : 'placeholder="Podle názvu..."';
+            echo '<input type="search-input" name="title" id="search"  '. $posledneHladane .'>';
+            echo '<input type="submit" value="🔍">';
+            echo '<button onclick="clearSearch()">↻</button>';
+            echo '<button onclick="clearAll()">❌</button>';
+            ?>
+        </div>
+
+        <div id = "advancedSearch">
+            <?php
+                include 'funkcie.php';
+                global $allContinents,$allBiotopes,$allOrders,$allClasses;
+                echo '<br><b>Kontinenty</b>';
+                echo '<button type="button" onclick="uncheck(\'.continent\')">↻</button><br>';
+                foreach ($allContinents as $continent)
+                {
+                    $isChecked = (isset($_POST['continents']) && in_array($continent, $_POST['continents'])) ? 'checked="checked"' : '';
+                    echo '<input type="checkbox" class="continent" id="'. $continent .'" value="'. $continent .'" name="continents[]" ' . $isChecked . ' ><label for="'. $continent .'">'. $continent .'</label><br>';
+
+                    //echo '<input type="checkbox" id="'. $continent .'" value="'. $continent .'" name="continents[]" ' . $isChecked . '><label for="'. $continent .'">'. $continent .'</label><br>';
+                }
+
+
+                echo '<br><b>Biotopy</b>';
+            echo '<button type="button" onclick="uncheck(\'.biotope\')">↻</button><br>';
+
+            foreach ($allBiotopes as $biotope)
+                {
+                    $isChecked = (isset($_POST['biotopes']) && in_array($biotope, $_POST['biotopes'])) ? 'checked="checked"' : '';
+                    echo '<input type="checkbox" class="biotope" id="'. $biotope .'" value="'. $biotope .'" name="biotopes[]" ' . $isChecked . '><label for="'. $biotope .'">'. $biotope .'</label><br>';
+                }
+
+                echo '<br><b>Třídy</b>';
+            echo '<button type="button" onclick="uncheck(\'.class\')">↻</button><br>';
+
+            foreach ($allClasses as $class)
+                {
+                    $isChecked = (isset($_POST['classes']) && in_array($class, $_POST['classes'])) ? 'checked="checked"' : '';
+                    echo '<input type="checkbox" class="class" id="'. $class .'" value="'. $class .'" name="classes[]" ' . $isChecked . '><label for="'. $class .'">'. $class .'</label><br>';
+                }
+
+                echo '<br><b>Řády</b>';
+            echo '<button type="button" onclick="uncheck(\'.order\')">↻</button><br>';
+
+            foreach ($allOrders as $order)
+                {
+                    $isChecked = (isset($_POST['orders']) && in_array($order, $_POST['orders'])) ? 'checked="checked"' : '';
+                    echo '<input type="checkbox" class="order" id="'. $order .'" value="'. $order .'" name="orders[]" ' . $isChecked . '><label for="'. $order .'" >'. $order .'</label><br>';
+                }
+
+            echo '<br>';
+            ?>
+        </div>
+    </form>
+    <div id="content">
+        <div>
+            <?php
+            global $searchedTitle,$chosenBiotopes, $chosenContinents,$chosenOrders,$chosenClasses;
+            form_handler();
+            listOfFoundAnimals(filterAnimals( $searchedTitle,$chosenBiotopes, $chosenContinents,$chosenOrders,$chosenClasses))
+            ?>
+        </div>
     </div>
-    <div id = "complexSearch">
-        <?php
-        include 'db.php';
-        global $allContinents,$allBiotopes,$allOrders,$allClasses;
-        echo '<br>kontinenty <br>';
-        foreach ($allContinents as $continent)
-        {
-            echo '<input type="checkbox" id="'. $continent .'" value="'. $continent .'" name="continents[]"><label for="'. $continent .'"  >'. $continent .'</label>';
-        }
-        echo '<br>biotopy <br>';
-        foreach ($allBiotopes as $biotope)
-        {
-            echo '<input type="checkbox" id="'. $biotope .'" value="'. $biotope .'" name="biotopes[]"><label for="'. $biotope .'">'. $biotope .'</label>';
-        }
-        echo '<br>trida <br>';
-        foreach ($allClasses as $class)
-        {
-            echo '<input type="checkbox" id="'. $class .'" value="'. $class .'" name="classes[]"><label for="'. $class .'">'. $class .'</label>';
-        }
-        echo '<br>rad <br>';
-        foreach ($allOrders as $order)
-        {
-            echo '<input type="checkbox" id="'. $order .'" value="'. $order .'" name="orders[]"><label for="'. $order .'" >'. $order .'</label>';
-        }
-        echo '<br>';
-        ?>
-        <input type="submit">
-    </div>
-</form>
-
-
-
-<div>
-    <?php
-    function vytvorOdkazNaZvieratko($animal){
-        return '<li><a href="detail.php?title='.$animal['title'].'">'.$animal['title'] .'</a></li>';
-    }
-
-
-    function form_handler()
-    {
-        global $searchedTitle, $chosenBiotopes, $chosenContinents,$chosenOrders,$chosenClasses, $allClasses, $allOrders, $allContinents, $allBiotopes ;
-
-        if (isset($_POST['title'])) {
-            $searchedTitle = $_POST['title'];
-        }
-        else{
-            $searchedTitle = '';
-        }
-        if (isset($_POST['continents'])) {
-            $chosenContinents = $_POST['continents'];
-        }
-        else
-        {
-            $chosenContinents = $allContinents;
-        }
-        if (isset($_POST['biotopes'])) {
-            $chosenBiotopes = $_POST['biotopes'];
-        }
-        else
-        {
-            $chosenBiotopes = $allBiotopes;
-        }
-        if (isset($_POST['classes'])) {
-            $chosenClasses = $_POST['classes'];
-        }
-        else{
-            $chosenClasses = $allClasses;
-        }
-        if (isset($_POST['orders'])) {
-            $chosenOrders = ($_POST['orders']);
-        }
-        else{
-            $chosenOrders = $allOrders;
-        }
-    }
-    form_handler();
-    $url = 'search.php?';
-
-    global $searchedTitle,$chosenBiotopes, $chosenContinents,$chosenOrders,$chosenClasses, $allAnimals ;
-
-    $suitableAnimals = getAnimalsBySearchedTitle($searchedTitle, $allAnimals);
-    $suitableAnimals = getAnimalsByContinent($suitableAnimals,$chosenContinents);
-    $suitableAnimals = getAnimalsByBiotope($suitableAnimals, $chosenBiotopes);
-    $suitableAnimals = getAnimalsByClass($suitableAnimals, $chosenClasses);
-    $suitableAnimals = getAnimalsByOrder($suitableAnimals, $chosenOrders);
-
-    function listOfFoundAnimals($suitableAnimals)
-    {
-        if (count($suitableAnimals) > 0) {
-            echo '<ol>';
-            foreach ($suitableAnimals as $animal) {
-                echo vytvorOdkazNaZvieratko($animal);
-            }
-            echo '</ol>';
-        }
-        else{
-            echo 'pre zvolene kriteria nemame zvieratko';
-        }
-    }
-    listOfFoundAnimals($suitableAnimals)
-    ?>
-</div>
 </body>
 </html>
-<?php
