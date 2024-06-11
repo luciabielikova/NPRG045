@@ -1,7 +1,7 @@
 <?php
 function r()
 {
-    require ('navigation.php');
+    require('navigation.html');
 }
 r();
 

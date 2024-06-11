@@ -18,6 +18,8 @@
     <div class="resultsFrom" id="resultsFrom"></div>
     <input type="text" id="searchTo" placeholder="Kam">
     <div class="resultsTo" id="resultsTo"></div>
+    <button id="submitBtn">Odeslat</button>
+
 </div>
 
 
@@ -26,8 +28,35 @@
     const searchInputTo = document.getElementById('searchTo');
     const resultsFromContainer = document.getElementById('resultsFrom');
     const resultsToContainer = document.getElementById('resultsTo');
+    const submitBtn = document.getElementById('submitBtn');
+    let polyline;
 
-    // Funkcia na načítanie výsledkov cez AJAX
+    function vykresli(shortestPath){
+
+        if (polyline) {
+            map.removeLayer(polyline);
+            console.log("vymazane");
+        }
+        else{
+            console.log("nevymazane");
+        }
+
+        if (shortestPath.length > 1) {
+            // Create an array to store LatLng points
+            const latlngs = [];
+
+            // Loop through each point in shortestPath and add LatLng coordinates to latlngs array
+            shortestPath.forEach(point => {
+                latlngs.push([point.lat, point.lon]);
+            });
+
+            // Add the polyline to the map
+            polyline = L.polyline(latlngs, {color: 'blue'}).addTo(map);
+
+            // Fit the map to the polyline
+            map.fitBounds(polyline.getBounds());
+        }
+    }
     function fetchResultsFrom(query) {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'vyhladavac.php?query=' + encodeURIComponent(query), true);
@@ -40,10 +69,6 @@
         xhr.send();
     }
 
-
-
-
-    // Funkcia na zobrazenie výsledkov
     function displayResultsFrom(results) {
         resultsFromContainer.innerHTML = '';
         if (results.length > 0) {
@@ -64,7 +89,6 @@
         }
     }
 
-    // Pridáme event listener na input
     searchInputFrom.addEventListener('input', (e) => {
         const query = e.target.value;
         if (query) {
@@ -81,7 +105,6 @@
         }
     });
 
-    // Funkcia na načítanie výsledkov cez AJAX
     function fetchResultsTo(query) {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'vyhladavac.php?query=' + encodeURIComponent(query), true);
@@ -94,7 +117,6 @@
         xhr.send();
     }
 
-    // Funkcia na zobrazenie výsledkov
     function displayResultsTo(results) {
         resultsToContainer.innerHTML = '';
         if (results.length > 0) {
@@ -115,7 +137,6 @@
         }
     }
 
-    // Pridáme event listener na input
     searchInputTo.addEventListener('input', (e) => {
         const query = e.target.value;
         if (query) {
@@ -125,12 +146,39 @@
             resultsToContainer.style.display = 'none';
         }
     });
-    // Skrytie výsledkov pri kliknutí mimo
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.search-container-to')) {
             resultsToContainer.style.display = 'none';
         }
     });
+
+    function handleSubmit() {
+        const fromValue = searchInputFrom.value;
+        const toValue = searchInputTo.value;
+        console.log('Odkud:', fromValue);
+        console.log('Kam:', toValue);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'handle_form.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                //console.log('Response:', xhr.responseText);
+                const response = JSON.parse(xhr.responseText);
+                const result = response.data.result;
+                vykresli(result);
+            }
+        };
+        xhr.send(`from=${encodeURIComponent(fromValue)}&to=${encodeURIComponent(toValue)}`);
+    }
+
+
+    submitBtn.addEventListener('click', handleSubmit);
+
+
+
+
+
 </script>
 
 

@@ -1,9 +1,5 @@
 <?php
 
-echo "sloni, lachtani, gorily, ibisove, tavy, lamy";
-echo '</br>';
-
-
 class Graph {
     private $vertices = [];
     private $edges = [];
@@ -25,28 +21,23 @@ class Graph {
         return $this->edges;
     }
 
-    public function findClosestPoint($wanted){
+    public function findClosestPoint($wanted) {
         $closestPoint = null;
         $dist = PHP_INT_MAX;
-        foreach($this->vertices as $point){//toto bude treba opravit na lon a lat aj pri wanted
-            if ($wanted[0] != $point['lon'] && $wanted[1] != $point['lat']){
-                if (!$closestPoint) {
-                    $closestPoint = $point;
-                }
-                else{
-                    $temp_dist = euclidean_distance([$wanted[0], $wanted[1]], [$point['lon'], $point['lat']]);
-                    if ($temp_dist< $dist)
-                    {
-                        $dist = $temp_dist;
-                        $closestPoint = $point;
-                    }
+        foreach ($this->vertices as $name => $point) {
+            if ($wanted[0] != $point['lon'] && $wanted[1] != $point['lat']) {
+                $temp_dist = euclidean_distance([$wanted[0], $wanted[1]], [$point['lon'], $point['lat']]);
+                if ($temp_dist < $dist) {
+                    $dist = $temp_dist;
+                    $closestPoint = $name;
                 }
             }
         }
         return $closestPoint;
     }
-}
 
+
+}
 class Dijkstra {
     private $graph;
     private $distances = [];
@@ -62,7 +53,7 @@ class Dijkstra {
         $this->previous = [];
         $this->queue = [];
 
-        foreach ($this->graph->getVertices() as $vertex => $value) {
+        foreach ($this->graph->getVertices() as $vertex => $data) {
             if ($vertex === $start) {
                 $this->distances[$vertex] = 0;
             } else {
@@ -105,7 +96,18 @@ class Dijkstra {
             array_unshift($path, $start);
         }
 
-        return $path;
+        $pathWithCoordinates = [];
+        foreach ($path as $vertex) {
+            $data = $this->graph->getVertices()[$vertex];
+            $pathWithCoordinates[] = [
+                'vertex' => $vertex,
+                'lon' => $data['lon'],
+                'lat' => $data['lat'],
+
+            ];
+        }
+
+        return $pathWithCoordinates;
     }
 }
 
@@ -115,7 +117,16 @@ function euclidean_distance($point1, $point2) {
 }
 
 
-
+function getGeoFromName($name){
+    global $animals;
+    foreach ($animals['features'] as $feature)
+    {
+        #echo $feature['properties']['name'];
+        if ($name == $feature['properties']['name']){
+            return $feature['geometry']['coordinates'];
+        }
+    }
+}
 
 // Load GeoJSON data from a file
 $highwaysFile = file_get_contents('C:\Moje dokumenty\ZS\rocnikovy projekt\python\highways.geojson');
@@ -170,6 +181,9 @@ $graph = createGraph();
 $dijkstra = new Dijkstra($graph);
 
 
+
+
+
 $animalsFile = file_get_contents('C:\Moje dokumenty\ZS\rocnikovy projekt\python\animals.geojson');
 $animals = json_decode($animalsFile, true);
 
@@ -185,5 +199,11 @@ foreach ($animals['features'] as $feature) {
 
 
 
-
-
+function get_path($start, $end) {
+    global $graph, $dijkstra;
+    $startCoords = getGeoFromName($start);
+    $endCoords = getGeoFromName($end);
+    $closestToStart = $graph->findClosestPoint($startCoords);
+    $closestToEnd = $graph->findClosestPoint($endCoords);
+    return $dijkstra->shortestPath($closestToStart, $closestToEnd);
+}
