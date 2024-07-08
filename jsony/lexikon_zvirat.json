@@ -296,7 +296,8 @@
    "projects_note": "V Červeném seznamu IUCN je veden jako kriticky ohrožený druh. Populace v přírodě nepřesahuje počet 680 jedinců a je rozdrobena do dílčích populací, čítajících maximálně 50 tygrů.",
    "breeding": "Tygr sumaterský patří k tradičním druhům pražské zoo. První samice přišla již v roce 1958, ovšem o skutečném chovu lze mluvit až do 60. let. Páru Maje (příchod 1967) a Radúzovi 2 (příchod 1966) se podařilo v roce 1971 odchovat první dvě mláďata v historii zoo – samečky Adama a Aliho. O druhý úspěšný odchov se postaral rotterdamský pár Mahulena 2 a Gabriel (přišli v roce 1968), když v roce 1973 odchovali samičku Balige. Do roku 2013 bylo v pražské zoo odchováno ještě dalších devět mláďat.",
    "localities_title": "Pavilon šelem a plazů",
-   "localities_url": "http://www.zoopraha.cz/zvirata-a-expozice/kam-v-zoo/pavilony/1454-pavilon-kockovitych-selem-a-terarium"
+   "localities_url": "http://www.zoopraha.cz/zvirata-a-expozice/kam-v-zoo/pavilony/1454-pavilon-kockovitych-selem-a-terarium",
+   "coordinates": "[50.1199478, 14.4032442]"
  },
  {
    "id": "15",
@@ -319,7 +320,8 @@
    "projects_note": "Ve volné přírodě žije odhadem posledních 250 dospělých jedinců, proto jsou velmi důležité záložní chovy v lidské péči.",
    "breeding": "Zoo Praha chová tento poddruh od roku 2006, kdy přišla ze zoo v Halle samice Radja. V roce 2007 následovala samice Banya, která se narodila rovněž v Halle. Konečně v roce 2008 dorazil i samec Kawi, pocházející z Lok Kawi Wildlife Parku ve státě Sabah (Borneo).",
    "localities_title": "Pavilon šelem a plazů",
-   "localities_url": "http://www.zoopraha.cz/zvirata-a-expozice/kam-v-zoo/pavilony/1454-pavilon-kockovitych-selem-a-terarium"
+   "localities_url": "http://www.zoopraha.cz/zvirata-a-expozice/kam-v-zoo/pavilony/1454-pavilon-kockovitych-selem-a-terarium",
+   "coordinates": "[50.1199478, 14.4032442]"
  },
  {
    "id": "16",
@@ -2582,7 +2584,7 @@
    "classes": "Savci (Mammalia)",
    "order": "Primáti (Primates)",
    "description": "Gorily jsou největší a nejmohutnější z lidoopů. Dospělí samci působí velice impozantně, protože mají nejen masivní svaly, ale navíc vysoký hřeben na temenní kosti, který vypadá jako přilba. Ve skutečnosti slouží k úponu žvýkacích svalů. Zbarvení srsti je převážně černé, často s hnědým nádechem na hlavě. Obličej je černý stejně jako dlaně a chodidla. Oči namířené dopředu jsou hnědé a chráněné vystouplými nadočnicovými oblouky.",
-   "image_src": "/images/lexikon-images/gorila_Nuru_-_Tomas_Adamec__Zoo_Praha.jpg",
+   "image_src": "https://zoopraha.cz/images/lexikon-images/gorila_Nuru_-_Tomas_Adamec__Zoo_Praha.jpg",
    "image_alt": "Gorila nížinná, foto: Tomáš Adamec, Zoo Praha",
    "continents": "Afrika",
    "spread_note": "rovníková Afrika",
@@ -2596,7 +2598,8 @@
    "projects_note": "''",
    "breeding": "V pražské zoo chováme gorily od roku 1963, kdy přišla první gorila nížinná – asi roční sameček Titan. Pocházel z přírody podobně jako malá Nigra, která dorazila záhy po něm. Dnes žije gorilí rodina ve vlastním pavilonu v dolní části areálu, kde se také v roce 2004 narodilo vůbec první gorilí mládě v českých zoo – slavná samička Moja. Ta už sice žije v jiné zoo a sama se stala matkou, seznámit se zde však můžete s dalšími gorilími osobnostmi. Je to především statný samec Richard, zasloužilá matka Kijivu nebo „babička“ Kamba. V příštích letech je ale čeká stěhování do nových prostor v bezpečnější části areálu mimo záplavové území.OchranaGorilám hrozí v přírodě úplné zhroucení populací. Deštné lesy, ve kterých žijí, totiž závratnou rychlostí mizí z důvodu těžby dřeva a surovin (např. pro výrobu mobilních telefonů). Do narušeného lesa se navíc snáze dostanou pytláci, kteří tyto mírné lidoopy loví pro žádané maso. O to důležitější jsou aktivity na ochranu goril v přírodě, které patří již řadu let k prioritám pražské zoo.",
    "localities_title": "Pavilon goril",
-   "localities_url": "http://www.zoopraha.cz/zvirata-a-expozice/kam-v-zoo/pavilony/2364-pavilon-goril"
+   "localities_url": "http://www.zoopraha.cz/zvirata-a-expozice/kam-v-zoo/pavilony/2364-pavilon-goril",
+   "coordinates": "[50.1205645, 14.4042972]"
  },
  {
    "id": "121",
