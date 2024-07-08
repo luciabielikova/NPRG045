@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
     <title>Zoo</title>
 </head>
 <body>
+
 <div id="animalDetails">
 
     <?php
@@ -23,7 +27,8 @@
 
     echo createAnimalHTML($animal);
 
-    function createAnimalHTML($animal) {
+    function createAnimalHTML($animal)
+    {
         $html = '<div class="animal">';
         if (isset($animal['image_src'])) {
             $html .= '<img src="' . $animal['image_src'] . '" alt="' . $animal['image_alt'] . '">';
@@ -57,16 +62,47 @@
         if (isset($animal['attractions'])) {
             $html .= '<p><b>Zajímavosti:</b><br>' . $animal['attractions'] . '</p>';
         }
-        else{
-            die('zvieratko bez nazvu');
-        }
+
         $html .= '</div>';
         return $html;
     }
-
-
-    ?>
+?>
 </div>
-</body>
-</html>
+<div id="mapid"></div>
 <?php
+
+    function createMap($animal){
+        if (isset($animal['coordinates'])) {
+            ?>
+            <script>
+                var map = L.map('mapid').setView( <?php echo $animal['coordinates']; ?>, 24);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 18,
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+
+                fetch('load_geojson.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        L.geoJSON(data, {
+                            style: myStyle,
+                            pointToLayer: function (feature, latlng) {
+                                return null;
+                            }
+                        }).addTo(map);
+                    });
+            </script>
+            <?php
+        }
+        else return;
+    }
+
+    createMap($animal);
+    ?>
+
+
+</body>
+<?php
+include 'footer.php';
+?>
+</html>

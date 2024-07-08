@@ -35,25 +35,36 @@ class Graph {
         }
         return $closestPoint;
     }
-
-
 }
+
 class Dijkstra {
     private $graph;
     private $distances = [];
     private $previous = [];
     private $queue = [];
+    private $notWanted = [];
 
     public function __construct($graph) {
         $this->graph = $graph;
     }
 
-    public function shortestPath($start, $end) {
+    public function shortestPath($start, $end,$wanted =[], $notWanted = []) {
         $this->distances = [];
         $this->previous = [];
         $this->queue = [];
+        $this->notWanted = [];
+
+        foreach ($notWanted as $nw) {
+            $this->notWanted[] = $this->graph->findClosestPoint(getGeoFromName($nw));
+            echo $this->graph->findClosestPoint(getGeoFromName($nw));
+        }
+
+
 
         foreach ($this->graph->getVertices() as $vertex => $data) {
+            if (in_array($vertex, $this->notWanted)) {
+                continue;
+            }
             if ($vertex === $start) {
                 $this->distances[$vertex] = 0;
             } else {
@@ -76,6 +87,9 @@ class Dijkstra {
             }
 
             foreach ($this->graph->getEdges()[$u] as $neighbor => $distance) {
+                if (in_array($neighbor, $this->notWanted)) {
+                    continue;
+                }
                 $alt = $this->distances[$u] + $distance;
                 if ($alt < $this->distances[$neighbor]) {
                     $this->distances[$neighbor] = $alt;
@@ -103,7 +117,6 @@ class Dijkstra {
                 'vertex' => $vertex,
                 'lon' => $data['lon'],
                 'lat' => $data['lat'],
-
             ];
         }
 
@@ -111,17 +124,13 @@ class Dijkstra {
     }
 }
 
-
 function euclidean_distance($point1, $point2) {
     return sqrt(pow($point1[0] - $point2[0], 2) + pow($point1[1] - $point2[1], 2));
 }
 
-
 function getGeoFromName($name){
     global $animals;
-    foreach ($animals['features'] as $feature)
-    {
-        #echo $feature['properties']['name'];
+    foreach ($animals['features'] as $feature) {
         if ($name == $feature['properties']['name']){
             return $feature['geometry']['coordinates'];
         }
@@ -132,8 +141,7 @@ function getGeoFromName($name){
 $highwaysFile = file_get_contents('C:\Moje dokumenty\ZS\rocnikovy projekt\python\highways.geojson');
 $highways = json_decode($highwaysFile, true);
 
-function createGraph()
-{
+function createGraph() {
     global $highways;
     $graph = new Graph();
 
@@ -142,8 +150,8 @@ function createGraph()
         if ($feature['geometry']['type'] === 'LineString') {
             $coordinates = $feature['geometry']['coordinates'];
             foreach($coordinates as $point){
-                $graph->addVertex($counter,$point[0], $point[1] );
-                $counter+=1;
+                $graph->addVertex($counter, $point[0], $point[1]);
+                $counter += 1;
             }
         }
     }
@@ -151,7 +159,6 @@ function createGraph()
     foreach ($highways['features'] as $feature) {
         if ($feature['geometry']['type'] === 'LineString') {
             $coordinates = $feature['geometry']['coordinates'];
-            // Find vertex names by coordinates
             $previousName = null;
             $previousCoords = null;
             foreach ($coordinates as $key => $coord) {
@@ -165,7 +172,7 @@ function createGraph()
                     }
                 }
                 if ($previousName && $currentName) {
-                    $distance = round(euclidean_distance($previousCoords, $currentCoords)*100000);
+                    $distance = round(euclidean_distance($previousCoords, $currentCoords) * 100000);
                     $graph->addEdge($previousName, $currentName, $distance);
                 }
                 $previousName = $currentName;
@@ -180,30 +187,23 @@ $graph = createGraph();
 
 $dijkstra = new Dijkstra($graph);
 
-
-
-
-
 $animalsFile = file_get_contents('C:\Moje dokumenty\ZS\rocnikovy projekt\python\animals.geojson');
 $animals = json_decode($animalsFile, true);
 
-
 $animalNames = [];
-
 foreach ($animals['features'] as $feature) {
     if ($feature['properties']['name'] != null) {
-        array_push($animalNames,$feature['properties']['name']);
+        array_push($animalNames, $feature['properties']['name']);
     }
 }
 
-
-
-
-function get_path($start, $end) {
+function get_path($start, $end, $notWanted = []) {
     global $graph, $dijkstra;
     $startCoords = getGeoFromName($start);
     $endCoords = getGeoFromName($end);
     $closestToStart = $graph->findClosestPoint($startCoords);
     $closestToEnd = $graph->findClosestPoint($endCoords);
-    return $dijkstra->shortestPath($closestToStart, $closestToEnd);
+    return $dijkstra->shortestPath($closestToStart, $closestToEnd,$wanted =[], $notWanted);
 }
+
+

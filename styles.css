@@ -54,15 +54,7 @@ li {
 }
 
 
-body {
-    margin-right: auto;
-    margin-left: auto;
-    width: 750px;
-    padding-right: 10px;
-    padding-left: 10px;
-    text-align: justify;
-    background-color: #ffe6cd;
-}
+
 
 
 img {
@@ -118,12 +110,10 @@ button #clearAll{
 
 #mapid {
     height: 500px;
+    z-index: 5;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-.search-container-from,.search-container-to  {
+
+.search-container-from,.search-container-to, .search-container-wanted  {
     position: relative;
 }
 input {
@@ -132,27 +122,112 @@ input {
     font-size: 16px;
     box-sizing: border-box;
 }
-.resultsFrom, .resultsTo {
+.resultsFrom, .resultsTo, .resultsWanted, .resultsNotWanted {
+    width: calc(100% - 130px);
     position: absolute;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-top: none;
+    left: 130px;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 20;
     max-height: 200px;
     overflow-y: auto;
-    background-color: white;
-    z-index: 1000;
     display: none;
 }
-.resultsFrom ul, .resultsTo ul {
+
+
+.resultsFrom ul, .resultsTo ul, .resultsWanted ul, .resultsNotWanted ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-.resultsFrom li, .resultsTo li {
+.resultsFrom li, .resultsTo li, .resultsWanted li, .resultsNotWanted li {
     padding: 10px;
     border-bottom: 1px solid #ccc;
     cursor: pointer;
 }
-.resultsFrom li:hover, .resultsTo li:hover {
+.resultsFrom li:hover, .resultsTo li:hover, .resultsWanted li:hover , .resultsNotWanted li:hover{
     background-color: #f0f0f0;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+}
+
+.label-input-wrapper {
+    display: flex;
+    align-items: center; /* Align label and input vertically */
+    margin-bottom: 10px; /* Optional: Space between pairs */
+}
+.label-input-wrapper label {
+    margin-right: 10px; /* Optional: Space between label and input */
+    width: 120px;
+}
+
+.label-input-wrapper input,
+.label-input-wrapper .resultsFrom,
+.label-input-wrapper .resultsTo,
+.label-input-wrapper .resultsWanted,
+.label-input-wrapper .resultsNotWanted {
+    box-sizing: border-box;
+}
+
+
+.label-input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+.label-input-wrapper label {
+    margin-right: 10px;
+    width: 120px;
+}
+.label-input-wrapper input {
+    width: calc(100% - 130px);
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.buttons-container button {
+    margin-right: 10px;
+    width: 100px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 20px;
+    background-color: #ffe6cd;
 }
