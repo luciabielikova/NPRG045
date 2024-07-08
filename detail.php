@@ -15,12 +15,11 @@
 
     <?php
 
+    require_once 'functions.php';
 
-    require_once 'funkcie.php';
-
-    $title = isset($_GET['title']) ? $_GET['title'] : '';//nejaky redirect
+    $title = isset($_GET['title']) ? $_GET['title'] : '';
     if ($title === ''){
-        require ('redirect.php');
+        require('errorPage.php');
 
     }
     $animal = getAnimalDetail($title);
@@ -62,45 +61,16 @@
         if (isset($animal['attractions'])) {
             $html .= '<p><b>Zajímavosti:</b><br>' . $animal['attractions'] . '</p>';
         }
-
+        if (isset($animal['coordinates'])) {
+            $html .= '<div id="mapid" class="detailPage"></div>';
+        }
         $html .= '</div>';
         return $html;
     }
-?>
-</div>
-<div id="mapid"></div>
-<?php
+    displayCoordinates($animal);
 
-    function createMap($animal){
-        if (isset($animal['coordinates'])) {
-            ?>
-            <script>
-                var map = L.map('mapid').setView( <?php echo $animal['coordinates']; ?>, 24);
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    maxZoom: 18,
-                    attribution: '© OpenStreetMap contributors'
-                }).addTo(map);
-
-                fetch('load_geojson.php')
-                    .then(response => response.json())
-                    .then(data => {
-                        L.geoJSON(data, {
-                            style: myStyle,
-                            pointToLayer: function (feature, latlng) {
-                                return null;
-                            }
-                        }).addTo(map);
-                    });
-            </script>
-            <?php
-        }
-        else return;
-    }
-
-    createMap($animal);
     ?>
-
-
+</div>
 </body>
 <?php
 include 'footer.php';

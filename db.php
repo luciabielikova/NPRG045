@@ -1,5 +1,4 @@
 <?php
-$directory = 'jsons/';
 function getAllAnimals()
 {
     $animalfile =  'jsons/lexikon_zvirat.json';
@@ -50,4 +49,12 @@ function getAllOrders(){
         }
     }
     return $orderTitles;
+}
+
+function loadAnimalsGeojson(){
+    return file_get_contents('jsons/animals.geojson');
+}
+
+function loadZooGeojson(){
+    return file_get_contents('jsons/zoo.geojson');
 }
