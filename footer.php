@@ -1,8 +1,8 @@
-<footer>
+<footer id="pageFooter">
     <nav>
         <ul>
             <a href="searchDatabase.php">Vyhledávání</a>
-            <a href="map.php">Mapa</a>
+            <a href="searchMap.php">Mapa</a>
         </ul>
     </nav>
 </footer>
