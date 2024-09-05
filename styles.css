@@ -1,111 +1,302 @@
-ul {
-    list-style-type: none;
-    padding: 0;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e8e0;
+    margin: 0;
 }
 
-li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+#filter form {
+    margin: 0;
 }
 
-input {
-    padding: 10px;
-    font-size: 16px;
-}
-
-
-button {
-    padding: 10px;
-    font-size: 16px;
-}
-
-div {
+#filter b {
+    font-size: 18px;
+    color: #333;
+    display: block;
     margin-bottom: 10px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
+#filter #searchTitle input[type="search-input"] {
+    width: calc(100% - 80px);
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    height: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+#filter input[type="submit"],
+#filter button {
+    background-color: #4CAF50;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#filter input[type="submit"]:hover,
+#filter button:hover {
+    background-color: #45a049;
+}
+
+#advancedSearch button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#advancedSearch button:hover {
+    background-color: #45a049;
+}
+
+#filter input[type="checkbox"] + label {
+    margin-left: 5px;
+    color: #333;
+    cursor: pointer;
+}
+
+#filter #advancedSearch b {
+    margin-top: 15px;
+    display: block;
+    color: #444;
+}
+
+#content div {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#content div:last-child {
+    border-bottom: none;
+}
+
+footer nav ul a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+footer nav ul a:hover {
+    background-color: #555;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-container {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    max-width: 100%;
+    justify-content: center;
+}
+
+#filter {
+    min-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
 
 #content {
-    width: 350px;
-    margin-right: 0px;
-    margin-left: 400px;
-    padding: 10px;
+    min-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-
-#advancedSearch {
-    width: 300px;
-    position: relative;
+footer {
+    background-color: #96705f;
+    color: white;
+    padding: 20px;
+    border-top: 1px solid #444;
+    text-align: center;
 }
 
-
-#search{
-    width: 750px;
-    height: 40px;
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-
-
-
-
-img {
-    max-width: 100%;
-    height: auto;
+footer nav ul a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-
-
-button, input[type=submit] {
-     align-items: center;
-     background-color: #FFFFFF;
-     border: 1px solid rgba(0, 0, 0, 0.1);
-     border-radius: .25rem;
-     box-sizing: border-box;
-     color: rgba(0, 0, 0, 0.85);
-     cursor: pointer;
-     display: inline-flex;
-     font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-     font-size: 16px;
-     font-weight: 600;
-     justify-content: center;
-     line-height: 1.25;
-     margin-left: 10px;
-     min-height: 3rem;
-     padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-     position: relative;
-     text-decoration: none;
-     transition: all 250ms;
-     user-select: none;
-     -webkit-user-select: none;
-     touch-action: manipulation;
-     vertical-align: baseline;
-     width: 60px;
-     height: 60px;
+footer nav ul a:hover {
+    background-color: #555;
 }
 
-button, input[type=submit]:hover {
-    border-color: rgba(0, 0, 0, 0.15);
-    color: rgba(0, 0, 0, 0.65);
+@media screen and (max-width: 840px) {
+    #main-container {
+        flex-direction: column;
+        padding: 0 0;
+    }
+
+    #filter, #content {
+        width: 100%;
+    }
 }
 
-button #clearAll{
-    margin-left: 0px;
-
-}
 
 #searchTitle {
     display: flex;
     align-items: center;
-    gap: 5px;
+}
+
+#searchTitle input[type="search"],
+#searchTitle input[type="submit"],
+#searchTitle button {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#searchTitle input[type="search"] {
+    flex: 1;
+    margin-right: 10px;
+    padding: 0 10px;
+    line-height: normal;
+}
+
+#searchTitle input[type="submit"]:hover,
+#searchTitle button:hover {
+    background-color: #45a049;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+#animalDetails {
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.animal {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.animal img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.animal h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.animal h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #5d534c;
+    font-style: italic;
+}
+
+
+.animal p {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+
+.animal p b {
+    color: #666;
+    font-size: 1.1em;
+}
+
+
+#mapid {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Map {
+    max-width: 800px;
+    margin-left: calc((100% - 800px)/2);
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    #animalDetails {
+        padding: 20px;
+    }
+
+    .animal {
+        padding: 15px;
+    }
+
+    .animal h2 {
+        font-size: 1.8em;
+    }
+
+    .animal h3 {
+        font-size: 1.2em;
+    }
 }
 
 #mapid {
@@ -116,16 +307,10 @@ button #clearAll{
     height: 500px;
 }
 
-
 .search-container-from,.search-container-to, .search-container-wanted  {
     position: relative;
 }
-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
+
 .resultsFrom, .resultsTo, .resultsWanted, .resultsNotWanted {
     width: calc(100% - 130px);
     position: absolute;
@@ -138,7 +323,6 @@ input {
     overflow-y: auto;
     display: none;
 }
-
 
 .resultsFrom ul, .resultsTo ul, .resultsWanted ul, .resultsNotWanted ul {
     list-style-type: none;
@@ -154,30 +338,26 @@ input {
     background-color: #f0f0f0;
 }
 
-footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    text-align: center;
+.buttons-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content:center;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: #333;
-    text-decoration: none;
+.buttons-container button {
     padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #4CAF50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
 
-nav ul li a:hover {
-    background-color: #ddd;
+.buttons-container button:hover {
+    background: #2E8B57;
 }
 
 .label-input-wrapper {
@@ -198,7 +378,6 @@ nav ul li a:hover {
     box-sizing: border-box;
 }
 
-
 .label-input-wrapper {
     display: flex;
     align-items: center;
@@ -214,71 +393,4 @@ nav ul li a:hover {
     padding: 10px;
     font-size: 16px;
     box-sizing: border-box;
-}
-
-
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.buttons-container button {
-    margin-right: 10px;
-    width: 100px;
-}
-
-.navButton{
-    background-color: #f4511e;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    opacity: 0.6;
-    transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.navButton:hover {opacity: 1}
-
-
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0 auto;
-    max-width: 750px;
-    padding: 20px;
-    background-color: #ffe6cd;
-}
-.button {
-    display: inline-block;
-    padding: 20px 80px;
-    margin: 20px;
-    font-size: 18px;
-    background-color: #ff8000;
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.button:hover {
-    background-color: #ff6200;
-}
-
-.container {
-
-    text-align: center;
-}
-
-body.nav{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-
 }
