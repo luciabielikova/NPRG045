@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Habitats Schema",
+    "description": "Schema for animal habitats",
+    "$id": "https://example.org/schema-habitats.json",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "Unique identifier for the habitat"
+        },
+        "translations": {
+          "type": "object",
+          "description": "Localized names and descriptions",
+          "patternProperties": {
+            "^[a-z]{2}$": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Habitat name in the specified language"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Description of the habitat in the specified language"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "translations"
+      ],
+      "additionalProperties": false
+    }
+  }

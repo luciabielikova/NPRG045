@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Animal Orders Schema",
+    "description": "Schema for animal taxonomic orders",
+    "$id": "https://example.org/schema-orders.json",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "Unique identifier for the order"
+        },
+        "class_id": {
+          "type": "integer",
+          "description": "Reference to the class to which the order belongs"
+        },
+        "translations": {
+          "type": "object",
+          "description": "Localized names and descriptions",
+          "patternProperties": {
+            "^[a-z]{2}$": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Order name in the specified language"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Description of the order in the specified language"
+                }
+              },
+              "required": [
+                "name"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "class_id",
+        "translations"
+      ]
+    }
+  }
