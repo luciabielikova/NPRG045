@@ -2,17 +2,31 @@
 
 require_once 'db.php';
 
-$allAnimals = getAllAnimals();
+global $defaultDir;
 
-$allContinents = getAllContinents();
+if (isset($_GET['dir'])) {
+    $dir = $_GET['dir'];
+}
+else{
+    $dir = $defaultDir;
+}
 
-$allBiotopes = getAllBiotopes();
-
-$allClasses = getAllClasses();
-
-$allOrders = getAllOrders();
 
 
+
+$allAnimals = getAllAnimals($dir);
+
+$allContinents = getAllContinents($dir);
+
+$allBiotopes = getAllBiotopes($dir);
+
+$allClasses = getAllClasses($dir);
+
+$allOrders = getAllOrders($dir);
+
+$zooTitles = getZooTitles();
+
+$allZoos = getAllZoos();
 
 function getAnimalsBySearchedTitle($searchedTitle, $animals)
 {
@@ -94,7 +108,7 @@ function getAnimalDetail($title){
     }
 }
 
-function vytvorOdkazNaZvieratko($animal){
+function createLinkToAnimal($animal){
     return '<li><a href="detail.php?title='.$animal['title'].'">'.$animal['title'] .'</a></li>';
 }
 
@@ -105,12 +119,12 @@ function listOfFoundAnimals($suitableAnimals)
     if (count($suitableAnimals) > 0) {
         echo '<ol>';
         foreach ($suitableAnimals as $animal) {
-            echo vytvorOdkazNaZvieratko($animal);
+            echo createLinkToAnimal($animal);
         }
         echo '</ol>';
     }
     else{
-        echo 'pre zvolene kriteria nemame zvieratko';
+        echo 'Pro zvolené kritériá nemáme zvířátko-.';
     }
 }
 
@@ -124,40 +138,45 @@ function filterAnimals($searchedTitle,$chosenBiotopes, $chosenContinents,$chosen
     return $suitableAnimals ;
 }
 
-function form_handler()
+function formHandlerSearchDB($dir)
 {
-    global $searchedTitle, $chosenBiotopes, $chosenContinents,$chosenOrders,$chosenClasses, $allClasses, $allOrders, $allContinents, $allBiotopes ;
+    global $searchedTitle, $chosenBiotopes, $chosenContinents, $chosenOrders, $chosenClasses, $allClasses, $allOrders, $allContinents, $allBiotopes;
 
     if (isset($_POST['title'])) {
-        $searchedTitle = $_POST['title'];
-    }
-    else{
+        $searchedTitle = htmlspecialchars($_POST['title'], ENT_QUOTES);
+    } else {
         $searchedTitle = '';
     }
+
     if (isset($_POST['continents'])) {
-        $chosenContinents = $_POST['continents'];
-    }
-    else
-    {
+        $chosenContinents = array_map(function($continent) {
+            return htmlspecialchars($continent, ENT_QUOTES);
+        }, $_POST['continents']);
+    } else {
         $chosenContinents = $allContinents;
     }
+
     if (isset($_POST['biotopes'])) {
-        $chosenBiotopes = $_POST['biotopes'];
-    }
-    else
-    {
+        $chosenBiotopes = array_map(function($biotope) {
+            return htmlspecialchars($biotope, ENT_QUOTES);
+        }, $_POST['biotopes']);
+    } else {
         $chosenBiotopes = $allBiotopes;
     }
+
     if (isset($_POST['classes'])) {
-        $chosenClasses = $_POST['classes'];
-    }
-    else{
+        $chosenClasses = array_map(function($class) {
+            return htmlspecialchars($class, ENT_QUOTES);
+        }, $_POST['classes']);
+    } else {
         $chosenClasses = $allClasses;
     }
+
     if (isset($_POST['orders'])) {
-        $chosenOrders = ($_POST['orders']);
-    }
-    else{
+        $chosenOrders = array_map(function($order) {
+            return htmlspecialchars($order, ENT_QUOTES);
+        }, $_POST['orders']);
+    } else {
         $chosenOrders = $allOrders;
     }
 }
@@ -178,7 +197,7 @@ function displayCoordinates($animal){
             var marker = L.marker(<?php echo $animal['coordinates']; ?>).addTo(map);
 
 
-            fetch('load_geojson.php')
+            fetch('loadGeojson.php')
                 .then(response => response.json())
                 .then(data => {
                     L.geoJSON(data, {

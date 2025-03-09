@@ -1,7 +1,7 @@
 
 <?php
 
-//interactively displays matching strings from search
+//interactively chooses matching strings from search
 
 require_once 'db.php';
 

@@ -1,13 +1,40 @@
 <?php
-function getAllAnimals()
+
+$defaultDir = 'cs-prague';
+
+function getZooTitles(){
+    $zooTitleFile =  'jsons/listOfZoos.json';
+    $zooData = json_decode(file_get_contents($zooTitleFile), true);
+    $zooTitles = array();
+    foreach ($zooData as $zoo){
+        array_push($zooTitles, $zoo['title']);
+    }
+
+    return $zooTitles;
+}
+
+function getAllZoos()
 {
-    $animalfile =  'jsons/lexikon_zvirat.json';
-    $jsonString = file_get_contents($animalfile);
+    $zooFile =  'jsons/listOfZoos.json';
+    $jsonString = file_get_contents($zooFile);
     return json_decode($jsonString, true);
 }
 
-function getAllContinents(){
-    $continentsFile = 'jsons/continents.json';
+
+function getAllAnimals($dir = null) {
+
+    $animalFile = "jsons/$dir/lexikon_zvirat.json";
+
+    if (file_exists($animalFile)) {
+        $jsonString = file_get_contents($animalFile);
+        return json_decode($jsonString, true);
+    } else {
+        return [];
+    }
+}
+
+function getAllContinents($dir = null){
+    $continentsFile = "jsons/$dir/continents.json";
     $jsonString = file_get_contents($continentsFile);
     $ContinentsData = json_decode($jsonString, true);
     $continentTitles = array();
@@ -17,8 +44,8 @@ function getAllContinents(){
     return $continentTitles;
 }
 
-function getAllBiotopes(){
-    $biotopesFile = 'jsons/biotop.json';
+function getAllBiotopes($dir = null){
+    $biotopesFile = "jsons/$dir/biotop.json";
     $jsonString = file_get_contents($biotopesFile);
     $BiotopesData = json_decode($jsonString, true);
     $biotopTitles = array();
@@ -28,8 +55,8 @@ function getAllBiotopes(){
     return $biotopTitles;
 }
 
-function getAllClasses(){
-    $classesFile = 'jsons/classes2.json';
+function getAllClasses($dir = null){
+    $classesFile = "jsons/$dir/classes2.json";
     $jsonString = file_get_contents($classesFile);
     $ClassesData = json_decode($jsonString, true);
     $ClassesTitles = array();
@@ -38,8 +65,8 @@ function getAllClasses(){
     }
     return $ClassesTitles;
 }
-function getAllOrders(){
-    $classesFile = 'jsons/classes2.json';
+function getAllOrders($dir = null){
+    $classesFile = "jsons/$dir/classes2.json";
     $jsonString = file_get_contents($classesFile);
     $ClassesData = json_decode($jsonString, true);
     $orderTitles = array();
@@ -52,9 +79,13 @@ function getAllOrders(){
 }
 
 function loadAnimalsGeojson(){
-    return file_get_contents('jsons/animals.geojson');
+    return file_get_contents('jsons/cs-prague/animals.geojson');
 }
 
 function loadZooGeojson(){
-    return file_get_contents('jsons/zoo.geojson');
+    return file_get_contents('jsons/cs-prague/zoo.geojson');
+}
+
+function loadHighways(){
+    return file_get_contents('jsons/cs-prague/highways.geojson');
 }

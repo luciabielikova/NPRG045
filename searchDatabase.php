@@ -8,10 +8,13 @@
     <script src="script.js"></script>
 </head>
 <body>
+
+
 <div id="main-container">
 <div id = "filter">
     <form method="POST">
         <div id="searchTitle">
+
             <?php
             $lastSearched = (isset($_POST['title']) && $_POST['title'] !== "") ? 'value=' . $_POST['title'] : 'placeholder="Podle názvu..."';
             echo '<input type="search-input" name="title" id="search"  '. $lastSearched .'>';
@@ -32,7 +35,6 @@
                     $isChecked = (isset($_POST['continents']) && in_array($continent, $_POST['continents'])) ? 'checked="checked"' : '';
                     echo '<input type="checkbox" class="continent" id="'. htmlspecialchars($continent, ENT_QUOTES) .'" value="'. $continent .'" name="continents[]" ' . $isChecked . ' ><label for="'. $continent .'">'. $continent .'</label><br>';
 
-                    //echo '<input type="checkbox" id="'. $continent .'" value="'. $continent .'" name="continents[]" ' . $isChecked . '><label for="'. $continent .'">'. $continent .'</label><br>';
                 }
 
 
@@ -72,7 +74,17 @@
         <div>
             <?php
             global $searchedTitle,$chosenBiotopes, $chosenContinents,$chosenOrders,$chosenClasses;
-            formHandlerSearchDB();
+
+            if (isset($_GET['dir'])) {
+                $dir = $_GET['dir'];
+                echo "Searching database for: " . htmlspecialchars($dir);
+            } else {
+                echo "No directory specified.";
+                $dir = 'cs-prague';
+            }
+
+
+            formHandlerSearchDB($dir);
             listOfFoundAnimals(filterAnimals( $searchedTitle,$chosenBiotopes, $chosenContinents,$chosenOrders,$chosenClasses))
             ?>
         </div>

@@ -118,7 +118,7 @@
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    fetch('loadZooGeojson.php')
+    fetch('loadGeojson.php')
         .then(response => response.json())
         .then(data => {
             L.geoJSON(data, {

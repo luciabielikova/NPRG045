@@ -29,7 +29,7 @@
     function createAnimalHTML($animal)
     {
         $html = '<div class="animal">';
-        if (isset($animal['image_src'])) {
+        if (isset($animal['image_src']) && $animal['image_src'] != "''") {
             $html .= '<img src="' . $animal['image_src'] . '" alt="' . $animal['image_alt'] . '">';
         }
         $html .= '<h2>' . $animal['title'] . '</h2>';

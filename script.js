@@ -1,4 +1,11 @@
 //clearing searchDatabase form
+let startMarker = null;
+let endMarker = null;
+let midMarker = null;
+let waypointsMarkers = [];
+
+
+
 function uncheckAll() {
     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(function(checkbox) {
@@ -31,22 +38,21 @@ function myStyle(feature) {
     };
 }
 
-function addWanted() {
-    //adds new input field for animal we want to see
-    if (wantedCount < 3) {
-        wantedCount++;
-        let container = document.getElementById('wanted-container');
+function addInputField(containerId, className, inputName, labelText, fetchFunction, counter, maxCount, resultsContainer) {
+    if (counter < maxCount) {
+        counter++;
+        let container = document.getElementById(containerId);
         let wrapper = document.createElement('div');
         wrapper.className = 'label-input-wrapper';
 
         let label = document.createElement('label');
-        let labelText = document.createTextNode('Chci vidět:');
+        let labelNode = document.createTextNode(labelText);
         let input = document.createElement('input');
         input.type = 'text';
         input.placeholder = 'Vyhledat...';
-        input.className = 'wanted-input';
-        input.name = 'wanted[]';
-        label.appendChild(labelText);
+        input.className = className;
+        input.name = inputName;
+        label.appendChild(labelNode);
         wrapper.appendChild(label);
         wrapper.appendChild(input);
         container.appendChild(wrapper);
@@ -54,48 +60,25 @@ function addWanted() {
         input.addEventListener('input', (e) => {
             const query = e.target.value;
             if (query) {
-                fetchResultsWanted(query, input);
+                fetchFunction(query, input);
             } else {
-                resultsWantedContainer.innerHTML = '';
-                resultsWantedContainer.style.display = 'none';
+                resultsContainer.innerHTML = '';
+                resultsContainer.style.display = 'none';
             }
         });
     } else {
-        alert('Vyberte nejvýš 3.');
+        alert('Vyberte nejvýše ' + maxCount + '.');
     }
 }
+
+function addWanted() {
+    addInputField('wanted-container', 'wanted-input', 'wanted[]', 'Chci vidět:', fetchResultsWanted, wantedCount, 3, resultsWantedContainer);
+    wantedCount++;
+}
+
 function addNotWanted() {
-    //adds new input field for animal we do not want to see
-    if (notWantedCount < 3) {
-        notWantedCount++;
-        let container = document.getElementById('not-wanted-container');
-        let wrapper = document.createElement('div');
-        wrapper.className = 'label-input-wrapper';
-
-        let label = document.createElement('label');
-        let labelText = document.createTextNode('Nechci vidět:');
-        let input = document.createElement('input');
-        input.type = 'text';
-        input.placeholder = 'Vyhledat...';
-        input.className = 'not-wanted-input';
-        input.name = 'notWanted[]';
-        label.appendChild(labelText);
-        wrapper.appendChild(label);
-        wrapper.appendChild(input);
-        container.appendChild(wrapper);
-
-        input.addEventListener('input', (e) => {
-            const query = e.target.value;
-            if (query) {
-                fetchResultsNotWanted(query, input);
-            } else {
-                resultsNotWantedContainer.innerHTML = '';
-                resultsNotWantedContainer.style.display = 'none';
-            }
-        });
-    } else {
-        alert('Vyberte nejvýše 3.');
-    }
+    addInputField('not-wanted-container', 'not-wanted-input', 'notWanted[]', 'Nechci vidět:', fetchResultsNotWanted, notWantedCount, 3, resultsNotWantedContainer);
+    notWantedCount++;
 }
 
 function fetchResults(query, container, input) {
@@ -168,28 +151,36 @@ function handleSubmit() {
     const fromValue = searchInputFrom.value;
     const toValue = searchInputTo.value;
 
-    const wantedValues = Array.from(document.querySelectorAll('.wanted-input')).map(input => input.value);
-    const notWantedValues = Array.from(document.querySelectorAll('.not-wanted-input')).map(input => input.value);
+    const wantedValues = Array.from(document.querySelectorAll('.wanted-input'))
+        .map(input => input.value)
+        .filter(value => value.trim() !== "");
+    const notWantedValues = Array.from(document.querySelectorAll('.not-wanted-input'))
+        .map(input => input.value)
+        .filter(value => value.trim() !== "");
 
-    /*
     console.log('Odkud:', fromValue);
     console.log('Kam:', toValue);
     console.log('Chci vidět:', wantedValues);
     console.log('Nechci vidět:', notWantedValues);
-     */
+
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', 'handleMapSearch.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
     xhr.onload = function () {
         if (xhr.status === 200) {
+            console.log(xhr.responseText);
             const response = JSON.parse(xhr.responseText);
             const result = response.data.result;
-            drawPath(result);
-        }
-    };
 
-    const data = `from=${encodeURIComponent(fromValue)}&to=${encodeURIComponent(toValue)}`;
+            console.log(result);
+            drawPath(result);
+            }
+    };
+    console.log('Raw response:', xhr.responseText);
+
+    const data = `from=${encodeURIComponent(fromValue)}&to=${encodeURIComponent(toValue)}&mandatory=${encodeURIComponent(wantedValues.join(','))}&forbidden=${encodeURIComponent(notWantedValues.join(','))}`;
     xhr.send(data);
 }
 
@@ -211,11 +202,37 @@ function drawPath(shortestPath) {
         map.removeLayer(polyline);
     }
 
-    if (shortestPath.length > 1) {
-        const latlngs = shortestPath.map(point => [point.lat, point.lon]);
+    // Odstrániť predchádzajúce značky (ak existujú)
+    if (startMarker) map.removeLayer(startMarker);
+    if (endMarker) map.removeLayer(endMarker);
+    if (waypointsMarkers) {
+        waypointsMarkers.forEach(marker => map.removeLayer(marker));
+    }
 
+    waypointsMarkers = [];
+
+    if (shortestPath.length > 1) {
+        const latlngs = shortestPath.map(point => [point.lat, point.lon, point.vertex]);
+        // Vytvorenie polyline pre cestu
         polyline = L.polyline(latlngs, { color: 'blue' }).addTo(map);
         map.fitBounds(polyline.getBounds());
+
+        // Pridanie značky pre začiatok
+        startMarker = L.marker(latlngs[0], { title: latlngs[0][2] }).addTo(map)
+        .bindPopup(latlngs[0][2]);
+
+        // Pridanie značky pre koniec
+        endMarker = L.marker(latlngs[latlngs.length - 1],  { title: latlngs[latlngs.length - 1][2] }).addTo(map)
+            .bindPopup(latlngs[latlngs.length - 1][2]);
+
+        for (let i = 1; i < latlngs.length - 1; i++) {
+            if (isNaN(latlngs[i][2])) {
+            let marker = L.marker(latlngs[i], { title: latlngs[i][2]  }).addTo(map)
+                .bindPopup(latlngs[i][2] );
+            waypointsMarkers.push(marker);
+        }
+        }
+
     }
 }
 
