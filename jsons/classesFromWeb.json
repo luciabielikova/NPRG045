@@ -1,0 +1,2002 @@
+[
+  {
+    "id_total": 1,
+    "type": "class",
+    "id_reference": 0,
+    "title": "Savci (Mammalia)",
+    "title2": "savci",
+    "id_class": 1
+  },
+  {
+    "id_total": 2,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Málozubí (Diprotodontia)",
+    "title2": "malozubi",
+    "id_class": 0
+  },
+  {
+    "id_total": 3,
+    "type": "family",
+    "id_reference": 2,
+    "title": "Klokanovití (Macropodidae)",
+    "title2": "klokanoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 4,
+    "type": "class",
+    "id_reference": 0,
+    "title": "Plazi (Reptilia)",
+    "title2": "plazi",
+    "id_class": 3
+  },
+  {
+    "id_total": 5,
+    "type": "order",
+    "id_reference": 4,
+    "title": "Želvy (Chelonia)",
+    "title2": "zelvy",
+    "id_class": 0
+  },
+  {
+    "id_total": 6,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Karetkovití (Carettochelyidae)",
+    "title2": "karetkoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 7,
+    "type": "class",
+    "id_reference": 0,
+    "title": "Ptáci (Aves)",
+    "title2": "ptaci",
+    "id_class": 2
+  },
+  {
+    "id_total": 8,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Veslonozí (Pelecaniformes)",
+    "title2": "veslonozi",
+    "id_class": 0
+  },
+  {
+    "id_total": 9,
+    "type": "family",
+    "id_reference": 8,
+    "title": "Pelikánovití (Pelecanidae)",
+    "title2": "pelikanoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 10,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Sudokopytníci (Artiodactyla)",
+    "title2": "sudokopytnici",
+    "id_class": 0
+  },
+  {
+    "id_total": 11,
+    "type": "family",
+    "id_reference": 10,
+    "title": "Turovití (Bovidae)",
+    "title2": "turoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 14,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Bércouni (Macroscelidea)",
+    "title2": "bercouni",
+    "id_class": 0
+  },
+  {
+    "id_total": 15,
+    "type": "family",
+    "id_reference": 14,
+    "title": "Bércounovití (Macroscelidae)",
+    "title2": "bercounoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 16,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Hmyzožravci (Eulipotyphla)",
+    "title2": "hmyzozravci",
+    "id_class": 0
+  },
+  {
+    "id_total": 17,
+    "type": "family",
+    "id_reference": 16,
+    "title": "Ježkovití (Erinaceidae)",
+    "title2": "jezkoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 21,
+    "type": "family",
+    "id_reference": 196,
+    "title": "Volavkovití (Ardeidae)",
+    "title2": "volavkoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 22,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Hrabaví (Galliformes)",
+    "title2": "hrabavi",
+    "id_class": 0
+  },
+  {
+    "id_total": 23,
+    "type": "family",
+    "id_reference": 22,
+    "title": "Bažantovití (Phasianidae)",
+    "title2": "bazantoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 24,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Měkkozobí (Columbiformes)",
+    "title2": "mekkozobi",
+    "id_class": 0
+  },
+  {
+    "id_total": 25,
+    "type": "family",
+    "id_reference": 24,
+    "title": "Holubovití (Columbidae)",
+    "title2": "holuboviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 26,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Hlodavci (Rodentia)",
+    "title2": "hlodavci",
+    "id_class": 0
+  },
+  {
+    "id_total": 27,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Tarbíkovití (Dipodidae)",
+    "title2": "tarbikoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 28,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Lichokopytníci (Perissodactyla)",
+    "title2": "lichokopytnici",
+    "id_class": 0
+  },
+  {
+    "id_total": 29,
+    "type": "family",
+    "id_reference": 28,
+    "title": "Koňovití (Equidae)",
+    "title2": "konoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 30,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Hrabáči (Tubulidentata)",
+    "title2": "hrabaci",
+    "id_class": 0
+  },
+  {
+    "id_total": 31,
+    "type": "family",
+    "id_reference": 30,
+    "title": "Hrabáčovití (Orycteropidae)",
+    "title2": "hrabacoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 33,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Papoušci (Psittaciformes)",
+    "title2": "papousci",
+    "id_class": 0
+  },
+  {
+    "id_total": 34,
+    "type": "family",
+    "id_reference": 33,
+    "title": "Papouškovití (Psittacidae)",
+    "title2": "papouskoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 35,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Srostloprstí (Coraciiformes)",
+    "title2": "srostloprsti",
+    "id_class": 0
+  },
+  {
+    "id_total": 36,
+    "type": "family",
+    "id_reference": 35,
+    "title": "Dudkovití (Upupidae)",
+    "title2": "dudkoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 39,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Vrubozobí (Anseriformes)",
+    "title2": "vrubozobi",
+    "id_class": 0
+  },
+  {
+    "id_total": 40,
+    "type": "family",
+    "id_reference": 39,
+    "title": "Kachnovití (Anatidae)",
+    "title2": "kachnoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 42,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Krátkokřídlí (Gruiformes)",
+    "title2": "kratkokridli",
+    "id_class": 0
+  },
+  {
+    "id_total": 43,
+    "type": "family",
+    "id_reference": 42,
+    "title": "Jeřábovití (Gruidae)",
+    "title2": "jeraboviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 44,
+    "type": "family",
+    "id_reference": 33,
+    "title": "Loriovití (Loridae)",
+    "title2": "lorioviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 46,
+    "type": "family",
+    "id_reference": 152,
+    "title": "Nanduovití (Rheidae)",
+    "title2": "nanduoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 48,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Primáti (Primates)",
+    "title2": "primati",
+    "id_class": 0
+  },
+  {
+    "id_total": 49,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Outloňovití (Lorisidae)",
+    "title2": "outlonoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 50,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Šplhavci (Piciformes)",
+    "title2": "splhavci",
+    "id_class": 0
+  },
+  {
+    "id_total": 51,
+    "type": "family",
+    "id_reference": 50,
+    "title": "Vousákovití (Capitonidae)",
+    "title2": "vousakoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 52,
+    "type": "family",
+    "id_reference": 10,
+    "title": "Jelenovití (Cervidae)",
+    "title2": "jelenoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 53,
+    "type": "family",
+    "id_reference": 10,
+    "title": "Velbloudovití (Camelidae)",
+    "title2": "velbloudoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 55,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Pěvci (Passeriformes)",
+    "title2": "pevci",
+    "id_class": 0
+  },
+  {
+    "id_total": 56,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Krkavcovití (Corvidae)",
+    "title2": "krkavcoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 59,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Chobotnatci (Proboscidea)",
+    "title2": "chobotnatci",
+    "id_class": 0
+  },
+  {
+    "id_total": 60,
+    "type": "family",
+    "id_reference": 59,
+    "title": "Slonovití (Elephantidae)",
+    "title2": "slonoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 61,
+    "type": "order",
+    "id_reference": 4,
+    "title": "Šupinatí (Squamata)",
+    "title2": "supinati",
+    "id_class": 0
+  },
+  {
+    "id_total": 62,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Leguánovití (Iguanidae)",
+    "title2": "leguanoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 64,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Morčatovití (Caviidae)",
+    "title2": "morcatoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 65,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Veverkovití (Sciuridae)",
+    "title2": "veverkoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 66,
+    "type": "family",
+    "id_reference": 10,
+    "title": "Žirafovití (Giraffidae)",
+    "title2": "zirafoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 69,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Chameleonovití (Cahamaeleonidae)",
+    "title2": "chameleonoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 70,
+    "type": "family",
+    "id_reference": 152,
+    "title": "Kasuárovití (Casuariidae)",
+    "title2": "kasuaroviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 71,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Kosmanovití (Callithricidae)",
+    "title2": "kosmanoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 72,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Sovy (Strigiformes)",
+    "title2": "sovy",
+    "id_class": 0
+  },
+  {
+    "id_total": 73,
+    "type": "family",
+    "id_reference": 72,
+    "title": "Puštíkovití (Strigidae)",
+    "title2": "pustikoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 74,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Hominidi (Hominidae)",
+    "title2": "hominidi",
+    "id_class": 0
+  },
+  {
+    "id_total": 75,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Lemurovití denní (Lemuridae)",
+    "title2": "lemuroviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 77,
+    "type": "family",
+    "id_reference": 10,
+    "title": "Pekariovití (Tayassuidae)",
+    "title2": "pekarioviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 78,
+    "type": "family",
+    "id_reference": 10,
+    "title": "Hrochovití (Hippopotamidae)",
+    "title2": "hrochoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 79,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Tučňáci (Sphenisciformes)",
+    "title2": "tucnaci",
+    "id_class": 0
+  },
+  {
+    "id_total": 80,
+    "type": "family",
+    "id_reference": 79,
+    "title": "Tučňákovití (Spheniscidae)",
+    "title2": "tucnakoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 81,
+    "type": "family",
+    "id_reference": 28,
+    "title": "Nosorožcovití (Rhinocerotidae)",
+    "title2": "nosorozcoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 82,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Ježury (Tachyglossa)",
+    "title2": "jezury",
+    "id_class": 0
+  },
+  {
+    "id_total": 83,
+    "type": "family",
+    "id_reference": 82,
+    "title": "Ježurovití (Tachyglossidae)",
+    "title2": "jezuroviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 84,
+    "type": "class",
+    "id_reference": 0,
+    "title": "Ostatní bezobratlí",
+    "title2": "ostatni-bezobratli",
+    "id_class": 9
+  },
+  {
+    "id_total": 85,
+    "type": "order",
+    "id_reference": 84,
+    "title": "Štíři (Scorpiones)",
+    "title2": "stiri",
+    "id_class": 0
+  },
+  {
+    "id_total": 86,
+    "type": "family",
+    "id_reference": 85,
+    "title": "Štírovití (Scorpionidae)",
+    "title2": "stiroviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 87,
+    "type": "class",
+    "id_reference": 0,
+    "title": "Hmyz (Insecta)",
+    "title2": "hmyz",
+    "id_class": 8
+  },
+  {
+    "id_total": 88,
+    "type": "order",
+    "id_reference": 87,
+    "title": "Strašilky (Phasmatodea)",
+    "title2": "strasilky",
+    "id_class": 0
+  },
+  {
+    "id_total": 89,
+    "type": "family",
+    "id_reference": 88,
+    "title": "Strašilkovití (Phasmatidae)",
+    "title2": "strasilkoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 90,
+    "type": "order",
+    "id_reference": 87,
+    "title": "Rovnokřídlí (Orthoptera)",
+    "title2": "rovnokridli",
+    "id_class": 0
+  },
+  {
+    "id_total": 91,
+    "type": "family",
+    "id_reference": 90,
+    "title": "Sarančovití (Acrididae)",
+    "title2": "sarance",
+    "id_class": 0
+  },
+  {
+    "id_total": 92,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Tany (Scadentia)",
+    "title2": "tany",
+    "id_class": 0
+  },
+  {
+    "id_total": 93,
+    "type": "family",
+    "id_reference": 92,
+    "title": "Tanovití (Tupaiidae)",
+    "title2": "tanoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 94,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Myšovití (Muridae)",
+    "title2": "mysoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 95,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Pěnkavovití (Fringillidae)",
+    "title2": "penkavoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 98,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Krajtovití (Pythonidae)",
+    "title2": "krajtoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 100,
+    "type": "order",
+    "id_reference": 264,
+    "title": "Pavouci (Araneae)",
+    "title2": "pavoukoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 101,
+    "type": "order",
+    "id_reference": 87,
+    "title": "Švábi (Blattodea)",
+    "title2": "svabi",
+    "id_class": 0
+  },
+  {
+    "id_total": 102,
+    "type": "family",
+    "id_reference": 101,
+    "title": "Švábovití (Blattidae)",
+    "title2": "svaboviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 103,
+    "type": "family",
+    "id_reference": 196,
+    "title": "Ibisovití (Threskionitidae)",
+    "title2": "ibisoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 104,
+    "type": "family",
+    "id_reference": 35,
+    "title": "Ledňáčkovití (Alceninidae)",
+    "title2": "lednackoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 105,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Lemčíkovití (Ptilonorhynchidae)",
+    "title2": "lemcikoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 106,
+    "type": "family",
+    "id_reference": 35,
+    "title": "Mandelíkovití (Coraciidae)",
+    "title2": "mandelikoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 107,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Snovačovití (Ploceidae)",
+    "title2": "snovacoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 108,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Timáliovití (Timaliidae)",
+    "title2": "timalioviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 109,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Kombovití (Galagidae)",
+    "title2": "komboviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 110,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Urzonovití (Erenthizontidae)",
+    "title2": "urzonoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 111,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Tejovití (Teiidae)",
+    "title2": "tejoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 112,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Damani (Hyracoidea)",
+    "title2": "damani",
+    "id_class": 0
+  },
+  {
+    "id_total": 113,
+    "type": "family",
+    "id_reference": 112,
+    "title": "Damanovití (Procaviidae)",
+    "title2": "damanoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 114,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Dikobrazovití (Hystricidae)",
+    "title2": "dikobrazoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 115,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Gibonovití (Hylobatidae)",
+    "title2": "gibonoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 116,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Letouni (Chiroptera)",
+    "title2": "letouni",
+    "id_class": 0
+  },
+  {
+    "id_total": 117,
+    "type": "family",
+    "id_reference": 116,
+    "title": "Kaloňovití (Pteropodidae)",
+    "title2": "kalonoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 118,
+    "type": "family",
+    "id_reference": 2,
+    "title": "Klokánkovití (Potoroidae)",
+    "title2": "klokankoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 120,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Chudozubí (Xenarthra)",
+    "title2": "chudozubi",
+    "id_class": 0
+  },
+  {
+    "id_total": 121,
+    "type": "family",
+    "id_reference": 120,
+    "title": "Lenochodovití dvouprstí (Megalonychidae)",
+    "title2": "lenochodoviti-dvouprsti",
+    "id_class": 0
+  },
+  {
+    "id_total": 123,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Kočkodanovití (Cercopithecidae)",
+    "title2": "kockodanoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 125,
+    "type": "family",
+    "id_reference": 10,
+    "title": "Prasatovití (Suidae)",
+    "title2": "prasatoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 126,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Drozdovití (Turdidae)",
+    "title2": "drozdoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 127,
+    "type": "family",
+    "id_reference": 35,
+    "title": "Zoborožcovití (Bucerotidae)",
+    "title2": "zoborozcoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 128,
+    "type": "family",
+    "id_reference": 22,
+    "title": "Hokovití (Cracidae)",
+    "title2": "hokoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 129,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Dravci (Falconiformes)",
+    "title2": "dravci",
+    "id_class": 0
+  },
+  {
+    "id_total": 130,
+    "type": "family",
+    "id_reference": 129,
+    "title": "Hadilovovití (Sagittariidae)",
+    "title2": "hadilovoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 131,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Plameňáci (Phoenicopteriformes)",
+    "title2": "plamenaci",
+    "id_class": 0
+  },
+  {
+    "id_total": 132,
+    "type": "family",
+    "id_reference": 131,
+    "title": "Plameňákovití (Phoenicopteridae)",
+    "title2": "plamenakoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 133,
+    "type": "family",
+    "id_reference": 33,
+    "title": "Kakaduovití (Cacatuidae)",
+    "title2": "kakaduoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 134,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Strnadovití (Emberizidae)",
+    "title2": "strnadoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 135,
+    "type": "family",
+    "id_reference": 129,
+    "title": "Kondorovití (Cathartidae)",
+    "title2": "kondoroviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 136,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Užovkovití (Colubridae)",
+    "title2": "uzovkoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 137,
+    "type": "family",
+    "id_reference": 28,
+    "title": "Tapírovití (Tapiridae)",
+    "title2": "tapiroviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 138,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Irenovití (Irenidae)",
+    "title2": "irenoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 139,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Špačkovití (Sturnidae)",
+    "title2": "spackoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 140,
+    "type": "family",
+    "id_reference": 129,
+    "title": "Jestřábovití (Accipitridae)",
+    "title2": "jestraboviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 141,
+    "type": "family",
+    "id_reference": 35,
+    "title": "Momotovití (Momotidae)",
+    "title2": "momotoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 142,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Agamovití (Agamidae)",
+    "title2": "agamoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 143,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Hroznýšovití (Boidae)",
+    "title2": "hroznysoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 144,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Kajmankovití (Chelydridae)",
+    "title2": "kajmankoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 145,
+    "type": "family",
+    "id_reference": 2,
+    "title": "Kuskusovití (Phalangeridae)",
+    "title2": "kuskusoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 146,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Lelkové (Caprimulgiformes)",
+    "title2": "lelkove",
+    "id_class": 0
+  },
+  {
+    "id_total": 147,
+    "type": "family",
+    "id_reference": 146,
+    "title": "Lelkounovití (Podargidae)",
+    "title2": "lelkounoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 148,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Myšáci (Coliiformes)",
+    "title2": "mysaci",
+    "id_class": 0
+  },
+  {
+    "id_total": 149,
+    "type": "family",
+    "id_reference": 148,
+    "title": "Myšákovití (Coliidae)",
+    "title2": "mysakoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 151,
+    "type": "family",
+    "id_reference": 201,
+    "title": "Cibetkovité (Viverridae)",
+    "title2": "cibetkovite",
+    "id_class": 0
+  },
+  {
+    "id_total": 152,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Pštrosi (Struthioniformes)",
+    "title2": "pstrosi",
+    "id_class": 0
+  },
+  {
+    "id_total": 153,
+    "type": "family",
+    "id_reference": 152,
+    "title": "Pštrosovití (Struthionidae)",
+    "title2": "pstrosoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 154,
+    "type": "family",
+    "id_reference": 42,
+    "title": "Seriemovití (Cariamidae)",
+    "title2": "seriemoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 155,
+    "type": "family",
+    "id_reference": 72,
+    "title": "Sovovití (Tytonidae)",
+    "title2": "sovoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 156,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Stepokurové (Pteroclidiformes)",
+    "title2": "stepokurove",
+    "id_class": 0
+  },
+  {
+    "id_total": 157,
+    "type": "family",
+    "id_reference": 156,
+    "title": "Stepokurovití (Pteroclididae)",
+    "title2": "stepokuroviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 158,
+    "type": "family",
+    "id_reference": 22,
+    "title": "Tabonovití (Megapodiidae)",
+    "title2": "tabonoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 159,
+    "type": "family",
+    "id_reference": 22,
+    "title": "Tetřevovití (Tetraonidae)",
+    "title2": "tetrevoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 160,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Kukačky (Cuculiformes)",
+    "title2": "kukacky",
+    "id_class": 0
+  },
+  {
+    "id_total": 161,
+    "type": "family",
+    "id_reference": 160,
+    "title": "Turakovití (Musophagidae)",
+    "title2": "turakoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 163,
+    "type": "family",
+    "id_reference": 176,
+    "title": "Ústřičníkovití (Haematopodidae)",
+    "title2": "ustricnikoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 164,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Vlhovcovití (Icteridae)",
+    "title2": "vlhovcoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 165,
+    "type": "family",
+    "id_reference": 50,
+    "title": "Datlovití (Picidae)",
+    "title2": "datloviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 166,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Varanovití (Varanidae)",
+    "title2": "varanoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 167,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Scinkovití (Scincidae)",
+    "title2": "scinkoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 168,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Emydovití (Emydidae)",
+    "title2": "emydoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 169,
+    "type": "family",
+    "id_reference": 5,
+    "title": "''",
+    "title2": "''",
+    "id_class": 0
+  },
+  {
+    "id_total": 170,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Testudovití (Testudinidae)",
+    "title2": "testudoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 171,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Batagurovití (Geoemydidae)",
+    "title2": "bataguroviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 172,
+    "type": "class",
+    "id_reference": 0,
+    "title": "Ryby paprskoploutvé (Actinopterygii)",
+    "title2": "ryby",
+    "id_class": 5
+  },
+  {
+    "id_total": 175,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Agutiovití (Dasyproctidae)",
+    "title2": "agutioviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 176,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Dlouhokřídlí (Chardriiformes)",
+    "title2": "dlouhokridli",
+    "id_class": 0
+  },
+  {
+    "id_total": 177,
+    "type": "family",
+    "id_reference": 176,
+    "title": "Kulíkovití (Charadriidae)",
+    "title2": "kulikoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 178,
+    "type": "class",
+    "id_reference": 0,
+    "title": "Měkkýši (Mollusca)",
+    "title2": "mekkysi",
+    "id_class": 7
+  },
+  {
+    "id_total": 180,
+    "type": "family",
+    "id_reference": 179,
+    "title": "-",
+    "title2": "''",
+    "id_class": 0
+  },
+  {
+    "id_total": 181,
+    "type": "order",
+    "id_reference": 172,
+    "title": "Máloostní (Cypriniformes)",
+    "title2": "maloostni",
+    "id_class": 0
+  },
+  {
+    "id_total": 182,
+    "type": "family",
+    "id_reference": 181,
+    "title": "Kaprovití (Cyprinidae)",
+    "title2": "kaproviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 183,
+    "type": "family",
+    "id_reference": 120,
+    "title": "Pásovcovití (Dasypodidae)",
+    "title2": "pasovcoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 185,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Bulbulovití (Pycnonotidae)",
+    "title2": "bulbuloviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 186,
+    "type": "family",
+    "id_reference": 22,
+    "title": "Perličkovití (Numididae)",
+    "title2": "perlickoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 187,
+    "type": "family",
+    "id_reference": 42,
+    "title": "Chřástalovití (Rallidae)",
+    "title2": "chrastaloviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 188,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Sýkořicovití (Paradoxornithidae)",
+    "title2": "sykoricoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 189,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Dlouhohlávkovití (Dermatemydidae)",
+    "title2": "dlouhohlavkoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 190,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Malpovití (Cebidae)",
+    "title2": "malpoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 191,
+    "type": "order",
+    "id_reference": 4,
+    "title": "Krokodýli (Crocodilia)",
+    "title2": "krokodyli",
+    "id_class": 0
+  },
+  {
+    "id_total": 192,
+    "type": "family",
+    "id_reference": 191,
+    "title": "Gaviálovití (Gavialidae)",
+    "title2": "gavialoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 193,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Šelmy (Carnivora)",
+    "title2": "selmy-carnivora",
+    "id_class": 0
+  },
+  {
+    "id_total": 194,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Promykovití (Herpestidae)",
+    "title2": "promykoviti-herpestidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 195,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Kočkovití (Felidae)",
+    "title2": "kockoviti-felidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 196,
+    "type": "order",
+    "id_reference": 7,
+    "title": "Brodiví (Ciconiiformes)",
+    "title2": "brodivi-ciconiiformes",
+    "id_class": 0
+  },
+  {
+    "id_total": 197,
+    "type": "family",
+    "id_reference": 196,
+    "title": "Člunozobcovití (Balaenicipitidae)",
+    "title2": "clunozobcoviti-balaenicipitidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 198,
+    "type": "class",
+    "id_reference": 0,
+    "title": "Paryby (Chondrichthyes)",
+    "title2": "paryby-chondrichthyes",
+    "id_class": 6
+  },
+  {
+    "id_total": 199,
+    "type": "class",
+    "id_reference": 0,
+    "title": "Obojživelníci (Amphibia)",
+    "title2": "obojzivelnici-amphibia",
+    "id_class": 4
+  },
+  {
+    "id_total": 200,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Vačice (Didelphimorphia)",
+    "title2": "vacice",
+    "id_class": 0
+  },
+  {
+    "id_total": 201,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Afrosoricidi (Afrosoricida)",
+    "title2": "afrosoricidi",
+    "id_class": 0
+  },
+  {
+    "id_total": 202,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Zajíci (Lagomorpha)",
+    "title2": "zajici",
+    "id_class": 0
+  },
+  {
+    "id_total": 203,
+    "type": "order",
+    "id_reference": 1,
+    "title": "Luskouni (Pholidota)",
+    "title2": "luskouni",
+    "id_class": 0
+  },
+  {
+    "id_total": 204,
+    "type": "family",
+    "id_reference": 200,
+    "title": "Vačicovití (Didelphidae)",
+    "title2": "vacicoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 205,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Mirikinovití (Aotidae)",
+    "title2": "mirikinoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 206,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Chápanovití (Atelidae)",
+    "title2": "chapanoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 207,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Makiovití (Cheirogaleididae)",
+    "title2": "makioviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 208,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Lemurovití noční (Lepiremuridae)",
+    "title2": "lemuroviti-nocni",
+    "id_class": 0
+  },
+  {
+    "id_total": 209,
+    "type": "family",
+    "id_reference": 48,
+    "title": "Nártounovití (Tarsiidae)",
+    "title2": "nartounoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 210,
+    "type": "family",
+    "id_reference": 120,
+    "title": "Mravenečníkovití (Myrmecophagidae)",
+    "title2": "mravenecnikoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 211,
+    "type": "family",
+    "id_reference": 201,
+    "title": "Bodlínovití (Tenrecidae)",
+    "title2": "bodlinoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 212,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Rypošovití (Bathyergidae)",
+    "title2": "ryposoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 213,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Hutiovití (Capromyidae)",
+    "title2": "hutioviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 214,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Činčilovití (Chinchillidae)",
+    "title2": "cinciloviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 215,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Nutriovití (Myocastoridae)",
+    "title2": "nutrioviti-myocastoridae",
+    "id_class": 0
+  },
+  {
+    "id_total": 216,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Plchovití (Myoxidae)",
+    "title2": "plchoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 217,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Noháčovití (Pedetidae)",
+    "title2": "nohacoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 218,
+    "type": "family",
+    "id_reference": 26,
+    "title": "Gundiovití (Ctenodactylidae)",
+    "title2": "gundioviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 219,
+    "type": "family",
+    "id_reference": 202,
+    "title": "Zajícovití (Leporidae)",
+    "title2": "zajicoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 220,
+    "type": "family",
+    "id_reference": 203,
+    "title": "Luskounovití (Manidae)",
+    "title2": "luskounoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 221,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Hyenovití (Hyaenidae)",
+    "title2": "hyenoviti-hyaenidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 222,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Cibetkovití (Viverridae)",
+    "title2": "cibetkoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 223,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Šelmy madagaskarské (Eupleridae)",
+    "title2": "selmy-madagaskarske-eupleridae",
+    "id_class": 0
+  },
+  {
+    "id_total": 224,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Nandinie (Nandiniidae)",
+    "title2": "nandinie-nandiniidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 225,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Linsangové asijští (Priodontidae)",
+    "title2": "linsangove-asijsti-priodontidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 226,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Psovití (Canidae)",
+    "title2": "psoviti-canidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 227,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Pandy malé (Ailuridae)",
+    "title2": "pandy-male-ailuridae",
+    "id_class": 0
+  },
+  {
+    "id_total": 228,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Skunkovití (Mephitidae)",
+    "title2": "skunkoviti-mephitidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 229,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Lasicovití (Mustelidae)",
+    "title2": "lasicoviti-mustelidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 230,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Medvídkovití (Procyonidae)",
+    "title2": "medvidkoviti-procyonidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 231,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Lachtanovití (Otariidae)",
+    "title2": "lachtanoviti-otariidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 232,
+    "type": "family",
+    "id_reference": 193,
+    "title": "Medvědovití (Ursidae)",
+    "title2": "medvedoviti-ursidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 233,
+    "type": "family",
+    "id_reference": 10,
+    "title": "Kabarovití (Moschidae)",
+    "title2": "kabaroviti-moschidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 234,
+    "type": "family",
+    "id_reference": 10,
+    "title": "Kančilovití (Tragulidae)",
+    "title2": "kanciloviti-tragulidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 235,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Matamatovití (Chelidae)",
+    "title2": "matamatoviti-chelidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 236,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Pelomedúzovití (Pelomedusidae)",
+    "title2": "pelomeduzoviti-pelomedusidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 237,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Terekovití (Podocnemididae)",
+    "title2": "terekoviti-podocnemididae",
+    "id_class": 0
+  },
+  {
+    "id_total": 238,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Hlavcovití (Platysternidae)",
+    "title2": "hlavcoviti-platysternidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 239,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Kožnatkovití (Trionychidae)",
+    "title2": "koznatkoviti-trionychidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 240,
+    "type": "family",
+    "id_reference": 5,
+    "title": "Klapavkovití (Kinosternidae)",
+    "title2": "klapavkoviti-kinosternidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 241,
+    "type": "family",
+    "id_reference": 191,
+    "title": "Aligátorovití (Alligatoridae)",
+    "title2": "aligatoroviti-alligatoridae",
+    "id_class": 0
+  },
+  {
+    "id_total": 242,
+    "type": "family",
+    "id_reference": 191,
+    "title": "Krokodýlovití (Crocodilidae)",
+    "title2": "krokodyloviti-crocodilidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 243,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Chameleonovití (Chamaeleonidae)",
+    "title2": "chameleonoviti-chamaeleonidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 244,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Baziliškovití (Corytophanidae)",
+    "title2": "baziliskoviti-corytophanidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 245,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Gekonovití (Gekkonidae)",
+    "title2": "gekonoviti-gekkonidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 246,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Kruhochvostovití (Cordylidae)",
+    "title2": "kruhochvostoviti-cordylidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 247,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Ještěrkovití (Lacertidae)",
+    "title2": "jesterkoviti-lacertidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 248,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Xantusiovití (Xantusiidae)",
+    "title2": "xantusioviti-xantusiidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 249,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Ještěrkovcovití (Gerrhosauridae)",
+    "title2": "jesterkovcoviti-gerrhosauridae",
+    "id_class": 0
+  },
+  {
+    "id_total": 250,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Mabujovití (Mabuyidae)",
+    "title2": "mabujoviti-mabuyidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 251,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Slepýšovití (Anguidae)",
+    "title2": "slepysoviti-anguidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 252,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Krokodýlovcovití (Xenosauridae)",
+    "title2": "krokodylovcoviti-xenosauridae",
+    "id_class": 0
+  },
+  {
+    "id_total": 253,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Korovcovití (Helodermatidae)",
+    "title2": "korovcoviti-helodermatidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 254,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Bradavičníkovití (Acrochordidae)",
+    "title2": "bradavicnikoviti-acrochordidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 255,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Zmijovití (Viperidae)",
+    "title2": "zmijoviti-viperidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 256,
+    "type": "order",
+    "id_reference": 198,
+    "title": "Rejnoci (Batoidei)",
+    "title2": "rejnoci-batoidei",
+    "id_class": 0
+  },
+  {
+    "id_total": 258,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Ropušníkovití (Phrynostomatidae)",
+    "title2": "ropusnikoviti-phrynostomatidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 259,
+    "type": "family",
+    "id_reference": 61,
+    "title": "Leguánovcovití (Crotaphytidae)",
+    "title2": "leguanovcoviti-crotaphytidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 260,
+    "type": "family",
+    "id_reference": 262,
+    "title": "Létavkovití (Rhacophoridae)",
+    "title2": "letavkoviti-rhacophoridae",
+    "id_class": 0
+  },
+  {
+    "id_total": 261,
+    "type": "order",
+    "id_reference": 199,
+    "title": "Ocasatí (Caudata)",
+    "title2": "ocasati-caudata",
+    "id_class": 0
+  },
+  {
+    "id_total": 262,
+    "type": "order",
+    "id_reference": 199,
+    "title": "Žáby (Anura)",
+    "title2": "zaby-anura",
+    "id_class": 0
+  },
+  {
+    "id_total": 263,
+    "type": "order",
+    "id_reference": 178,
+    "title": "Plži - plicnatí (Pulmonata)",
+    "title2": "plzi-plicnati-pulmonata",
+    "id_class": 0
+  },
+  {
+    "id_total": 264,
+    "type": "class",
+    "id_reference": 0,
+    "title": "Pavoukovci (Arachnida)",
+    "title2": "pavoukovci-arachnida",
+    "id_class": 10
+  },
+  {
+    "id_total": 265,
+    "type": "family",
+    "id_reference": 256,
+    "title": "Potamotrygonidae",
+    "title2": "potamotrygonidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 266,
+    "type": "family",
+    "id_reference": 196,
+    "title": "Čápovití (Ciconiidae)",
+    "title2": "capoviti-ciconiidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 267,
+    "type": "family",
+    "id_reference": 39,
+    "title": "kamišovití (Anhimidae)",
+    "title2": "kamisoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 268,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Flétnákovití (Cracticidae)",
+    "title2": "fletnakoviti-cracticidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 269,
+    "type": "order",
+    "id_reference": 172,
+    "title": "Ostnoploutví (Perciformes)",
+    "title2": "ostnoploutvi-perciformes",
+    "id_class": 0
+  },
+  {
+    "id_total": 270,
+    "type": "family",
+    "id_reference": 269,
+    "title": "kaložroutovití (Scatophagidae)",
+    "title2": "kalozroutoviti-scatophagidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 271,
+    "type": "order",
+    "id_reference": 264,
+    "title": "Krabovci = bičovci (Amblypygi)",
+    "title2": "krabovci-bicovci-amblypygi",
+    "id_class": 0
+  },
+  {
+    "id_total": 272,
+    "type": "family",
+    "id_reference": 271,
+    "title": "Krabovcovití = bičovcovití (Phrynichidae)",
+    "title2": "krabovcoviti-bicovcoviti-phrynichidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 273,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Medosavkovití (Meliphagidae)",
+    "title2": "medosavkoviti-meliphagidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 274,
+    "type": "family",
+    "id_reference": 261,
+    "title": "Velemlokovití (Cryptobranchidae)",
+    "title2": "velemlokoviti-cryptobranchidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 275,
+    "type": "family",
+    "id_reference": 100,
+    "title": "maloočkovití",
+    "title2": "sparassida",
+    "id_class": 0
+  },
+  {
+    "id_total": 276,
+    "type": "family",
+    "id_reference": 55,
+    "title": "konipasovití (Motacillidae)",
+    "title2": "konipasoviti-motacillidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 277,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Žluvovití (Oriolidae)",
+    "title2": "zluvoviti-oriolidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 278,
+    "type": "family",
+    "id_reference": 55,
+    "title": "Brhlíkovití (Sittidae)",
+    "title2": "brhlikoviti-sittidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 279,
+    "type": "family",
+    "id_reference": 269,
+    "title": "Hlaváčovití (Gobiidae)",
+    "title2": "hlavacoviti",
+    "id_class": 0
+  },
+  {
+    "id_total": 280,
+    "type": "family",
+    "id_reference": 269,
+    "title": "Pilohřbetcovití (Datnioidae)",
+    "title2": "pilohrbetcoviti-datnioidae",
+    "id_class": 0
+  },
+  {
+    "id_total": 281,
+    "type": "family",
+    "id_reference": 129,
+    "title": "Sokolovití (Falconidae)",
+    "title2": "sokoloviti-falconidae",
+    "id_class": 0
+  }
+]

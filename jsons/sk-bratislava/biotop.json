@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "biotop": "moře"
+  },
+  {
+    "id": 2,
+    "biotop": "sladké vody"
+  },
+  {
+    "id": 3,
+    "biotop": "poušť a polopoušť"
+  },
+  {
+    "id": 4,
+    "biotop": "travnaté území"
+  },
+  {
+    "id": 5,
+    "biotop": "hory"
+  },
+  {
+    "id": 6,
+    "biotop": "tropický les"
+  },
+  {
+    "id": 7,
+    "biotop": "listnatý a smíšený les"
+  },
+  {
+    "id": 8,
+    "biotop": "jehličnatý les"
+  }
+]

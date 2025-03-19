@@ -1,0 +1,52 @@
+[
+  {
+    "id": "prague",
+    "default_language": "cs",
+    "name": {
+      "en": "Prague Zoo",
+      "cs": "Zoo Praha",
+      "de": "Zoo Prag"
+    },
+    "description": {
+      "en": "Prague Zoo is home to many exotic animals.",
+      "cs": "Zoo Praha je domovem mnoha exotických zvířat.",
+      "de": "Der Zoo Prag beherbergt viele exotische Tiere."
+    },
+    "location": {
+      "country": "Czech Republic",
+      "city": "Prague"
+    },
+    "data_path": "datasets/zoos/prague/",
+    "habitats_path": "datasets/zoos/prague/habitats.json",
+    "classes_path": "datasets/zoos/prague/classes.json",
+    "orders_path": "datasets/zoos/prague/orders.json",
+    "continents_path": "datasets/zoos/prague/continents.json",
+    "animals_path": "datasets/zoos/prague/animals.json",
+    "website": "https://www.zoopraha.cz"
+  },
+  {
+    "id": "bratislava",
+    "default_language": "cs",
+    "name": {
+      "en": "Bratislava Zoo",
+      "cs": "Zoo Bratislava",
+      "de": "Zoo Bratislava"
+    },
+    "description": {
+      "en": "Bratislava Zoo offers animals and a dinosaur park.",
+      "cs": "Zoo Bratislava láká na zvířata a DinoPark.",
+      "de": "Der Zoo Bratislava bietet Tiere und einen Dinopark."
+    },
+    "location": {
+      "country": "Slovakia",
+      "city": "Bratislava"
+    },
+    "data_path": "datasets/zoos/bratislava/",
+    "habitats_path": "datasets/zoos/bratislava/habitats.json",
+    "classes_path": "datasets/zoos/prague/classes.json",
+    "orders_path": "datasets/zoos/prague/orders.json",
+    "continents_path": "datasets/zoos/bratislava/continents.json",
+    "animals_path": "datasets/zoos/bratislava/animals.json",
+    "website": "https://www.zoobratislava.sk"
+  }
+]

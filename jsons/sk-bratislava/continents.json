@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "continent": "Afrika"
+  },
+  {
+    "id": 2,
+    "continent": "Asie"
+  },
+  {
+    "id": 3,
+    "continent": "Jižní Amerika"
+  },
+
+  {
+    "id": 6,
+    "continent": "v přírodě nežije"
+  },
+  {
+    "id": 7,
+    "continent": "Evropa"
+  }
+]

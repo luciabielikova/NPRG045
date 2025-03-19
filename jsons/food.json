@@ -1,0 +1,38 @@
+[
+  {
+    "id_f": 1,
+    "name_f": "části rostlin"
+  },
+  {
+    "id_f": 2,
+    "name_f": "živá kořist"
+  },
+  {
+    "id_f": 3,
+    "name_f": "zdechliny"
+  },
+  {
+    "id_f": 4,
+    "name_f": "plankton"
+  },
+  {
+    "id_f": 5,
+    "name_f": "rostliny i živočichové"
+  },
+  {
+    "id_f": 6,
+    "name_f": "bezobratlí"
+  },
+  {
+    "id_f": 7,
+    "name_f": "ryby"
+  },
+  {
+    "id_f": 8,
+    "name_f": "semena"
+  },
+  {
+    "id_f": 9,
+    "name_f": "plody"
+  }
+]

@@ -1,0 +1,470 @@
+[
+    {
+      "id_total": 1,
+      "type": "class",
+      "title": "Savci (Mammalia)",
+      "title2": "savci",
+      "id_class": 1,
+      "orders": [
+        {
+          "id_total": 2,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Málozubí (Diprotodontia)",
+          "title2": "malozubi"
+        },
+        {
+          "id_total": 10,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Sudokopytníci (Artiodactyla)",
+          "title2": "sudokopytnici"
+        },
+        {
+          "id_total": 14,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Běrcouni (Macroscelidea)",
+          "title2": "bercouni"
+        },
+        {
+          "id_total": 16,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Hmyzožravci (Eulipotyphla)",
+          "title2": "hmyzozravci"
+        },
+        {
+          "id_total": 26,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Hlodavci (Rodentia)",
+          "title2": "hlodavci"
+        },
+        {
+          "id_total": 28,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Lichokopytníci (Perissodactyla)",
+          "title2": "lichokopytnici"
+        },
+        {
+          "id_total": 30,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Hrabáči (Tubulidentata)",
+          "title2": "hrabaci"
+        },
+        {
+          "id_total": 48,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Primáti (Primates)",
+          "title2": "primati"
+        },
+        {
+          "id_total": 59,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Chobotnatci (Proboscidea)",
+          "title2": "chobotnatci"
+        },
+        {
+          "id_total": 82,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Ježury (Tachyglossa)",
+          "title2": "jezury"
+        },
+        {
+          "id_total": 92,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Tany (Scadentia)",
+          "title2": "tany"
+        },
+        {
+          "id_total": 112,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Damani (Hyracoidea)",
+          "title2": "damani"
+        },
+        {
+          "id_total": 116,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Letouni (Chiroptera)",
+          "title2": "letouni"
+        },
+        {
+          "id_total": 120,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Chudozubí (Xenarthra)",
+          "title2": "chudozubi"
+        },
+        {
+          "id_total": 193,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Šelmy (Carnivora)",
+          "title2": "selmy-carnivora"
+        },
+        {
+          "id_total": 200,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Vačice (Didelphimorphia)",
+          "title2": "vacice"
+        },
+        {
+          "id_total": 201,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Afrosoricidi (Afrosoricida)",
+          "title2": "afrosoricidi"
+        },
+        {
+          "id_total": 202,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Zajíci (Lagomorpha)",
+          "title2": "zajici"
+        },
+        {
+          "id_total": 203,
+          "type": "order",
+          "id_reference": 1,
+          "title": "Luskouni (Pholidota)",
+          "title2": "luskouni"
+        }
+      ]
+    },
+    {
+      "id_total": 4,
+      "type": "class",
+      "title": "Plazi (Reptilia)",
+      "title2": "plazi",
+      "id_class": 3,
+      "orders": [
+        {
+          "id_total": 5,
+          "type": "order",
+          "id_reference": 4,
+          "title": "Želvy (Chelonia)",
+          "title2": "zelvy"
+        },
+        {
+          "id_total": 61,
+          "type": "order",
+          "id_reference": 4,
+          "title": "Šupinatí (Squamata)",
+          "title2": "supinati"
+        },
+        {
+          "id_total": 191,
+          "type": "order",
+          "id_reference": 4,
+          "title": "Krokodýli (Crocodilia)",
+          "title2": "krokodyli"
+        }
+      ]
+    },
+    {
+      "id_total": 7,
+      "type": "class",
+      "title": "Ptáci (Aves)",
+      "title2": "ptaci",
+      "id_class": 2,
+      "orders": [
+        {
+          "id_total": 8,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Veslonozí (Pelecaniformes)",
+          "title2": "veslonozi"
+        },
+        {
+          "id_total": 22,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Hrabaví (Galliformes)",
+          "title2": "hrabavi"
+        },
+        {
+          "id_total": 24,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Měkkozobí (Columbiformes)",
+          "title2": "mekkozobi"
+        },
+        {
+          "id_total": 33,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Papoušci (Psittaciformes)",
+          "title2": "papousci"
+        },
+        {
+          "id_total": 35,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Srostloprstí (Coraciiformes)",
+          "title2": "srostloprsti"
+        },
+        {
+          "id_total": 39,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Vrubozobí (Anseriformes)",
+          "title2": "vrubozobi"
+        },
+        {
+          "id_total": 42,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Krátkokřídlí (Gruiformes)",
+          "title2": "kratkokridli"
+        },
+        {
+          "id_total": 50,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Šplhavci (Piciformes)",
+          "title2": "splhavci"
+        },
+        {
+          "id_total": 55,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Pěvci (Passeriformes)",
+          "title2": "pevci"
+        },
+        {
+          "id_total": 72,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Sovy (Strigiformes)",
+          "title2": "sovy"
+        },
+        {
+          "id_total": 79,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Tučňáci (Sphenisciformes)",
+          "title2": "tucnaci"
+        },
+        {
+          "id_total": 129,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Dravci (Falconiformes)",
+          "title2": "dravci"
+        },
+        {
+          "id_total": 131,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Plameňáci (Phoenicopteriformes)",
+          "title2": "plamenaci"
+        },
+        {
+          "id_total": 146,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Lelkové (Caprimulgiformes)",
+          "title2": "lelkove"
+        },
+        {
+          "id_total": 148,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Myšáci (Coliiformes)",
+          "title2": "mysaci"
+        },
+        {
+          "id_total": 152,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Pštrosi (Struthioniformes)",
+          "title2": "pstrosi"
+        },
+        {
+          "id_total": 156,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Stepokurové (Pteroclidiformes)",
+          "title2": "stepokurove"
+        },
+        {
+          "id_total": 160,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Kukačky (Cuculiformes)",
+          "title2": "kukacky"
+        },
+        {
+          "id_total": 176,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Dlouhokřídlí (Chardriiformes)",
+          "title2": "dlouhokridli"
+        },
+        {
+          "id_total": 196,
+          "type": "order",
+          "id_reference": 7,
+          "title": "Brodiví (Ciconiiformes)",
+          "title2": "brodivi-ciconiiformes"
+        }
+      ]
+    },
+    {
+      "id_total": 84,
+      "type": "class",
+      "title": "Ostatní bezobratlí",
+      "title2": "ostatni-bezobratli",
+      "id_class": 9,
+      "orders": [
+        {
+          "id_total": 85,
+          "type": "order",
+          "id_reference": 84,
+          "title": "Štíři (Scorpiones)",
+          "title2": "stiri"
+        }
+      ]
+    },
+    {
+      "id_total": 87,
+      "type": "class",
+      "title": "Hmyz (Insecta)",
+      "title2": "hmyz",
+      "id_class": 8,
+      "orders": [
+        {
+          "id_total": 88,
+          "type": "order",
+          "id_reference": 87,
+          "title": "Strašilky (Phasmatodea)",
+          "title2": "strasilky"
+        },
+        {
+          "id_total": 90,
+          "type": "order",
+          "id_reference": 87,
+          "title": "Rovnokřídlí (Orthoptera)",
+          "title2": "rovnokridli"
+        },
+        {
+          "id_total": 101,
+          "type": "order",
+          "id_reference": 87,
+          "title": "Švábi (Blattodea)",
+          "title2": "svabi"
+        }
+      ]
+    },
+    {
+      "id_total": 172,
+      "type": "class",
+      "title": "Ryby paprskoploutvé (Actinopterygii)",
+      "title2": "ryby",
+      "id_class": 5,
+      "orders": [
+        {
+          "id_total": 181,
+          "type": "order",
+          "id_reference": 172,
+          "title": "Máloostní (Cypriniformes)",
+          "title2": "maloostni"
+        },
+        {
+          "id_total": 269,
+          "type": "order",
+          "id_reference": 172,
+          "title": "Ostnoploutví (Perciformes)",
+          "title2": "ostnoploutvi-perciformes"
+        }
+      ]
+    },
+    {
+      "id_total": 178,
+      "type": "class",
+      "title": "Měkkýši (Mollusca)",
+      "title2": "mekkysi",
+      "id_class": 7,
+      "orders": [
+        {
+          "id_total": 263,
+          "type": "order",
+          "id_reference": 178,
+          "title": "Plži - plicnatí (Pulmonata)",
+          "title2": "plzi-plicnati-pulmonata"
+        }
+      ]
+    },
+    {
+      "id_total": 198,
+      "type": "class",
+      "title": "Paryby (Chondrichthyes)",
+      "title2": "paryby-chondrichthyes",
+      "id_class": 6,
+      "orders": [
+        {
+          "id_total": 256,
+          "type": "order",
+          "id_reference": 198,
+          "title": "Rejnoci (Batoidei)",
+          "title2": "rejnoci-batoidei"
+        }
+      ]
+    },
+    {
+      "id_total": 199,
+      "type": "class",
+      "title": "Obojživelníci (Amphibia)",
+      "title2": "obojzivelnici-amphibia",
+      "id_class": 4,
+      "orders": [
+        {
+          "id_total": 261,
+          "type": "order",
+          "id_reference": 199,
+          "title": "Ocasatí (Caudata)",
+          "title2": "ocasati-caudata"
+        },
+        {
+          "id_total": 262,
+          "type": "order",
+          "id_reference": 199,
+          "title": "Žáby (Anura)",
+          "title2": "zaby-anura"
+        }
+      ]
+    },
+    {
+      "id_total": 264,
+      "type": "class",
+      "title": "Pavoukovci (Arachnida)",
+      "title2": "pavoukovci-arachnida",
+      "id_class": 10,
+      "orders": [
+        {
+          "id_total": 100,
+          "type": "order",
+          "id_reference": 264,
+          "title": "Pavouci (Araneae)",
+          "title2": "pavoukoviti"
+        },
+        {
+          "id_total": 271,
+          "type": "order",
+          "id_reference": 264,
+          "title": "Krabovci = bičovci (Amblypygi)",
+          "title2": "krabovci-bicovci-amblypygi"
+        }
+      ]
+    }
+  ]

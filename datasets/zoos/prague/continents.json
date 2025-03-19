@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "translations": {
+      "cs": {
+        "name": "Afrika",
+        "description": "Druhý největší kontinent, domov rozmanité fauny a flóry."
+      },
+      "en": {
+        "name": "Africa",
+        "description": "The second-largest continent, home to diverse wildlife and ecosystems."
+      },
+      "de": {
+        "name": "Afrika",
+        "description": "Der zweitgrößte Kontinent, Heimat einer vielfältigen Tier- und Pflanzenwelt."
+      }
+    }
+  },
+  {
+    "id": 2,
+    "translations": {
+      "cs": {
+        "name": "Asie",
+        "description": "Největší kontinent na světě s rozmanitými klimatickými zónami."
+      },
+      "en": {
+        "name": "Asia",
+        "description": "The largest continent with diverse climates and ecosystems."
+      },
+      "de": {
+        "name": "Asien",
+        "description": "Der größte Kontinent mit vielfältigen Klimazonen und Ökosystemen."
+      }
+    }
+  },
+  {
+    "id": 3,
+    "translations": {
+      "cs": {
+        "name": "Jižní Amerika",
+        "description": "Kontinent s tropickými deštnými pralesy a rozsáhlými savanami."
+      },
+      "en": {
+        "name": "South America",
+        "description": "A continent with tropical rainforests and vast savannas."
+      },
+      "de": {
+        "name": "Südamerika",
+        "description": "Ein Kontinent mit tropischen Regenwäldern und weiten Savannen."
+      }
+    }
+  },
+  {
+    "id": 4,
+    "translations": {
+      "cs": {
+        "name": "Severní Amerika",
+        "description": "Rozsáhlý kontinent s různorodými ekosystémy od tundry po pouště."
+      },
+      "en": {
+        "name": "North America",
+        "description": "A vast continent with diverse ecosystems, from tundra to deserts."
+      },
+      "de": {
+        "name": "Nordamerika",
+        "description": "Ein riesiger Kontinent mit vielfältigen Ökosystemen, von der Tundra bis zu Wüsten."
+      }
+    }
+  },
+  {
+    "id": 5,
+    "translations": {
+      "cs": {
+        "name": "Austrálie",
+        "description": "Nejmenší kontinent, známý unikátní faunou a flórou."
+      },
+      "en": {
+        "name": "Australia",
+        "description": "The smallest continent, known for its unique wildlife and ecosystems."
+      },
+      "de": {
+        "name": "Australien",
+        "description": "Der kleinste Kontinent, bekannt für seine einzigartige Tier- und Pflanzenwelt."
+      }
+    }
+  },
+  {
+    "id": 6,
+    "translations": {
+      "cs": {
+        "name": "V přírodě nežije",
+        "description": "Tento druh se v divoké přírodě nevyskytuje."
+      },
+      "en": {
+        "name": "Does not live in the wild",
+        "description": "This species does not occur in the wild."
+      },
+      "de": {
+        "name": "Lebt nicht in der Wildnis",
+        "description": "Diese Art kommt in der freien Natur nicht vor."
+      }
+    }
+  },
+  {
+    "id": 7,
+    "translations": {
+      "cs": {
+        "name": "Evropa",
+        "description": "Kontinent s mírným klimatem a pestrou krajinou."
+      },
+      "en": {
+        "name": "Europe",
+        "description": "A continent with a temperate climate and diverse landscapes."
+      },
+      "de": {
+        "name": "Europa",
+        "description": "Ein Kontinent mit gemäßigtem Klima und vielfältigen Landschaften."
+      }
+    }
+  }
+]
