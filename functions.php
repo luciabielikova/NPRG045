@@ -2,40 +2,53 @@
 
 require_once 'db.php';
 
-global $defaultDir;
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-if (isset($_GET['dir'])) {
-    $dir = $_GET['dir'];
+if (isset($_SESSION['zooID'])) {
+    $zooID = $_SESSION['zooID'];
 }
 else{
-    $dir = $defaultDir;
+    $zooID = 'prague';
+}
+
+if (isset($_SESSION['language'])) {
+    $language = $_SESSION['language'];
+}
+else{
+    $language = 'en';
 }
 
 
 
 
-$allAnimals = getAllAnimals($dir);
+$allAnimals = getAllAnimals($zooID, $language);
 
-$allContinents = getAllContinents($dir);
+$allAnimalTitles = getAnimalTitles($zooID, $language);
 
-$allBiotopes = getAllBiotopes($dir);
+$allContinents = getAllContinents($zooID, $language);
 
-$allClasses = getAllClasses($dir);
+$allHabitats = getAllHabitats($zooID, $language);
 
-$allOrders = getAllOrders($dir);
+$allClasses = getAllClasses($zooID,$language);
 
-$zooTitles = getZooTitles();
+$allOrders = getAllOrders($zooID,$language);
+
+$zooTitles = getZooTitles($language);
 
 $allZoos = getAllZoos();
 
-function getAnimalsBySearchedTitle($searchedTitle, $animals)
+
+
+function getAnimalsBySearchedTitle($foundAnimals, $searchedTitle, $language)
 {
     $suitableAnimals = array();
-    foreach ($animals as $animal) {
-        $pattern = '/' . $searchedTitle . '/i';
-        if (isset($animal['title'])) {
-            if (preg_match_all($pattern, $animal['title'], $matches)) {
-                array_push($suitableAnimals, $animal);
+    foreach ($foundAnimals as $animal) {
+        if (isset($animal['names'][$language])) {
+            $pattern = '/' . preg_quote($searchedTitle, '/') . '/i';
+            if (preg_match($pattern, $animal['names'][$language])) {
+                $suitableAnimals[] = $animal;
             }
         }
     }
@@ -43,25 +56,37 @@ function getAnimalsBySearchedTitle($searchedTitle, $animals)
 }
 
 
-function getAnimalsByContinent($foundAnimals,$wantedContinents)
+
+
+
+
+                                //$foundAnimals - zoznam zvierat, $wantedContinents su idcka kontinentov
+function getAnimalsByContinent($foundAnimals, $wantedContinents)
 {
     $suitableAnimals = array();
-    foreach ($foundAnimals as $animal) {
-        if (isset($animal['continents'])) {
-            if (in_array($animal['continents'], $wantedContinents)) {
-                array_push($suitableAnimals, $animal);
+    if (count($wantedContinents) != 0){
+        foreach ($foundAnimals as $animal) {
+            if (isset($animal['continents']) && is_array($animal['continents'])) {
+                $wantedContinents = array_map('intval', $wantedContinents);
+                if (!empty(array_intersect($animal['continents'], $wantedContinents))) {
+                    array_push($suitableAnimals, $animal);
+                }
             }
         }
+        return $suitableAnimals;
     }
-    return $suitableAnimals;
+    else{
+        return $foundAnimals;
+    }
 }
 
-function getAnimalsByBiotope($foundAnimals,$wantedBiotopes)
+function getAnimalsByHabitat($foundAnimals,$wantedHabitats)
 {
     $suitableAnimals = array();
     foreach ($foundAnimals as $animal) {
-        if (isset($animal['biotop'])) {
-            if (in_array($animal['biotop'], $wantedBiotopes)) {
+        if (isset($animal['habitats'])&& is_array($animal['habitats'])) {
+            if (!empty(array_intersect($animal['habitats'], $wantedHabitats))) {
+
                 array_push($suitableAnimals, $animal);
             }
         }
@@ -74,8 +99,8 @@ function getAnimalsByClass($foundAnimals,$wantedClasses)
 {
     $suitableAnimals = array();
     foreach ($foundAnimals as $animal) {
-        if (isset($animal['classes'])) {
-            if (in_array($animal['classes'], $wantedClasses)) {
+        if (isset($animal['class_id'])) {
+            if (in_array($animal['class_id'], $wantedClasses)) {
                 array_push($suitableAnimals, $animal);
             }
         }
@@ -89,8 +114,8 @@ function getAnimalsByOrder($foundAnimals,$wantedOrders)
 {
     $suitableAnimals = array();
     foreach ($foundAnimals as $animal) {
-        if (isset($animal['order'])) {
-            if (in_array($animal['order'], $wantedOrders)) {
+        if (isset($animal['order_id'])) {
+            if (in_array($animal['order_id'], $wantedOrders)) {
                 array_push($suitableAnimals, $animal);
             }
         }
@@ -99,27 +124,37 @@ function getAnimalsByOrder($foundAnimals,$wantedOrders)
 }
 
 
-function getAnimalDetail($title){
-    global $allAnimals;
-    foreach ($allAnimals as $animal) {
-        if ($animal['title'] === htmlspecialchars($title)){
-            return $animal;
-        }
-    }
+
+function createLinkToAnimal($id,$name){
+
+    return '<li><a href="detail.php?animalID='.$id.'">'.$name .'</a></li>';
 }
 
-function createLinkToAnimal($animal){
-    return '<li><a href="detail.php?title='.$animal['title'].'">'.$animal['title'] .'</a></li>';
-}
-
-
-
-function listOfFoundAnimals($suitableAnimals)
+function listOfFoundAnimals($suitableAnimals, $language = 'en')
 {
     if (count($suitableAnimals) > 0) {
         echo '<ol>';
         foreach ($suitableAnimals as $animal) {
-            echo createLinkToAnimal($animal);
+            if (isset( $animal["names"][$language])) {
+                echo createLinkToAnimal($animal['id'], $animal["names"][$language]);
+            }
+        }
+        echo '</ol>';
+    }
+    else{
+        $translations = loadTranslations();
+        echo $translations[$_SESSION['language']]['animal_not_found'];
+    }
+}
+
+
+function listOfAnimals($suitableAnimals)
+{
+    var_dump($suitableAnimals);
+    if (count($suitableAnimals) > 0) {
+        echo '<ol>';
+        foreach ($suitableAnimals as $id => $name) {
+            echo createLinkToAnimal($id, $name);
         }
         echo '</ol>';
     }
@@ -128,19 +163,20 @@ function listOfFoundAnimals($suitableAnimals)
     }
 }
 
-function filterAnimals($searchedTitle,$chosenBiotopes, $chosenContinents,$chosenOrders,$chosenClasses){
+function filterAnimals($searchedTitle,$chosenHabitats, $chosenContinents,$chosenOrders,$chosenClasses){
     global $allAnimals;
-    $suitableAnimals = getAnimalsBySearchedTitle($searchedTitle, $allAnimals);
+
+    $suitableAnimals = getAnimalsBySearchedTitle($allAnimals, $searchedTitle, $_SESSION['language']);
     $suitableAnimals = getAnimalsByContinent($suitableAnimals,$chosenContinents);
-    $suitableAnimals = getAnimalsByBiotope($suitableAnimals, $chosenBiotopes);
+    $suitableAnimals = getAnimalsByHabitat($suitableAnimals, $chosenHabitats);
     $suitableAnimals = getAnimalsByClass($suitableAnimals, $chosenClasses);
     $suitableAnimals = getAnimalsByOrder($suitableAnimals, $chosenOrders);
     return $suitableAnimals ;
 }
 
-function formHandlerSearchDB($dir)
+function formHandlerSearchDB($id)
 {
-    global $searchedTitle, $chosenBiotopes, $chosenContinents, $chosenOrders, $chosenClasses, $allClasses, $allOrders, $allContinents, $allBiotopes;
+    global $searchedTitle, $chosenHabitats, $chosenContinents, $chosenOrders, $chosenClasses, $allClasses, $allOrders, $allContinents, $allHabitats;
 
     if (isset($_POST['title'])) {
         $searchedTitle = htmlspecialchars($_POST['title'], ENT_QUOTES);
@@ -151,17 +187,19 @@ function formHandlerSearchDB($dir)
     if (isset($_POST['continents'])) {
         $chosenContinents = array_map(function($continent) {
             return htmlspecialchars($continent, ENT_QUOTES);
-        }, $_POST['continents']);
+        },
+            $_POST['continents']);
     } else {
-        $chosenContinents = $allContinents;
+        $chosenContinents = array_keys($allContinents);
+
     }
 
-    if (isset($_POST['biotopes'])) {
-        $chosenBiotopes = array_map(function($biotope) {
-            return htmlspecialchars($biotope, ENT_QUOTES);
-        }, $_POST['biotopes']);
+    if (isset($_POST['habitats'])) {
+        $chosenHabitats = array_map(function($habitat) {
+            return htmlspecialchars($habitat, ENT_QUOTES);
+        }, $_POST['habitats']);
     } else {
-        $chosenBiotopes = $allBiotopes;
+        $chosenHabitats = array_keys($allHabitats);
     }
 
     if (isset($_POST['classes'])) {
@@ -169,7 +207,7 @@ function formHandlerSearchDB($dir)
             return htmlspecialchars($class, ENT_QUOTES);
         }, $_POST['classes']);
     } else {
-        $chosenClasses = $allClasses;
+        $chosenClasses = array_keys($allClasses);
     }
 
     if (isset($_POST['orders'])) {
@@ -177,7 +215,7 @@ function formHandlerSearchDB($dir)
             return htmlspecialchars($order, ENT_QUOTES);
         }, $_POST['orders']);
     } else {
-        $chosenOrders = $allOrders;
+        $chosenOrders = array_keys($allOrders);
     }
 }
 

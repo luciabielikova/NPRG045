@@ -5,26 +5,36 @@ let midMarker = null;
 let waypointsMarkers = [];
 
 
-
 function uncheckAll() {
     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(function(checkbox) {
+    checkboxes.forEach(function (checkbox) {
         checkbox.checked = false;
     });
 }
 
-function uncheck(selector ) {
+function uncheck(selector) {
     var checkboxes = document.querySelectorAll(selector);
-    checkboxes.forEach(function(checkbox) {
+    checkboxes.forEach(function (checkbox) {
         checkbox.checked = false;
     });
 }
-function clearSearch(){
+
+function uncheck(selector) {
+    document.querySelectorAll(selector).forEach(el => {
+        if (el instanceof HTMLInputElement) {
+            el.checked = false;
+        }
+    });
+}
+
+
+function clearSearch() {
     return document.getElementById("search").value = "";
 }
 
 function clearAll() {
-    uncheckAll(); clearSearch();
+    uncheckAll();
+    clearSearch();
 }
 
 
@@ -84,7 +94,7 @@ function addNotWanted() {
 function fetchResults(query, container, input) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'displayMatchingAnimals.php?query=' + encodeURIComponent(query), true);
-    xhr.onload = function() {
+    xhr.onload = function () {
         if (xhr.status === 200) {
             const results = JSON.parse(xhr.responseText);
             displayResults(results, container, input);
@@ -176,7 +186,7 @@ function handleSubmit() {
 
             console.log(result);
             drawPath(result);
-            }
+        }
     };
     console.log('Raw response:', xhr.responseText);
 
@@ -202,7 +212,6 @@ function drawPath(shortestPath) {
         map.removeLayer(polyline);
     }
 
-    // Odstrániť predchádzajúce značky (ak existujú)
     if (startMarker) map.removeLayer(startMarker);
     if (endMarker) map.removeLayer(endMarker);
     if (waypointsMarkers) {
@@ -214,25 +223,57 @@ function drawPath(shortestPath) {
     if (shortestPath.length > 1) {
         const latlngs = shortestPath.map(point => [point.lat, point.lon, point.vertex]);
         // Vytvorenie polyline pre cestu
-        polyline = L.polyline(latlngs, { color: 'blue' }).addTo(map);
+        polyline = L.polyline(latlngs, {color: 'blue'}).addTo(map);
         map.fitBounds(polyline.getBounds());
 
         // Pridanie značky pre začiatok
-        startMarker = L.marker(latlngs[0], { title: latlngs[0][2] }).addTo(map)
-        .bindPopup(latlngs[0][2]);
+        startMarker = L.marker(latlngs[0], {title: latlngs[0][2]}).addTo(map)
+            .bindPopup(latlngs[0][2]);
 
-        // Pridanie značky pre koniec
-        endMarker = L.marker(latlngs[latlngs.length - 1],  { title: latlngs[latlngs.length - 1][2] }).addTo(map)
+        endMarker = L.marker(latlngs[latlngs.length - 1], {title: latlngs[latlngs.length - 1][2]}).addTo(map)
             .bindPopup(latlngs[latlngs.length - 1][2]);
 
         for (let i = 1; i < latlngs.length - 1; i++) {
             if (isNaN(latlngs[i][2])) {
-            let marker = L.marker(latlngs[i], { title: latlngs[i][2]  }).addTo(map)
-                .bindPopup(latlngs[i][2] );
-            waypointsMarkers.push(marker);
-        }
+                let marker = L.marker(latlngs[i], {title: latlngs[i][2]}).addTo(map)
+                    .bindPopup(latlngs[i][2]);
+                waypointsMarkers.push(marker);
+            }
         }
 
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const languageDropdown = document.getElementById("language");
+
+    languageDropdown.addEventListener("change", function () {
+        const selectedLang = this.value;
+        const urlParams = new URLSearchParams(window.location.search);
+
+        urlParams.set("language", selectedLang);
+
+        window.location.search = urlParams.toString();
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.zooButton').forEach(button => {
+        button.addEventListener('click', function() {
+            let zooID = this.getAttribute('data-zooid');
+
+            fetch('setZooID.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'zooID=' + encodeURIComponent(zooID) + '&language=' + encodeURIComponent(selectedLanguage)
+            }).then(() => {
+                window.location.href = 'mapOrSearch.php';
+            });
+        });
+    });
+});
+
 

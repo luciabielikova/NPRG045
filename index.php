@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
-    <title>Navigace</title>
-
+    <title>Zoo Page</title>
+    <script src="script.js"></script>
 </head>
-
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include "header.php";
+?>
 <body class="nav">
-<div class="container">
-    <h1>Seznam Zoo</h1>
-    <?php
-        include "functions.php";
-        //asi nejake ine classy a tak celkovo podobny ale iny dizajn
-        global $zooTitles, $allZoos;
+<div class="wrapper">
+    <div class="content">
+        <div class="container">
+        <?php
 
+            include "functions.php";
+            global $zooTitles;
 
-        foreach ($allZoos as $zoo) {
-            echo '<form action="mapOrSearch.php" method="POST" style="display: inline;">';
-            echo '<input type="hidden" name="dir" value="' . htmlspecialchars($zoo['dir']) . '">';
-            echo '<button type="submit" class="button">' . htmlspecialchars($zoo['title']) . '</button>';
-            echo '</form>';
-        }
-    ?>
-    <!--<a href="searchDatabase.php" class="button">Vyhledávání</a>
-    <a href="searchMap.php" class="button">Mapa</a> -->
+            $currentLanguage = isset($_SESSION['language']) ? $_SESSION['language'] : 'en';
+
+            echo '<script>let selectedLanguage = "' . htmlspecialchars($currentLanguage, ENT_QUOTES) . '";</script>';
+                foreach ($zooTitles as $id => $title) {
+                    echo '<button class="zooButton" data-zooid="' . htmlspecialchars($id) . '">' . htmlspecialchars($title) . '</button>';
+                }
+        ?>
+    </div>
+    </div>
 </div>
+<?php
+include 'footer.php';
+?>
 </body>
 </html>

@@ -1,9 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0e8e0;
-    margin: 0;
-}
-
 #filter form {
     margin: 0;
 }
@@ -40,7 +34,7 @@ body {
 
 #filter input[type="submit"]:hover,
 #filter button:hover {
-    background-color: #45a049;
+    background-color: #1d6b20;
 }
 
 #advancedSearch button {
@@ -55,7 +49,7 @@ body {
 }
 
 #advancedSearch button:hover {
-    background-color: #45a049;
+    background-color: #1d6b20;
 }
 
 #filter input[type="checkbox"] + label {
@@ -91,24 +85,6 @@ footer nav ul a:hover {
     background-color: #555;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-#main-container {
-    display: flex;
-    flex: 1;
-    gap: 20px;
-    max-width: 100%;
-    justify-content: center;
-}
-
 #filter {
     min-width: 400px;
     padding: 20px;
@@ -127,13 +103,7 @@ body {
     box-sizing: border-box;
 }
 
-footer {
-    background-color: #96705f;
-    color: white;
-    padding: 20px;
-    border-top: 1px solid #444;
-    text-align: center;
-}
+
 
 footer nav ul {
     list-style-type: none;
@@ -144,7 +114,7 @@ footer nav ul {
 footer nav ul a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px;
     display: inline-block;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -197,7 +167,7 @@ footer nav ul a:hover {
 
 #searchTitle input[type="submit"]:hover,
 #searchTitle button:hover {
-    background-color: #45a049;
+    background-color: #1d6b20;
 }
 
 li {
@@ -362,11 +332,11 @@ a:hover {
 
 .label-input-wrapper {
     display: flex;
-    align-items: center; /* Align label and input vertically */
-    margin-bottom: 10px; /* Optional: Space between pairs */
+    align-items: center;
+    margin-bottom: 10px;
 }
 .label-input-wrapper label {
-    margin-right: 10px; /* Optional: Space between label and input */
+    margin-right: 10px;
     width: 120px;
 }
 
@@ -406,16 +376,10 @@ body.nav {
 }
 
 
-.container {
-    text-align: center;
-    background-color: #fff;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
 
 
-.container .button {
+
+.container .button, .zooButton  {
     display: inline-block;
     padding: 15px 30px;
     margin: 10px;
@@ -426,4 +390,128 @@ body.nav {
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.button:hover, .zooButton:hover {
+    background-color: #1d6b20;
+}
+
+
+h1, h3 {
+    margin: 5px 0;
+}
+
+.language-selector {
+    font-family: Arial, sans-serif;
+    position: absolute;
+    right: 60px;
+    top: 20px;
+}
+
+select {
+    padding: 5px;
+    border: none;
+}
+
+
+#main-container {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+body {
+    padding-bottom: 80px;
+    font-family: Arial, sans-serif;
+    background-color: #f0e8e0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper {
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    height: 10%;
+    border-top: 3px solid rgba(65, 31, 2, 0.91);
+    background-color: #96705f;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 1000;
+    flex: 1;
+}
+header {
+    border-bottom: 3px solid rgba(65, 31, 2, 0.91);
+    background-color: #96705f;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.filter-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Rozostup medzi názvom a tlačidlom */
+    margin-bottom: 5px;
+}
+
+.filter-header b {
+    font-size: 18px;
+    color: #333;
+}
+
+

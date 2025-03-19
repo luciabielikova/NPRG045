@@ -11,6 +11,14 @@
 
 </head>
 <body>
+<?php
+
+include "header.php";
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+?>
 <div class="Map">
 <div class="search-container-from">
     <div class="label-input-wrapper">
@@ -131,7 +139,10 @@
 </script>
 </div>
     <?php
+    require_once 'functions.php';
+    require_once 'db.php';
     include 'footer.php';
+
     ?>
 
 </body>
