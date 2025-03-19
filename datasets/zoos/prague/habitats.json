@@ -1,0 +1,189 @@
+[
+  {
+    "id": 1,
+    "translations": {
+      "cs": {
+        "name": "moře",
+        "description": "Slané vodní prostředí oceánů a moří."
+      },
+      "en": {
+        "name": "Sea",
+        "description": "A saltwater environment of oceans and seas."
+      },
+      "de": {
+        "name": "Meer",
+        "description": "Ein salziges Wasserumfeld von Ozeanen und Meeren."
+      }
+    }
+  },
+  {
+    "id": 2,
+    "translations": {
+      "cs": {
+        "name": "sladké vody",
+        "description": "Řeky, jezera a další sladkovodní biotopy."
+      },
+      "en": {
+        "name": "Freshwater",
+        "description": "Rivers, lakes, and other freshwater habitats."
+      },
+      "de": {
+        "name": "Süßwasser",
+        "description": "Flüsse, Seen und andere Süßwasserhabitate."
+      }
+    }
+  },
+  {
+    "id": 3,
+    "translations": {
+      "cs": {
+        "name": "poušť a polopoušť",
+        "description": "Suché oblasti s minimem srážek."
+      },
+      "en": {
+        "name": "Desert and semi-desert",
+        "description": "Arid regions with minimal precipitation."
+      },
+      "de": {
+        "name": "Wüste und Halbwüste",
+        "description": "Trockene Gebiete mit minimalem Niederschlag."
+      }
+    }
+  },
+  {
+    "id": 4,
+    "translations": {
+      "cs": {
+        "name": "travnaté území",
+        "description": "Louky, savany a stepi s převahou trav."
+      },
+      "en": {
+        "name": "Grasslands",
+        "description": "Meadows, savannas, and steppes dominated by grasses."
+      },
+      "de": {
+        "name": "Grasland",
+        "description": "Wiesen, Savannen und Steppen, die von Gräsern dominiert werden."
+      }
+    }
+  },
+  {
+    "id": 5,
+    "translations": {
+      "cs": {
+        "name": "hory",
+        "description": "Vysoce položené oblasti s extrémními podmínkami."
+      },
+      "en": {
+        "name": "Mountains",
+        "description": "High-altitude regions with extreme conditions."
+      },
+      "de": {
+        "name": "Berge",
+        "description": "Hochgelegene Regionen mit extremen Bedingungen."
+      }
+    }
+  },
+  {
+    "id": 6,
+    "translations": {
+      "cs": {
+        "name": "tropický les",
+        "description": "Husté lesy v teplých a vlhkých oblastech."
+      },
+      "en": {
+        "name": "Tropical forest",
+        "description": "Dense forests in warm and humid regions."
+      },
+      "de": {
+        "name": "Tropischer Wald",
+        "description": "Dichte Wälder in warmen und feuchten Regionen."
+      }
+    }
+  },
+  {
+    "id": 7,
+    "translations": {
+      "cs": {
+        "name": "listnatý a smíšený les",
+        "description": "Lesy složené z listnatých i jehličnatých stromů."
+      },
+      "en": {
+        "name": "Deciduous and mixed forest",
+        "description": "Forests composed of both deciduous and coniferous trees."
+      },
+      "de": {
+        "name": "Laub- und Mischwald",
+        "description": "Wälder aus Laub- und Nadelbäumen."
+      }
+    }
+  },
+  {
+    "id": 8,
+    "translations": {
+      "cs": {
+        "name": "jehličnatý les",
+        "description": "Lesy s převahou jehličnatých stromů."
+      },
+      "en": {
+        "name": "Coniferous forest",
+        "description": "Forests dominated by coniferous trees."
+      },
+      "de": {
+        "name": "Nadelwald",
+        "description": "Wälder, die von Nadelbäumen dominiert werden."
+      }
+    }
+  },
+  {
+    "id": 9,
+    "translations": {
+      "cs": {
+        "name": "tundra",
+        "description": "Chladné oblasti s nízkou vegetací a permafrostem."
+      },
+      "en": {
+        "name": "Tundra",
+        "description": "Cold regions with low vegetation and permafrost."
+      },
+      "de": {
+        "name": "Tundra",
+        "description": "Kalte Regionen mit niedriger Vegetation und Permafrost."
+      }
+    }
+  },
+  {
+    "id": 10,
+    "translations": {
+      "cs": {
+        "name": "polární oblasti",
+        "description": "Extrémně chladné oblasti na severu a jihu planety."
+      },
+      "en": {
+        "name": "Polar regions",
+        "description": "Extremely cold regions at the north and south of the planet."
+      },
+      "de": {
+        "name": "Polarregionen",
+        "description": "Extrem kalte Regionen im Norden und Süden des Planeten."
+      }
+    }
+  },
+  {
+    "id": 11,
+    "translations": {
+      "cs": {
+        "name": "kamenité stepi a polopouště",
+        "description": "Suché oblasti s kamenitou půdou a řídkou vegetací."
+      },
+      "en": {
+        "name": "Rocky steppes and semi-deserts",
+        "description": "Arid regions with rocky soil and sparse vegetation."
+      },
+      "de": {
+        "name": "Felsige Steppen und Halbwüsten",
+        "description": "Trockene Gebiete mit felsigem Boden und spärlichem Bewuchs."
+      }
+    }
+  }
+]
