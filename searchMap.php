@@ -140,7 +140,6 @@ if (session_status() === PHP_SESSION_NONE) {
 </div>
     <?php
     require_once 'functions.php';
-    require_once 'db.php';
     include 'footer.php';
 
     ?>

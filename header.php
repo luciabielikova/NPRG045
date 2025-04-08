@@ -13,13 +13,14 @@ if (!isset($_SESSION['language'])) {
 
 
 <?php
-require_once 'db.php';
+require_once 'languages.php';
+
+$selectedLang = $_SESSION['language'];
 
 $languages = getLanguages();
 
-$translations = loadTranslations();
+$translation = getTranslation($selectedLang);
 
-$selectedLang = $_SESSION['language'];
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +39,7 @@ $selectedLang = $_SESSION['language'];
         echo "<h3>". getZooById($_SESSION['zooID'])['description'][$_SESSION['language']]. "</h3>";
     }
     else{
-        echo "<h1>". $translations[$_SESSION['language']]['welcome']. "</h1>";
+        echo "<h1>". $translation['welcome']. "</h1>";
         echo "<h3> tu si dam copyright :D</h3>";
     }
 
@@ -47,7 +48,7 @@ $selectedLang = $_SESSION['language'];
 
 
     <div class="language-selector">
-        <label for="language"> <?= $translations[$_SESSION['language']]['language'] . "🌍" ?> </label>
+        <label for="language"> <?= $translation['language'] . "🌍" ?> </label>
         <select id="language">
             <?php foreach ($languages as $code => $name): ?>
                 <option value="<?= $code ?>" <?= ($selectedLang == $code) ? 'selected' : '' ?>>

@@ -19,7 +19,8 @@ include "header.php";
         <div class="container">
         <?php
 
-            include "functions.php";
+        include "functions.php";
+        require_once "languages.php";
             global $zooTitles;
 
             $currentLanguage = isset($_SESSION['language']) ? $_SESSION['language'] : 'en';

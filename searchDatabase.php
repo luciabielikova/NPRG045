@@ -12,6 +12,9 @@
 <body>
 <?php
 include "header.php";
+require_once "languages.php";
+include 'functions.php';
+
 ?>
 
 <div id="main-container">
@@ -23,10 +26,9 @@ include "header.php";
                 if (session_status() === PHP_SESSION_NONE) {
                     session_start();
                 }
-                $translations = loadTranslations();
-                $t = $translations[$_SESSION['language']];
 
-                $lastSearched = (isset($_POST['title']) && $_POST['title'] !== "") ? 'value=' . $_POST['title'] : 'placeholder="' . htmlspecialchars($t['by_title'], ENT_QUOTES, 'UTF-8') . '"';
+                $translation = getTranslation($_SESSION['language']);
+                $lastSearched = (isset($_POST['title']) && $_POST['title'] !== "") ? 'value=' . $_POST['title'] : 'placeholder="' . htmlspecialchars($translation['by_title'], ENT_QUOTES, 'UTF-8') . '"';
                 echo '<input type="search-input" name="title" id="search"  ' . $lastSearched . '>';
                 echo '<input type="submit" value="🔍">';
                 echo '<button onclick="clearSearch()">🗘</button>';
@@ -36,10 +38,9 @@ include "header.php";
 
             <div id="advancedSearch">
                 <?php
-                include 'functions.php';
                 global $allContinents, $allHabitats, $allOrders, $allClasses;
                 echo '<div class="filter-header">';
-                echo '<b>' . $t['continents'] . '</b>';
+                echo '<b>' . $translation['continents'] . '</b>';
                 echo '<button type="button" onclick="uncheck(\'.continent\')">🗘</button>';
                 echo '</div>';
 
@@ -51,7 +52,7 @@ include "header.php";
 
 
                 echo '<div class="filter-header">';
-                echo '<br><b>' . $t['habitats'] . '</b>';
+                echo '<br><b>' . $translation['habitats'] . '</b>';
                 echo '<button type="button" onclick="uncheck(\'.habitat\')">🗘</button><br>';
                 echo '</div>';
 
@@ -61,7 +62,7 @@ include "header.php";
                     echo '<label for="habitat_' . htmlspecialchars($id, ENT_QUOTES) . '">' . htmlspecialchars($habitat, ENT_QUOTES) . '</label><br>';
                 }
 
-                echo '<br><b>' . $t['classes'] . '</b>';
+                echo '<br><b>' . $translation['classes'] . '</b>';
                 echo '<button type="button" onclick="uncheck(\'.class\')">🗘</button><br>';
 
                 foreach ($allClasses as $id => $class) {
@@ -70,7 +71,7 @@ include "header.php";
                     echo '<label for="class_' . htmlspecialchars($id, ENT_QUOTES) . '">' . htmlspecialchars($class, ENT_QUOTES) . '</label><br>';
                 }
 
-                echo '<br><b>' . $t['orders'] . '</b>';
+                echo '<br><b>' . $translation['orders'] . '</b>';
                 echo '<button type="button" onclick="uncheck(\'.order\')">🗘</button><br>';
 
                 foreach ($allOrders as $id => $order) {
@@ -94,6 +95,11 @@ include "header.php";
         </div>
     </div>
 </div>
+
+
+
+
+
 <?php
 include 'footer.php';
 ?>

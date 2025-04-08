@@ -19,7 +19,6 @@ include "header.php";
     <?php
 
     require_once 'functions.php';
-    require_once 'db.php';
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
@@ -29,37 +28,33 @@ include "header.php";
         require('errorPage.php');
 
     }
-    $animal = getAnimalDetail($animalID, $_SESSION['zooID'], $_SESSION['language'] );
-    $animalCategories = getAnimalCategories($animalID, $_SESSION['zooID'], $_SESSION['language'] );;
-    echo createAnimalHTML($animal, $animalCategories, $_SESSION['language']);
+    $animal = getCompleteAnimalDetail($animalID, $_SESSION['zooID'], $_SESSION['language']);
+    echo createAnimalHTML($animal, $_SESSION['language']);
 
-
-
-    function createAnimalHTML($animal, $animalCategories, $language = 'cs')
+    function createAnimalHTML($animal, $language = 'cs')
     {
         $translations = loadTranslations();
-
 
         $t = $translations[$language];
 
         $html = '<div class="animal">';
-        if (!empty($animalCategories['image_src'])) {
-            $html .= '<img src="' . htmlspecialchars($animalCategories['image_src']) . '">';
+        if (!empty($animal['image_src'])) {
+            $html .= '<img src="' . htmlspecialchars($animal['image_src']) . '">';
         }
         $html .= '<h2>' . htmlspecialchars($animal['name']) . '</h2>';
-        if (!empty($animalCategories['latin_name'])) {
-            $html .= '<h3>' . htmlspecialchars($animalCategories['latin_name']) . '</h3>';
+        if (!empty($animal['latin_name'])) {
+            $html .= '<h3>' . htmlspecialchars($animal['latin_name']) . '</h3>';
         }
         $html .= '<p><b>' . $t['basic_info'] . '</b></p>';
 
-        if (!empty($animalCategories['class_id'])) {
-            $html .= '<p><b>' . $t['class'] . ': </b>' . htmlspecialchars($animalCategories['class_id']) . '</p>';
+        if (!empty($animal['class_id'])) {
+            $html .= '<p><b>' . $t['class'] . ': </b>' . htmlspecialchars($animal['class_id']) . '</p>';
         }
-        if (!empty($animalCategories['order_id'])) {
-            $html .= '<p><b>' . $t['order'] . ': </b>' . htmlspecialchars($animalCategories['order_id']) . '</p>';
+        if (!empty($animal['order_id'])) {
+            $html .= '<p><b>' . $t['order'] . ': </b>' . htmlspecialchars($animal['order_id']) . '</p>';
         }
-        if (!empty($animalCategories['continents'])) {
-            $html .= '<p><b>' . $t['continents'] . ': </b>' . htmlspecialchars($animalCategories['continents']) . '</p>';
+        if (!empty($animal['continents'])) {
+            $html .= '<p><b>' . $t['continents'] . ': </b>' . htmlspecialchars($animal['continents']) . '</p>';
         }
         if (!empty($animal['spread_note'])) {
             $html .= '<p><b>' . $t['spread'] . ': </b>' . htmlspecialchars($animal['spread_note']) . '</p>';
@@ -67,8 +62,8 @@ include "header.php";
         if (!empty($animal['description'])) {
             $html .= '<p><b>' . $t['description'] . ': </b><br>' . htmlspecialchars($animal['description']) . '</p>';
         }
-        if (!empty($animalCategories['habitats'])) {
-            $html .= '<p><b>' . $t['habitats'] . ': </b>' . htmlspecialchars($animalCategories['habitats']) . '</p>';
+        if (!empty($animal['habitats'])) {
+            $html .= '<p><b>' . $t['habitats'] . ': </b>' . htmlspecialchars($animal['habitats']) . '</p>';
         }
         if (!empty($animal['food'])) {
             $html .= '<p><b>' . $t['food'] . ':</b> ' . htmlspecialchars($animal['food']) . '</p>';
@@ -83,8 +78,6 @@ include "header.php";
 
         return $html;
     }
-
-
 
     displayCoordinates($animal);
 

@@ -1,10 +1,9 @@
 <?php
-require_once 'functions.php';
-require_once 'db.php';
+require_once "languages.php";
 
+$selectedLang = $_SESSION['language'];
 
-
-$translations = loadTranslations();
+$translation = getTranslation($selectedLang);
 ?>
 <head>
     <meta charset="UTF-8">
@@ -16,9 +15,9 @@ $translations = loadTranslations();
 <footer id="pageFooter">
     <nav>
         <ul>
-            <a href="searchDatabase.php"><?= $translations[$_SESSION['language']]['search']  ?></a>
-            <a href="searchMap.php"><?= $translations[$_SESSION['language']]['map']  ?></a>
-            <a href="index.php"><?= $translations[$_SESSION['language']]['change_zoo']  ?></a>
+            <a href="searchDatabase.php"><?= $translation['search']  ?></a>
+            <a href="searchMap.php"><?= $translation['map']  ?></a>
+            <a href="index.php"><?= $translation['change_zoo']  ?></a>
 
         </ul>
     </nav>

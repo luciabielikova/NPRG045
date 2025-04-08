@@ -4,7 +4,6 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-
 function loadTranslations() {
     $detailTemplateFile = 'datasets/detailTemplate.json';
     if (!file_exists($detailTemplateFile)) {
@@ -13,21 +12,6 @@ function loadTranslations() {
     $jsonContent = file_get_contents($detailTemplateFile);
     return json_decode($jsonContent, true) ?: [];
 }
-
-
-
-
-
-
-function getLanguages(){
-    $data = loadTranslations();
-    foreach ($data as $key => $value) {
-        $languages[$key] = $value['lang'];
-    }
-    return $languages;
-}
-
-
 
 function getZooTitles($language){
     $zooTitleFile =  'datasets/zoznamVsetkychZoo.json';
@@ -53,17 +37,6 @@ function getAllZoos()
 
 }
 
-function getZooNameInDefaultLanguage($json)
-{
-    $data = json_decode($json, true);
-
-    if (isset($data['name'][$data['default_language']])) {
-        return $data['name'][$data['default_language']];
-    } else {
-        return null;
-    }
-}
-
 function getZooById( $id) {
     $zooTitleFile =  'datasets/zoznamVsetkychZoo.json';
     $data = json_decode(file_get_contents($zooTitleFile), true);
@@ -71,32 +44,6 @@ function getZooById( $id) {
     foreach ($data as $zoo) {
         if ($zoo['id'] == $id) {
             return $zoo;
-        }
-    }
-    return null;
-}
-
-function getAnimalDetail($animalID, $zooID, $language){
-    $filename = "datasets/zoos/$zooID/translations/$language/$animalID.json";
-
-    if (file_exists($filename)){
-        $animal = json_decode(file_get_contents($filename), true);
-    }
-    else{
-        $animal = null;
-    }
-    return $animal;
-
-}
-
-function getAnimalByID($animalID, $zooID){
-    $filename = "datasets/zoos/$zooID/animals.json";
-    if (file_exists($filename)) {
-        $data = json_decode(file_get_contents($filename), true);
-        foreach ($data as $animal) {
-            if ($animal['id'] == $animalID) {
-                return $animal;
-            }
         }
     }
     return null;
@@ -138,21 +85,31 @@ function getContinentsByID($continentIDs)
     return substr($names, 0, -2);
 }
 
+function getAnimalDetail($animalID, $zooID, $language){
+    $filename = "datasets/zoos/$zooID/translations/$language/$animalID.json";
 
-
-function getAnimalCategories($animalID, $zooID, $language){
-    $animal = getAnimalByID($animalID, $zooID);
-    $animal["class_id"] = getClassByID($animal["class_id"],$language);
-    $animal["order_id"] = getOrderByID($animal["order_id"]);
-    $animal["habitats"] = getHabitatsByID($animal["habitats"]);
-    $animal["continents"] = getContinentsByID($animal["continents"]);
-
+    if (file_exists($filename)){
+        $animal = json_decode(file_get_contents($filename), true);
+    }
+    else{
+        $animal = null;
+    }
     return $animal;
 
 }
 
-
-
+function getAnimalCategories($animalID, $zooID){
+    $filename = "datasets/zoos/$zooID/animals.json";
+    if (file_exists($filename)) {
+        $data = json_decode(file_get_contents($filename), true);
+        foreach ($data as $animal) {
+            if ($animal['id'] == $animalID) {
+                return $animal;
+            }
+        }
+    }
+    return null;
+}
 
 
 function getAnimalTitles($zooID = null, $language = "en") {
@@ -171,18 +128,13 @@ function getAnimalTitles($zooID = null, $language = "en") {
     return $filteredAnimals;
 }
 
-function getAllAnimals($zooID = null, $language = "en") {
+function getAllAnimals($zooID = null) {
     $zooData = getZooById($zooID);
     $animalFile = $zooData["animals_path"];
-
     $jsonString = file_get_contents($animalFile);
     $animals = json_decode($jsonString, true);
-
     return $animals;
 }
-
-
-
 
 function getAllContinents($zooID = null, $language = "en") {
     $zooData = getZooById($zooID);
@@ -203,8 +155,6 @@ function getAllContinents($zooID = null, $language = "en") {
     return $continentTitles;
 }
 
-
-
 function getAllHabitats($zooID = null, $language = "en") {
     $zooData = getZooById($zooID);
     $habitatsFile = $zooData["habitats_path"];
@@ -223,7 +173,6 @@ function getAllHabitats($zooID = null, $language = "en") {
 
     return $habitatsTitles;
 }
-
 
 function getAllClasses($zooID = null, $language = "en") {
     $zooData = getZooById($zooID);
@@ -265,10 +214,6 @@ function getAllOrders($zooID = null, $language = "en") {
 
 function loadAnimalsGeojson(){
     return file_get_contents('jsons/cs-prague/animals.geojson');
-}
-
-function loadZooGeojson(){
-    return file_get_contents('jsons/cs-prague/zoo.geojson');
 }
 
 function loadHighways(){

@@ -19,7 +19,12 @@ if (isset($_SESSION['language'])) {
 else{
     $language = 'en';
 }
-
+if (!function_exists('getTranslation')) {
+    function getTranslation($language){
+        $translations = loadTranslations();
+        return $translations[$language];
+    }
+}
 
 
 
@@ -55,12 +60,26 @@ function getAnimalsBySearchedTitle($foundAnimals, $searchedTitle, $language)
     return $suitableAnimals;
 }
 
+function getCompleteAnimalDetail($animalID, $zooID, $language){
+    $animal = getAnimalDetail($animalID, $zooID, $language);
+
+    if ($animal != null){
+        $categories = getAnimalCategories($animalID, $zooID);
+
+        $animal["image_src"] = $categories["image_src"];
+        $animal["class_id"] = getClassByID($categories["class_id"]);
+        $animal["order_id"] = getOrderByID($categories["order_id"]);
+        $animal["habitats"] = getHabitatsByID($categories["habitats"]);
+        $animal["continents"] = getContinentsByID($categories["continents"]);
+    } else {
+        $animal = null;
+    }
+    return $animal;
+}
 
 
 
 
-
-                                //$foundAnimals - zoznam zvierat, $wantedContinents su idcka kontinentov
 function getAnimalsByContinent($foundAnimals, $wantedContinents)
 {
     $suitableAnimals = array();

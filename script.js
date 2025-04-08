@@ -93,7 +93,7 @@ function addNotWanted() {
 
 function fetchResults(query, container, input) {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'displayMatchingAnimals.php?query=' + encodeURIComponent(query), true);
+    xhr.open('GET', 'listMatchingAnimals.php?query=' + encodeURIComponent(query), true);
     xhr.onload = function () {
         if (xhr.status === 200) {
             const results = JSON.parse(xhr.responseText);
@@ -277,3 +277,53 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const animalsPerPage = 40;
+    let currentPage = 1;
+    let animals = Array.from(document.querySelectorAll("#content > div > .animal"));
+    let totalPages = Math.ceil(animals.length / animalsPerPage);
+
+    function showPage(page) {
+        let start = (page - 1) * animalsPerPage;
+        let end = start + animalsPerPage;
+        animals.forEach((animal, index) => {
+            animal.style.display = (index >= start && index < end) ? "block" : "none";
+        });
+        document.getElementById("page-info").textContent = `Page ${page} of ${totalPages}`;
+    }
+
+    function createPagination() {
+        let paginationContainer = document.createElement("div");
+        paginationContainer.id = "pagination";
+        let prevButton = document.createElement("button");
+        prevButton.textContent = "⏪";
+        prevButton.onclick = function () {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        };
+
+        let nextButton = document.createElement("button");
+        nextButton.textContent = "⏩";
+        nextButton.onclick = function () {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        };
+
+        let pageInfo = document.createElement("span");
+        pageInfo.id = "page-info";
+
+        paginationContainer.appendChild(prevButton);
+        paginationContainer.appendChild(pageInfo);
+        paginationContainer.appendChild(nextButton);
+        document.getElementById("content").appendChild(paginationContainer);
+    }
+
+    if (animals.length > 0) {
+        createPagination();
+        showPage(currentPage);
+    }
+});
