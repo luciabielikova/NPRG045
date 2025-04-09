@@ -960,6 +960,362 @@ from bs4 import BeautifulSoup
     "image_url": "https://www.zoobratislava.sk/assets/Uploads/Lexikon/Cicavce/Zubor-europsky/zubor-europsky-c__FillMaxWzU0MCw1NDBd.jpg"
   }
 ]
+---------------------------------------------------------------------------------------------------------------------------
+zlin:
+
+[
+  {
+    "name": "Aligátor americký",
+    "latin_title": "Alligator mississippiensis",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1531/df290bc36916a88c398cb684f1748640-t2.jpeg"
+  },
+  {
+    "name": "Ara arakanga",
+    "latin_title": "Ara macao",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1490/537ac3ba0d2aa54a8cbacf6679a0e3bd-t2.jpeg"
+  },
+  {
+    "name": "Ara hyacintový",
+    "latin_title": "Anodorhynchus hyacinthinus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1511/acd026f4ab9175a07e54e661e408e9bc-t2.jpeg"
+  },
+  {
+    "name": "Bongo horský",
+    "latin_title": "Tragelaphus eurycerus isaaci",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1459/9204ed8c9e241963cd4afc838ed6ed81-t2.jpeg"
+  },
+  {
+    "name": "Čája bělolící",
+    "latin_title": "Chauna chavaria",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1583/dfd0fe19446f313586c9b87bd6e91059-t2.jpeg"
+  },
+  {
+    "name": "Čáp sedlatý",
+    "latin_title": "Ephippiorhynchus senegalensis",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1534/798eeb4188bf8b004b0eb0dc3d04587b-t2.jpeg"
+  },
+  {
+    "name": "Dingo novoguinejský",
+    "latin_title": "Canis dingo hallstromi",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1509/45b290deaa526bc660baaa5022092014-t2.jpeg"
+  },
+  {
+    "name": "Dvojzoborožec indický",
+    "latin_title": "Buceros bicornis",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1508/912dcd431c3e85af1322eb0672f6b310-t2.jpeg"
+  },
+  {
+    "name": "Dvojzoborožec nosorožčí",
+    "latin_title": "Buceros rhinoceros",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1515/229575d1b8df9c4304f48e0f3bd9491d-t2.jpeg"
+  },
+  {
+    "name": "Dželada hnědá",
+    "latin_title": "Theropithecus gelada",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1514/7b2179277fa49a1763ae6fedf643984b-t2.jpeg"
+  },
+  {
+    "name": "Emu hnědý",
+    "latin_title": "Dromaius novaehollandiae",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1516/b7efd021fddfe7a90fab61c21d125e50-t2.jpeg"
+  },
+  {
+    "name": "Flétnák australský",
+    "latin_title": "Gymnorhina tibicen",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-654/680184c4a0366ab6766a7ad2f9892ed6-t2.jpeg"
+  },
+  {
+    "name": "Gaur indický",
+    "latin_title": "Bos gaurus gaurus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1461/7a7bcb9394b37f359304fbde48d5943c-t2.jpeg"
+  },
+  {
+    "name": "Gibon stříbrný",
+    "latin_title": "Hylobates moloch",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1494/03d0991e103f244d5631cca2f333ad42-t2.jpeg"
+  },
+  {
+    "name": "Hoko pospolitý",
+    "latin_title": "Crax alector",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1658/1af87cf1e1eeafe705fa0910411e60d0-t2.jpeg"
+  },
+  {
+    "name": "Hyena skvrnitá",
+    "latin_title": "Crocuta crocuta",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1491/80307262424f6b75318596c832773573-t2.jpeg"
+  },
+  {
+    "name": "Hyenka hřivnatá",
+    "latin_title": "Proteles cristata",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1968/7733889390ad992dd38854e8a9778585-t2.jpeg"
+  },
+  {
+    "name": "Chápan vlnatý",
+    "latin_title": "Lagothrix lagothricha",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1465/f5263b4fc22a60da1521385a527f8457-t2.jpeg"
+  },
+  {
+    "name": "Chvostan bělolící",
+    "latin_title": "Pithecia pithecia",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1502/72ae85b30731ec30f988d67dc95d66e2-t2.jpeg"
+  },
+  {
+    "name": "Jaguár americký",
+    "latin_title": "Panthera Onca",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1706/3093a1ee72c44c1619f2a58b8d17517f-t2.jpeg"
+  },
+  {
+    "name": "Jeřáb královský",
+    "latin_title": "Balearica regulorum gibbericeps",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1499/bced492c20d399036ffeac28e1f1f796-t2.jpeg"
+  },
+  {
+    "name": "Jeřáb laločnatý",
+    "latin_title": "Bugeranus carunculatus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1498/1fc77524183ed7399552f80516fdf7dc-t2.jpeg"
+  },
+  {
+    "name": "Kapybara",
+    "latin_title": "Hydrochaeris hydrochaeris",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1464/10e30b30e6b5baf859c6f1c6ed7d59ed-t2.jpeg"
+  },
+  {
+    "name": "Kasuár přilbový",
+    "latin_title": "Casuarius casuarius",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1510/d7868efa16731558155cc25ee00f5e2b-t2.jpeg"
+  },
+  {
+    "name": "Kivi hnědý",
+    "latin_title": "Apteryx mantelli",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1607/d2c3dc346f9fd871c6ad13ec850f2d6b-t2.jpeg"
+  },
+  {
+    "name": "Klokan rudokrký",
+    "latin_title": "Macropus rufogriseus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1507/52efdcb0d963fb6ae32b7e5168562fd6-t2.jpeg"
+  },
+  {
+    "name": "Kotinga tříbarvá",
+    "latin_title": "Perissocephalus tricolor",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1536/d243ca859d4e5a15d9147a60b7ee2ae5-t2.jpeg"
+  },
+  {
+    "name": "Kotul veverovitý",
+    "latin_title": "Saimiri sciureus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1493/fb9ad13fcd68c416be2293dd1f25340a-t2.jpeg"
+  },
+  {
+    "name": "Kudu velký",
+    "latin_title": "Tragelaphus strepsiceros",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1519/2cecfbebf9233533333a9f093c89bddd-t2.jpeg"
+  },
+  {
+    "name": "Lachtan hřivnatý",
+    "latin_title": "Otaria byronia",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1660/e2c8dc4ef3dee97a7a346bb245016eec-t2.jpeg"
+  },
+  {
+    "name": "Lemur kata",
+    "latin_title": "Lemur catta",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1497/ac4da6233f1c567faae8c09c93ada06d-t2.jpeg"
+  },
+  {
+    "name": "Lenochod dvouprstý",
+    "latin_title": "Choloepus didactylus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1506/87d80778f5615ad2aa4b8cba3e72fc3d-t2.jpeg"
+  },
+  {
+    "name": "Lev konžský",
+    "latin_title": "Panthera leo bleyenberghi",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1503/be1571a1b5de8b2951c610ea8dd8a5c2-t2.jpeg"
+  },
+  {
+    "name": "Medvěd pyskatý",
+    "latin_title": "Melursus ursinus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1501/cfa99536deea7539a15057d7478dd0af-t2.jpeg"
+  },
+  {
+    "name": "Mravenečník čtyřprstý",
+    "latin_title": "Tamandua tetradactyla",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1500/4f93585e48c850a06bcf541dae6ac041-t2.jpeg"
+  },
+  {
+    "name": "Mravenečník velký",
+    "latin_title": "Myrmecophaga tridactyla",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1677/4f201f3637846c5960c8de7c4046147d-t2.jpeg"
+  },
+  {
+    "name": "Nandu Darwinův",
+    "latin_title": "Pterocnemia pennata pennata",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1537/bce5c8475d26ee10fb30bf1491f52902-t2.jpeg"
+  },
+  {
+    "name": "Nestor kea",
+    "latin_title": "Nestor notabilis",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1533/833fe1978304462d5d25c3ec92187d71-t2.jpeg"
+  },
+  {
+    "name": "Nesyt bílý",
+    "latin_title": "Mycteria cinerea",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1661/fcf937b4b94897c9acf84fb11aec51d0-t2.jpeg"
+  },
+  {
+    "name": "Nesyt indomalajský",
+    "latin_title": "Mycteria leucocephala",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1541/cb9efb6a4746daacc177e3778967ee18-t2.jpeg"
+  },
+  {
+    "name": "Nosorožec tuponosý jižní",
+    "latin_title": "Ceratotherium simum simum",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1525/80bee7370665e8a8bfb8095c16c34adb-t2.jpeg"
+  },
+  {
+    "name": "Orel korunkatý",
+    "latin_title": "Stephanoaetus coronatus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1505/4adaac1a114bef5a76e88554f24df4c6-t2.jpeg"
+  },
+  {
+    "name": "Panda červená",
+    "latin_title": "Ailurus fulgens",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1463/0213cd9b4f89f7a6abdf7d7b88ad4b18-t2.jpeg"
+  },
+  {
+    "name": "Pelikán australský",
+    "latin_title": "Pelecanus conspicillatus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1520/0a6e5999e11dfed7c5707b8e43496e8c-t2.jpeg"
+  },
+  {
+    "name": "Pižmovka bělokřídlá",
+    "latin_title": "Asarcornis scutulata",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1512/baf06cf5a73c951f22ff17d01c5fabae-t2.jpeg"
+  },
+  {
+    "name": "Plameňák malý",
+    "latin_title": "Phoeniconaias minor",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1513/407298b1d134fc49f6af53c0cf644718-t2.jpeg"
+  },
+  {
+    "name": "Plameňák růžový",
+    "latin_title": "Phoenicopterus roseus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1522/402bc344b16ec04f2711970f04b02fdf-t2.jpeg"
+  },
+  {
+    "name": "Siba ománská",
+    "latin_title": "Rhinoptera jayakari",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-490/14cd031b762db25ed890f9c0cd846a33-t2.jpeg"
+  },
+  {
+    "name": "Slon africký",
+    "latin_title": "Loxodonta africana",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1466/66d56e8d82e596fbc9d9dd77c17761d2-t2.jpeg"
+  },
+  {
+    "name": "Sup bělohlavý",
+    "latin_title": "Gyps fulvus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1538/bdabf5774d7813dbb0980e099b5d57a7-t2.jpeg"
+  },
+  {
+    "name": "Sup himálajský",
+    "latin_title": "Gyps himalayensis",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1539/3180ea7537a7bae3d56ffc79180c7bd3-t2.jpeg"
+  },
+  {
+    "name": "Sup hnědý",
+    "latin_title": "Aegypius monachus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1540/2567f8d1f7309e1e6f6c1e852ecde987-t2.jpeg"
+  },
+  {
+    "name": "Sup chocholatý",
+    "latin_title": "Trigonoceps occipitalis",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-647/4c149a633b3a2d2c98b8aa7d11e4b51e-t2.jpeg"
+  },
+  {
+    "name": "Sup kapucín",
+    "latin_title": "Necrosyrtes monachus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1528/93482f7069aefa7246cea7684af535d5-t2.jpeg"
+  },
+  {
+    "name": "Sup mrchožravý",
+    "latin_title": "Neophron percnopterus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-648/8a2dedfdd778dab9c25e2ab80885f2bd-t2.jpeg"
+  },
+  {
+    "name": "Sup Rüppellův",
+    "latin_title": "Gyps rueppellii",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-649/5d78ade7cf6f2842c060cc546b088368-t2.jpeg"
+  },
+  {
+    "name": "Surikata",
+    "latin_title": "Suricata suricatta",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1485/271d4c6d7bb29f5109f1933a7a3dbc5b-t2.jpeg"
+  },
+  {
+    "name": "Tamarín pestrý",
+    "latin_title": "Saguinus bicolor",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1486/ede60c8c95ad3e2fc5473c6b85a9d58e-t2.jpeg"
+  },
+  {
+    "name": "Tapír čabrakový",
+    "latin_title": "Tapirus indicus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1521/b5fbcabf026a727b4ab6658099dd4034-t2.jpeg"
+  },
+  {
+    "name": "Tapír jihoamerický",
+    "latin_title": "Tapirus terrestris",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1489/7989b81a4606050e12df98bb44f7f527-t2.jpeg"
+  },
+  {
+    "name": "Tučňák Humboldtův",
+    "latin_title": "Spheniscus humboldti",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1524/c2999045951080a04a4a4e71d6fb1737-t2.jpeg"
+  },
+  {
+    "name": "Tygr ussurijský",
+    "latin_title": "Panthera tigris altaica",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1504/bfacf956e16e85760d8da67f5973c133-t2.jpeg"
+  },
+  {
+    "name": "Velbloud dvouhrbý",
+    "latin_title": "Camelus bactrianus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1518/4d6d541e6e7d9c07cb6e9536c2ec7ed9-t2.jpeg"
+  },
+  {
+    "name": "Veverka šedobřichá",
+    "latin_title": "Tamiops swinhoei",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1523/a096b9493b2d2bab30d0a82c060fc183-t2.jpeg"
+  },
+  {
+    "name": "Vikuňa",
+    "latin_title": "Vicugna vicugna",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1462/d146c6ed6c5c1df3de8e4b9d27b3c787-t2.jpeg"
+  },
+  {
+    "name": "Vlhovec žlutohřbetý",
+    "latin_title": "Cacicus cela",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1688/66952edb726ed08f6a5d6c26d16fdaef-t2.jpeg"
+  },
+  {
+    "name": "Vydra obrovská",
+    "latin_title": "Pteronura brasiliensis",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1460/85cd6bc06ee172d0938879ed4615eec8-t2.jpeg"
+  },
+  {
+    "name": "Zoborožec havraní",
+    "latin_title": "Bucorvus abyssinicus",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1529/ee5df0d8afd256d812a909ead66465c7-t2.jpeg"
+  },
+  {
+    "name": "Želva mohutná",
+    "latin_title": "Manouria emys",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1659/6989a9c4df9cf9a325021d16707efea9-t2.jpeg"
+  },
+  {
+    "name": "Žirafa Rothschildova",
+    "latin_title": "Giraffa camelopardalis rothschildi",
+    "img_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1487/0580c33de433853d2c641a06a7efed7c-t2.jpeg"
+  }
+]
+
 
 '''
 
