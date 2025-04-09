@@ -5,11 +5,11 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 function loadTranslations() {
-    $detailTemplateFile = 'datasets/detailTemplate.json';
-    if (!file_exists($detailTemplateFile)) {
+    $translationsFile = 'datasets/translations.json';
+    if (!file_exists($translationsFile)) {
         return [];
     }
-    $jsonContent = file_get_contents($detailTemplateFile);
+    $jsonContent = file_get_contents($translationsFile);
     return json_decode($jsonContent, true) ?: [];
 }
 
