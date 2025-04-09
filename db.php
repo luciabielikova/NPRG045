@@ -14,7 +14,7 @@ function loadTranslations() {
 }
 
 function getZooTitles($language){
-    $zooTitleFile =  'datasets/zoznamVsetkychZoo.json';
+    $zooTitleFile =  'datasets/allZoosList.json';
     $zooData = json_decode(file_get_contents($zooTitleFile), true);
     $zooTitles = array();
 
@@ -31,14 +31,14 @@ function getZooTitles($language){
 }
 function getAllZoos()
 {
-    $zooTitleFile =  'datasets/zoznamVsetkychZoo.json';
+    $zooTitleFile =  'datasets/allZoosList.json';
     $zooData = json_decode(file_get_contents($zooTitleFile), true);
 
 
 }
 
 function getZooById( $id) {
-    $zooTitleFile =  'datasets/zoznamVsetkychZoo.json';
+    $zooTitleFile =  'datasets/allZoosList.json';
     $data = json_decode(file_get_contents($zooTitleFile), true);
 
     foreach ($data as $zoo) {
