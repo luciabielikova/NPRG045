@@ -24,10 +24,6 @@ include "header.php";
     }
     $animalID = isset($_GET['animalID']) ? $_GET['animalID'] : '';
 
-    if ($animalID === ''){
-        require('errorPage.php');
-
-    }
     $animal = getCompleteAnimalDetail($animalID, $_SESSION['zooID'], $_SESSION['language']);
     echo createAnimalHTML($animal, $_SESSION['language']);
 
