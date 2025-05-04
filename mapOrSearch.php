@@ -22,8 +22,8 @@ $t = $translations[$_SESSION['language']];
 <div class="wrapper">
     <div class="content">
         <div class="container">
-            <a href="searchDatabase.php" class="button"><?=$t['lexicon']?></a>
-            <a href="searchMap.php" class="button"><?=$t['map']?></a>
+            <a href="searchAnimals.php" class="button"><?=$t['lexicon']?></a>
+            <a href="searchPaths.php" class="button"><?=$t['map']?></a>
         </div>
     </div>
 </div>
