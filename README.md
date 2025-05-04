@@ -1,12 +1,12 @@
-# ZooApp – PHP aplikácia
+# ZooApp
 
-## Požiadavky
-- PHP 8.1 alebo vyššie
+## Requirements
+- PHP 8.1 or higher
 - Composer
 
-## Inštalácia
+## Installation
 
-1. Klonuj repozitár alebo stiahni ZIP:
+1. Clone repository or download .ZIP:
 ```bash
 git clone https://github.com/luciabielikova/zooApp.git
 cd zooApp
