@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "translations": {
+      "cs": {
+        "name": "Savci",
+        "description": "Teplokrevní obratlovci rodící živá mláďata a kojící je mlékem."
+      },
+      "en": {
+        "name": "Mammals",
+        "description": "Warm-blooded vertebrates that give birth to live young and nurse them with milk."
+      }
+    }
+  },
+  {
+    "id": 2,
+    "translations": {
+      "cs": {
+        "name": "Ptáci",
+        "description": "Obratlovci s peřím, schopní letu (většinou)."
+      },
+      "en": {
+        "name": "Birds",
+        "description": "Vertebrates with feathers, most of which are capable of flight."
+      }
+    }
+  },
+  {
+    "id": 3,
+    "translations": {
+      "cs": {
+        "name": "Plazi",
+        "description": "Studenokrevní obratlovci jako hadi, ještěrky a želvy."
+      },
+      "en": {
+        "name": "Reptiles",
+        "description": "Cold-blooded vertebrates like snakes, lizards, and turtles."
+      }
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "Zoborožec havraní",
+  "description": "Zoborožec havraní je velký pták s červeným hrdelním vakem, známý svými pozemskými návyky.",
+  "spread_note": "Vyskytuje se ve východní Africe, včetně Etiopie a Somálska.",
+  "food": "Hmyz, malí savci a plazi.",
+  "food_note": "Hledá potravu na zemi, často ve dvojicích.",
+  "proportions": "Délka: 90-100 cm, hmotnost: 3-5 kg.",
+  "reproduction": "Klade 1-2 vejce do dutiny stromu, inkubace trvá asi 40 dní.",
+  "attractions": "Působivý v zoologických zahradách díky své velikosti a jedinečnému chování.",
+  "projects_note": "Zranitelný kvůli ztrátě prostředí; ochrana je aktivní.",
+  "breeding": "Chován v zajetí pro ochranu.",
+  "localities_title": "Východní Afrika"
+}

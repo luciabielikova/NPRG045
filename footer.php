@@ -15,9 +15,10 @@ $translation = getTranslation($selectedLang);
 <footer id="pageFooter">
     <nav>
         <ul>
-            <a href="searchDatabase.php"><?= $translation['search']  ?></a>
-            <a href="searchMap.php"><?= $translation['map']  ?></a>
             <a href="index.php"><?= $translation['change_zoo']  ?></a>
+            <a href="searchDatabase.php"><?= $translation['searchDB']  ?></a>
+            <a href="searchMap.php"><?= $translation['map']  ?></a>
+            <a href="formular.php"><?= $translation['add_zoo']  ?></a>
 
         </ul>
     </nav>

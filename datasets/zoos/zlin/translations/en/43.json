@@ -1,0 +1,13 @@
+{
+  "name": "Red Panda",
+  "description": "The Red Panda is a small mammal with reddish fur and a bushy tail, known for its arboreal habits.",
+  "spread_note": "Found in the eastern Himalayas and southern China.",
+  "food": "Bamboo, fruits, and insects.",
+  "food_note": "Spends much of its time in trees, foraging at dusk.",
+  "proportions": "Length: 50-65 cm, tail: 30-50 cm, weight: 3-6 kg.",
+  "reproduction": "Gestation about 4.5 months, litters of 1-4 cubs.",
+  "attractions": "Popular in zoos for their adorable appearance and playful behavior.",
+  "projects_note": "Endangered due to habitat loss; conservation programs are active.",
+  "breeding": "Commonly bred in captivity for conservation.",
+  "localities_title": "Eastern Himalayas, Southern China"
+}

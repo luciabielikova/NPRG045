@@ -1,0 +1,13 @@
+{
+  "name": "Želva mohutná",
+  "description": "Želva mohutná je velký plaz s tmavým krunýřem, známý svou býložravou stravou.",
+  "spread_note": "Vyskytuje se v jihovýchodní Asii, včetně Thajska a Myanmaru.",
+  "food": "Listy, ovoce a trávy.",
+  "food_note": "Hledá potravu pomalu ve stinných oblastech.",
+  "proportions": "Délka: 40-50 cm, hmotnost: 20-40 kg.",
+  "reproduction": "Klade 20-50 vajec do hnízda na zemi, inkubace trvá asi 60-90 dní.",
+  "attractions": "Pozoruhodná v zoologických zahradách díky své dlouhověkosti a klidné povaze.",
+  "projects_note": "Zranitelná kvůli ztrátě prostředí a obchodu; ochrana je aktivní.",
+  "breeding": "Chována v zajetí pro ochranu.",
+  "localities_title": "Jihovýchodní Asie"
+}

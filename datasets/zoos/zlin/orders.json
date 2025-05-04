@@ -1,0 +1,145 @@
+[
+  {
+    "id": 1,
+    "translations": {
+      "cs": {
+        "name": "Šelmy",
+        "description": "Masožraví savci, například tygři, hyeny nebo medvědi."
+      },
+      "en": {
+        "name": "Carnivores",
+        "description": "Meat-eating mammals such as tigers, hyenas, or bears."
+      }
+    }
+  },
+  {
+    "id": 2,
+    "translations": {
+      "cs": {
+        "name": "Primáti",
+        "description": "Savci jako opice a lidé, s vyspělým mozkem a obratnýma rukama."
+      },
+      "en": {
+        "name": "Primates",
+        "description": "Mammals such as monkeys and humans, with developed brains and dexterous hands."
+      }
+    }
+  },
+  {
+    "id": 3,
+    "translations": {
+      "cs": {
+        "name": "Hlodavci",
+        "description": "Savci s ostrými hlodáky, například veverky nebo kapybary."
+      },
+      "en": {
+        "name": "Rodents",
+        "description": "Mammals with sharp incisors, such as squirrels or capybaras."
+      }
+    }
+  },
+  {
+    "id": 4,
+    "translations": {
+      "cs": {
+        "name": "Letouni",
+        "description": "Ptáci schopní aktivního letu, jako papoušci nebo supi."
+      },
+      "en": {
+        "name": "Flying Birds",
+        "description": "Birds capable of active flight, such as parrots or vultures."
+      }
+    }
+  },
+  {
+    "id": 5,
+    "translations": {
+      "cs": {
+        "name": "Bezletí ptáci",
+        "description": "Ptáci, kteří ztratili schopnost letu, např. emu nebo tučňák."
+      },
+      "en": {
+        "name": "Flightless Birds",
+        "description": "Birds that have lost the ability to fly, e.g., emus or penguins."
+      }
+    }
+  },
+  {
+    "id": 6,
+    "translations": {
+      "cs": {
+        "name": "Sudokopytníci",
+        "description": "Savci s sudým počtem prstů, např. žirafy, tapíři, prasata."
+      },
+      "en": {
+        "name": "Even-toed Ungulates",
+        "description": "Mammals with an even number of toes, e.g., giraffes, tapirs, pigs."
+      }
+    }
+  },
+  {
+    "id": 7,
+    "translations": {
+      "cs": {
+        "name": "Chobotnatci",
+        "description": "Velcí savci s chobotem, např. sloni."
+      },
+      "en": {
+        "name": "Proboscidea",
+        "description": "Large mammals with trunks, such as elephants."
+      }
+    }
+  },
+  {
+    "id": 8,
+    "translations": {
+      "cs": {
+        "name": "Vačnatci",
+        "description": "Savci s vakem, např. klokani."
+      },
+      "en": {
+        "name": "Marsupials",
+        "description": "Pouched mammals, such as kangaroos."
+      }
+    }
+  },
+  {
+    "id": 9,
+    "translations": {
+      "cs": {
+        "name": "Hrabaví",
+        "description": "Ptáci jako kura domácí, čája nebo hokové."
+      },
+      "en": {
+        "name": "Galliformes",
+        "description": "Ground-dwelling birds like turkeys, screamers, or guans."
+      }
+    }
+  },
+  {
+    "id": 10,
+    "translations": {
+      "cs": {
+        "name": "Krokodýli",
+        "description": "Velcí vodní plazi, např. aligátoři a krokodýli."
+      },
+      "en": {
+        "name": "Crocodilians",
+        "description": "Large aquatic reptiles like alligators and crocodiles."
+      }
+    }
+  },
+  {
+    "id": 11,
+    "translations": {
+      "cs": {
+        "name": "Želvy",
+        "description": "Plazi s krunýřem, např. suchozemské a mořské želvy."
+      },
+      "en": {
+        "name": "Turtles",
+        "description": "Reptiles with shells, including tortoises and sea turtles."
+      }
+    }
+  }
+]

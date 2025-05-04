@@ -1,0 +1,13 @@
+{
+  "name": "Jaguar",
+  "description": "The Jaguar is a powerful big cat with a spotted coat, known for its strength and stealth.",
+  "spread_note": "Found from Mexico to Argentina.",
+  "food": "Mammals, reptiles, and birds.",
+  "food_note": "Ambush predator with a strong bite, capable of crushing skulls.",
+  "proportions": "Length: 1.1-1.9 m, height: 60-75 cm, weight: 50-120 kg.",
+  "reproduction": "Gestation about 100 days, litters of 1-4 cubs.",
+  "attractions": "Major attraction in zoos due to their beauty and power.",
+  "projects_note": "Threatened by habitat loss and poaching; conservation programs are active.",
+  "breeding": "Bred in captivity to support population recovery.",
+  "localities_title": "Mexico to Argentina"
+}

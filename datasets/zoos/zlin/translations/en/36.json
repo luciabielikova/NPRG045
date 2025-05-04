@@ -1,0 +1,13 @@
+{
+  "name": "Giant Anteater",
+  "description": "The Giant Anteater is a large mammal with a long snout and bushy tail, known for its insectivorous diet.",
+  "spread_note": "Found from Guatemala to Argentina.",
+  "food": "Ants and termites.",
+  "food_note": "Can consume up to 30,000 insects daily.",
+  "proportions": "Length: 1.8-2.2 m, tail: 60-90 cm, weight: 18-50 kg.",
+  "reproduction": "Gestation about 6 months, one infant born.",
+  "attractions": "Fascinating in zoos for their unique appearance and feeding behavior.",
+  "projects_note": "Vulnerable due to habitat loss; conservation programs are active.",
+  "breeding": "Bred in captivity for conservation.",
+  "localities_title": "Guatemala to Argentina"
+}

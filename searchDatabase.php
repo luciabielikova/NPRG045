@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Zoo</title>
     <script src="script.js"></script>
+    <link rel="icon" href="favicon-16x16.png" type="image/png">
 </head>
 
 <body>
@@ -14,6 +15,19 @@
 include "header.php";
 require_once "languages.php";
 include 'functions.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['filter_data'] = $_POST;
+    header("Location: " . strtok($_SERVER["REQUEST_URI"], '?'));
+    exit;
+}
+
+if (isset($_SESSION['filter_data'])) {
+    $_POST = $_SESSION['filter_data'];
+    unset($_SESSION['filter_data']);
+}
 
 ?>
 
@@ -23,9 +37,6 @@ include 'functions.php';
             <div id="searchTitle">
 
                 <?php
-                if (session_status() === PHP_SESSION_NONE) {
-                    session_start();
-                }
 
                 $translation = getTranslation($_SESSION['language']);
                 $lastSearched = (isset($_POST['title']) && $_POST['title'] !== "") ? 'value=' . $_POST['title'] : 'placeholder="' . htmlspecialchars($translation['by_title'], ENT_QUOTES, 'UTF-8') . '"';

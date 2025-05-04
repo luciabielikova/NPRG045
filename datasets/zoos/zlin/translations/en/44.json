@@ -1,0 +1,13 @@
+{
+  "name": "Australian Pelican",
+  "description": "The Australian Pelican is a large waterbird with a massive bill, known for its cooperative fishing.",
+  "spread_note": "Found across Australia, New Guinea, and Indonesia.",
+  "food": "Fish and crustaceans.",
+  "food_note": "Fishes in groups, using its pouch to scoop prey.",
+  "proportions": "Length: 1.6-1.9 m, wingspan: 2.3-2.5 m, weight: 4-13 kg.",
+  "reproduction": "Lays 1-3 eggs in a ground nest, incubation about 32-35 days.",
+  "attractions": "Common in zoos for their impressive size and feeding behavior.",
+  "projects_note": "Not endangered, but pollution is a concern.",
+  "breeding": "Bred in captivity for educational purposes.",
+  "localities_title": "Australia, New Guinea, Indonesia"
+}

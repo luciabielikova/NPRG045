@@ -1,0 +1,13 @@
+{
+  "name": "Emu hnědý",
+  "description": "Emu hnědý je velký, nelétavý pták, druhý největší po pštrosovi, původní v Austrálii.",
+  "spread_note": "Rozšířený po celé pevninské Austrálii.",
+  "food": "Rostliny, semena, ovoce a hmyz.",
+  "food_note": "Oportunističní, konzumují širokou škálu potravy.",
+  "proportions": "Výška: 1,5-2 m, hmotnost: 30-55 kg.",
+  "reproduction": "Klade 5-15 vajec do hnízda na zemi, samci inkubují asi 60 dní.",
+  "attractions": "Oblíbený v zoologických zahradách a farmách díky své velikosti a zvědavosti.",
+  "projects_note": "Není ohrožen; některé populace jsou chovány pro maso a olej.",
+  "breeding": "Široce chován v zajetí pro ochranu a komerční účely.",
+  "localities_title": "Pevninská Austrálie"
+}

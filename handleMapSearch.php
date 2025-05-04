@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-    if (!empty($from) && !empty($to) && getCoordsFromName($from) !== "" && getCoordsFromName($to) !== "") {
+    if (!empty($from) && !empty($to) && getFirstCoordinateFromName($from) !== "" && getFirstCoordinateFromName($to) !== "") {
         $shortestPath = get_path($from, $to, $mandatory, $forbidden);
 
         $response = array(

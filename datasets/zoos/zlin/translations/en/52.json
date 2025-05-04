@@ -1,0 +1,13 @@
+{
+  "name": "Black Vulture",
+  "description": "The Black Vulture is a large scavenger with dark feathers, known for its aggressive feeding.",
+  "spread_note": "Found in southern Europe and Central Asia.",
+  "food": "Carrion.",
+  "food_note": "Dominates feeding sites, often displacing other scavengers.",
+  "proportions": "Wingspan: 2.5-3 m, length: 100-110 cm, weight: 7-14 kg.",
+  "reproduction": "Lays 1 egg in a nest in trees or cliffs, incubation about 55 days.",
+  "attractions": "Notable in zoos for their commanding presence.",
+  "projects_note": "Vulnerable due to poisoning and habitat loss; conservation is active.",
+  "breeding": "Bred in captivity for reintroduction.",
+  "localities_title": "Southern Europe, Central Asia"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Panda červená",
+  "description": "Panda červená je malý savec s červenavou srstí a huňatým ocasem, známý svými stromovými návyky.",
+  "spread_note": "Vyskytuje se ve východních Himalájích a jižní Číně.",
+  "food": "Bambus, ovoce a hmyz.",
+  "food_note": "Tráví většinu času na stromech, hledá potravu za soumraku.",
+  "proportions": "Délka: 50-65 cm, ocas: 30-50 cm, hmotnost: 3-6 kg.",
+  "reproduction": "Březost trvá asi 4,5 měsíce, vrhy mají 1-4 mláďata.",
+  "attractions": "Oblíbená v zoologických zahradách díky svému roztomilému vzhledu a hravému chování.",
+  "projects_note": "Ohrožená kvůli ztrátě prostředí; ochrana je aktivní.",
+  "breeding": "Běžně chována v zajetí pro ochranu.",
+  "localities_title": "Východní Himaláje, Jižní Čína"
+}

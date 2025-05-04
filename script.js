@@ -48,49 +48,6 @@ function myStyle(feature) {
     };
 }
 
-function addInputField(containerId, className, inputName, labelText, fetchFunction, counter, maxCount, resultsContainer) {
-    if (counter < maxCount) {
-        counter++;
-        let container = document.getElementById(containerId);
-        let wrapper = document.createElement('div');
-        wrapper.className = 'label-input-wrapper';
-
-        let label = document.createElement('label');
-        let labelNode = document.createTextNode(labelText);
-        let input = document.createElement('input');
-        input.type = 'text';
-        input.placeholder = 'Vyhledat...';
-        input.className = className;
-        input.name = inputName;
-        label.appendChild(labelNode);
-        wrapper.appendChild(label);
-        wrapper.appendChild(input);
-        container.appendChild(wrapper);
-
-        input.addEventListener('input', (e) => {
-            const query = e.target.value;
-            if (query) {
-                fetchFunction(query, input);
-            } else {
-                resultsContainer.innerHTML = '';
-                resultsContainer.style.display = 'none';
-            }
-        });
-    } else {
-        alert('Vyberte nejvýše ' + maxCount + '.');
-    }
-}
-
-function addWanted() {
-    addInputField('wanted-container', 'wanted-input', 'wanted[]', 'Chci vidět:', fetchResultsWanted, wantedCount, 3, resultsWantedContainer);
-    wantedCount++;
-}
-
-function addNotWanted() {
-    addInputField('not-wanted-container', 'not-wanted-input', 'notWanted[]', 'Nechci vidět:', fetchResultsNotWanted, notWantedCount, 3, resultsNotWantedContainer);
-    notWantedCount++;
-}
-
 function fetchResults(query, container, input) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'listMatchingAnimals.php?query=' + encodeURIComponent(query), true);
@@ -140,16 +97,17 @@ function displayResultsTo(results) {
     displayResults(results, resultsToContainer, searchInputTo);
 }
 
-function fetchResultsWanted(query, input) {
-    fetchResults(query, resultsWantedContainer, input);
+function fetchResultsWanted(query, container, input) {
+    fetchResults(query, container, input);
 }
+
+function fetchResultsNotWanted(query, container, input) {
+    fetchResults(query, container, input);
+}
+
 
 function displayResultsWanted(results, input) {
     displayResults(results, resultsWantedContainer, input);
-}
-
-function fetchResultsNotWanted(query, input) {
-    fetchResults(query, resultsNotWantedContainer, input);
 }
 
 function displayResultsNotWanted(results, input) {
@@ -222,11 +180,9 @@ function drawPath(shortestPath) {
 
     if (shortestPath.length > 1) {
         const latlngs = shortestPath.map(point => [point.lat, point.lon, point.vertex]);
-        // Vytvorenie polyline pre cestu
         polyline = L.polyline(latlngs, {color: 'blue'}).addTo(map);
         map.fitBounds(polyline.getBounds());
 
-        // Pridanie značky pre začiatok
         startMarker = L.marker(latlngs[0], {title: latlngs[0][2]}).addTo(map)
             .bindPopup(latlngs[0][2]);
 
@@ -276,54 +232,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    const animalsPerPage = 40;
-    let currentPage = 1;
-    let animals = Array.from(document.querySelectorAll("#content > div > .animal"));
-    let totalPages = Math.ceil(animals.length / animalsPerPage);
-
-    function showPage(page) {
-        let start = (page - 1) * animalsPerPage;
-        let end = start + animalsPerPage;
-        animals.forEach((animal, index) => {
-            animal.style.display = (index >= start && index < end) ? "block" : "none";
-        });
-        document.getElementById("page-info").textContent = `Page ${page} of ${totalPages}`;
-    }
-
-    function createPagination() {
-        let paginationContainer = document.createElement("div");
-        paginationContainer.id = "pagination";
-        let prevButton = document.createElement("button");
-        prevButton.textContent = "⏪";
-        prevButton.onclick = function () {
-            if (currentPage > 1) {
-                currentPage--;
-                showPage(currentPage);
-            }
-        };
-
-        let nextButton = document.createElement("button");
-        nextButton.textContent = "⏩";
-        nextButton.onclick = function () {
-            if (currentPage < totalPages) {
-                currentPage++;
-                showPage(currentPage);
-            }
-        };
-
-        let pageInfo = document.createElement("span");
-        pageInfo.id = "page-info";
-
-        paginationContainer.appendChild(prevButton);
-        paginationContainer.appendChild(pageInfo);
-        paginationContainer.appendChild(nextButton);
-        document.getElementById("content").appendChild(paginationContainer);
-    }
-
-    if (animals.length > 0) {
-        createPagination();
-        showPage(currentPage);
-    }
-});

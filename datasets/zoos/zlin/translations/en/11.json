@@ -1,0 +1,13 @@
+{
+  "name": "Emu",
+  "description": "The Emu is a large, flightless bird, second only to the ostrich in size, native to Australia.",
+  "spread_note": "Widespread across mainland Australia.",
+  "food": "Plants, seeds, fruits, and insects.",
+  "food_note": "Opportunistic feeders, consuming a wide variety of foods.",
+  "proportions": "Height: 1.5-2 m, weight: 30-55 kg.",
+  "reproduction": "Lays 5-15 eggs in a ground nest, males incubate for about 60 days.",
+  "attractions": "Popular in zoos and farms for their size and curious nature.",
+  "projects_note": "Not endangered; some populations are farmed for meat and oil.",
+  "breeding": "Widely bred in captivity for conservation and commercial purposes.",
+  "localities_title": "Mainland Australia"
+}

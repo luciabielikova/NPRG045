@@ -1,0 +1,13 @@
+{
+  "name": "Rüppell's Vulture",
+  "description": "The Rüppell's Vulture is a high-flying scavenger, known for soaring at extreme altitudes.",
+  "spread_note": "Found in East and West Africa.",
+  "food": "Carrion.",
+  "food_note": "Can fly up to 11 km high, spotting carcasses from afar.",
+  "proportions": "Wingspan: 2.3-2.6 m, length: 85-100 cm, weight: 6-9 kg.",
+  "reproduction": "Lays 1 egg in a cliff nest, incubation about 55 days.",
+  "attractions": "Rare in zoos due to specific needs, but notable for their flight.",
+  "projects_note": "Endangered due to poisoning; conservation is critical.",
+  "breeding": "Bred in captivity for reintroduction.",
+  "localities_title": "East and West Africa"
+}

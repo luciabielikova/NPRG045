@@ -1,0 +1,13 @@
+{
+  "name": "Medvěd pyskatý",
+  "description": "Medvěd pyskatý je středně velký medvěd s huňatou srstí, známý svým dlouhým čumákem a stravou bohatou na hmyz.",
+  "spread_note": "Vyskytuje se v Indii, na Srí Lance a v Nepálu.",
+  "food": "Termiti, ovoce a med.",
+  "food_note": "Používá rty k vysávání hmyzu jako vysavač.",
+  "proportions": "Délka: 1,4-1,9 m, výška: 60-90 cm, hmotnost: 80-145 kg.",
+  "reproduction": "Březost trvá asi 7 měsíců, vrhy mají 1-3 mláďata.",
+  "attractions": "Jedinečný v zoologických zahradách díky svému způsobu krmení.",
+  "projects_note": "Zranitelný kvůli ztrátě prostředí; ochrana je aktivní.",
+  "breeding": "Chován v zajetí pro ochranu a vystavování.",
+  "localities_title": "Indie, Srí Lanka, Nepál"
+}

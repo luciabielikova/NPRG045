@@ -1,0 +1,1295 @@
+[
+  {
+    "id": 1,
+    "latin_name": "Alligator mississippiensis",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1531/df290bc36916a88c398cb684f1748640-t1.jpeg",
+    "class_id": 3,
+    "order_id": 10,
+    "habitats": [
+      3
+    ],
+    "continents": [
+      4
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "American Alligator",
+      "cs": "Aligátor americký"
+    }
+  },
+  {
+    "id": 2,
+    "latin_name": "Ara macao",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1490/537ac3ba0d2aa54a8cbacf6679a0e3bd-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Scarlet Macaw",
+      "cs": "Ara arakanga"
+    }
+  },
+  {
+    "id": 3,
+    "latin_name": "Anodorhynchus hyacinthinus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1511/acd026f4ab9175a07e54e661e408e9bc-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Hyacinth Macaw",
+      "cs": "Ara hyacintový"
+    }
+  },
+  {
+    "id": 4,
+    "latin_name": "Tragelaphus eurycerus isaaci",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1459/9204ed8c9e241963cd4afc838ed6ed81-t1.jpeg",
+    "class_id": 1,
+    "order_id": 6,
+    "habitats": [
+      1,
+      7
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Bongo",
+      "cs": "Bongo horský"
+    }
+  },
+  {
+    "id": 5,
+    "latin_name": "Chauna chavaria",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1583/dfd0fe19446f313586c9b87bd6e91059-t1.jpeg",
+    "class_id": 2,
+    "order_id": 9,
+    "habitats": [
+      3
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Northern Screamer",
+      "cs": "Čája bělolící"
+    }
+  },
+  {
+    "id": 6,
+    "latin_name": "Ephippiorhynchus senegalensis",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1534/798eeb4188bf8b004b0eb0dc3d04587b-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      2,
+      3
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Saddle-billed Stork",
+      "cs": "Čáp sedlatý"
+    }
+  },
+  {
+    "id": 7,
+    "latin_name": "Canis dingo hallstromi",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1509/45b290deaa526bc660baaa5022092014-t1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      4,
+      5,
+      6
+    ],
+    "continents": [
+      6
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "New Guinea Singing Dog",
+      "cs": "Dingo novoguinejský"
+    }
+  },
+  {
+    "id": 8,
+    "latin_name": "Buceros bicornis",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1508/912dcd431c3e85af1322eb0672f6b310-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Great Hornbill",
+      "cs": "Dvojzoborožec indický"
+    }
+  },
+  {
+    "id": 9,
+    "latin_name": "Buceros rhinoceros",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1515/229575d1b8df9c4304f48e0f3bd9491d-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Rhinoceros Hornbill",
+      "cs": "Dvojzoborožec nosorožčí"
+    }
+  },
+  {
+    "id": 10,
+    "latin_name": "Theropithecus gelada",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1514/7b2179277fa49a1763ae6fedf643984b-t1.jpeg",
+    "class_id": 1,
+    "order_id": 2,
+    "habitats": [
+      5,
+      7
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Gelada Baboon",
+      "cs": "Dželada hnědá"
+    }
+  },
+  {
+    "id": 11,
+    "latin_name": "Dromaius novaehollandiae",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1516/b7efd021fddfe7a90fab61c21d125e50-t1.jpeg",
+    "class_id": 2,
+    "order_id": 5,
+    "habitats": [
+      5
+    ],
+    "continents": [
+      6
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Emu",
+      "cs": "Emu hnědý"
+    }
+  },
+  {
+    "id": 12,
+    "latin_name": "Gymnorhina tibicen",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-654/680184c4a0366ab6766a7ad2f9892ed6-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      4,
+      5
+    ],
+    "continents": [
+      6
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Australian Magpie",
+      "cs": "Flétnák australský"
+    }
+  },
+  {
+    "id": 13,
+    "latin_name": "Bos gaurus gaurus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1461/7a7bcb9394b37f359304fbde48d5943c-t1.jpeg",
+    "class_id": 1,
+    "order_id": 6,
+    "habitats": [
+      4,
+      5
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Indian Gaur",
+      "cs": "Gaur indický"
+    }
+  },
+  {
+    "id": 14,
+    "latin_name": "Hylobates moloch",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1494/03d0991e103f244d5631cca2f333ad42-t1.jpeg",
+    "class_id": 1,
+    "order_id": 2,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Silver Gibbon",
+      "cs": "Gibon stříbrný"
+    }
+  },
+  {
+    "id": 15,
+    "latin_name": "Crax alector",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1658/1af87cf1e1eeafe705fa0910411e60d0-t1.jpeg",
+    "class_id": 2,
+    "order_id": 9,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Black Curassow",
+      "cs": "Hoko pospolitý"
+    }
+  },
+  {
+    "id": 16,
+    "latin_name": "Crocuta crocuta",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1491/80307262424f6b75318596c832773573-t1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      2,
+      5
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Spotted Hyena",
+      "cs": "Hyena skvrnitá"
+    }
+  },
+  {
+    "id": 17,
+    "latin_name": "Proteles cristata",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1968/7733889390ad992dd38854e8a9778585-t1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      2,
+      5
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Aardwolf",
+      "cs": "Hyenka hřivnatá"
+    }
+  },
+  {
+    "id": 18,
+    "latin_name": "Lagothrix lagothricha",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1465/f5263b4fc22a60da1521385a527f8457-t1.jpeg",
+    "class_id": 1,
+    "order_id": 2,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Common Woolly Monkey",
+      "cs": "Chápan vlnatý"
+    }
+  },
+  {
+    "id": 19,
+    "latin_name": "Pithecia pithecia",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1502/72ae85b30731ec30f988d67dc95d66e2-t1.jpeg",
+    "class_id": 1,
+    "order_id": 2,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Guianan Saki",
+      "cs": "Chvostan bělolící"
+    }
+  },
+  {
+    "id": 20,
+    "latin_name": "Panthera onca",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1706/3093a1ee72c44c1619f2a58b8d17517f-t1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      1,
+      3
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Jaguar",
+      "cs": "Jaguár americký"
+    }
+  },
+  {
+    "id": 21,
+    "latin_name": "Balearica regulorum gibbericeps",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1499/bced492c20d399036ffeac28e1f1f796-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      2,
+      3
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Grey Crowned-crane",
+      "cs": "Jeřáb královský"
+    }
+  },
+  {
+    "id": 22,
+    "latin_name": "Bugeranus carunculatus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1498/1fc77524183ed7399552f fragments due to habitatt1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      3
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": null,
+    "names": {
+      "en": null,
+      "cs": "Jeřáb laločnatý"
+    }
+  },
+  {
+    "id": 23,
+    "latin_name": "Hydrochaeris hydrochaeris",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1464/10e30b30e6b5baf859c6f1c6ed7d59ed-t1.jpeg",
+    "class_id": 1,
+    "order_id": 3,
+    "habitats": [
+      3,
+      4
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Capybara",
+      "cs": "Kapybara"
+    }
+  },
+  {
+    "id": 24,
+    "latin_name": "Casuarius casuarius",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1510/d7868efa16731558155cc25ee00f5e2b-t1.jpeg",
+    "class_id": 2,
+    "order_id": 5,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      6
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Southern Cassowary",
+      "cs": "Kasuár přilbový"
+    }
+  },
+  {
+    "id": 25,
+    "latin_name": "Apteryx mantelli",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1607/d2c3dc346f9fd871c6ad13ec850f2d6b-t1.jpeg",
+    "class_id": 2,
+    "order_id": 5,
+    "habitats": [
+      4
+    ],
+    "continents": [
+      6
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "North Island Kiwi",
+      "cs": "Kivi hnědý"
+    }
+  },
+  {
+    "id": 26,
+    "latin_name": "Macropus rufogriseus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1507/52efdcb0d963fb6ae32b7e5168562fd6-t1.jpeg",
+    "class_id": 1,
+    "order_id": 8,
+    "habitats": [
+      4,
+      5
+    ],
+    "continents": [
+      6
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Red-necked Wallaby",
+      "cs": "Klokan rudokrký"
+    }
+  },
+  {
+    "id": 27,
+    "latin_name": "Perissocephalus tricolor",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1536/d243ca859d4e5a15d9147a60b7ee2ae5-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Capuchin Bird",
+      "cs": "Kotinga tříbarvá"
+    }
+  },
+  {
+    "id": 28,
+    "latin_name": "Saimiri sciureus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1493/fb9ad13fcd68c416be2293dd1f25340a-t1.jpeg",
+    "class_id": 1,
+    "order_id": 2,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Common Squirrel Monkey",
+      "cs": "Kotul veverovitý"
+    }
+  },
+  {
+    "id": 29,
+    "latin_name": "Tragelaphus strepsiceros",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1519/2cecfbebf9233533333a9f093c89bddd-t1.jpeg",
+    "class_id": 1,
+    "order_id": 6,
+    "habitats": [
+      2
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Greater Kudu",
+      "cs": "Kudu velký"
+    }
+  },
+  {
+    "id": 30,
+    "latin_name": "Otaria byronia",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1660/e2c8dc4ef3dee97a7a346bb245016eec-tmaneuverabt1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      8,
+      9
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": null,
+    "names": {
+      "en": null,
+      "cs": "Lachtan hřivnatý"
+    }
+  },
+  {
+    "id": 31,
+    "latin_name": "Lemur catta",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1497/ac4da6233f1c567faae8c09c93ada06d-t1.jpeg",
+    "class_id": 1,
+    "order_id": 2,
+    "habitats": [
+      1,
+      4
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Ring-tailed Lemur",
+      "cs": "Lemur kata"
+    }
+  },
+  {
+    "id": 32,
+    "latin_name": "Choloepus didactylus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1506/87d80778f5615ad2aa4b8cba3e72fc3d-t1.jpeg",
+    "class_id": 1,
+    "order_id": 2,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Southern Two-toed Sloth",
+      "cs": "Lenochod dvouprstý"
+    }
+  },
+  {
+    "id": 33,
+    "latin_name": "Panthera leo bleyenberghi",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1503/be1571a1b5de8b2951c610ea8dd8a5c2-t1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      2
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Katanga Lion",
+      "cs": "Lev konžský"
+    }
+  },
+  {
+    "id": 34,
+    "latin_name": "Melursus ursinus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1501/cfa99536deea7539a15057d7478dd0af-t1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      4,
+      7
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Sloth Bear",
+      "cs": "Medvěd pyskatý"
+    }
+  },
+  {
+    "id": 35,
+    "latin_name": "Tamandua tetradactyla",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1500/4f93585e48c850a06bcf541dae6ac041-t1.jpeg",
+    "class_id": 1,
+    "order_id": 2,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Southern Tamandua",
+      "cs": "Mravenečník čtyřprstý"
+    }
+  },
+  {
+    "id": 36,
+    "latin_name": "Myrmecophaga tridactyla",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1677/4f201f3637846c5960c8de7c4046147d-t1.jpeg",
+    "class_id": 1,
+    "order_id": 2,
+    "habitats": [
+      1,
+      5
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Giant Anteater",
+      "cs": "Mravenečník velký"
+    }
+  },
+  {
+    "id": 37,
+    "latin_name": "Pterocnemia pennata pennata",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1537/bce5c8475d26ee10fb30bf1491f52902-t1.jpeg",
+    "class_id": 2,
+    "order_id": 5,
+    "habitats": [
+      5
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Lesser Rhea",
+      "cs": "Nandu Darwinův"
+    }
+  },
+  {
+    "id": 38,
+    "latin_name": "Nestor notabilis",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1533/833fe1978304462d5d25c3ec92187d71-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      4,
+      7
+    ],
+    "continents": [
+      6
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Nestor Kea",
+      "cs": "Nestor kea"
+    }
+  },
+  {
+    "id": 39,
+    "latin_name": "Mycteria cinerea",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1661/fcf937b4b94897c9acf84fb11aec51d0-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      3
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Milky Stork",
+      "cs": "Nesyt bílý"
+    }
+  },
+  {
+    "id": 40,
+    "latin_name": "Mycteria leucocephala",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1541/cb9efb6a4746daacc177e3778967ee18-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      3
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Painted Stork",
+      "cs": "Nesyt indomalajský"
+    }
+  },
+  {
+    "id": 41,
+    "latin_name": "Ceratotherium simum simum",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1525/80bee7370665e8a8bfb8095c16c34adb-t1.jpeg",
+    "class_id": 1,
+    "order_id": 6,
+    "habitats": [
+      2,
+      5
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Southern White Rhinoceros",
+      "cs": "Nosorožec tuponosý jižní"
+    }
+  },
+  {
+    "id": 42,
+    "latin_name": "Stephanoaetus coronatus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1505/4adaac1a114bef5a76e88554f24df4c6-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      2,
+      4
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Crowned Eagle",
+      "cs": "Orel korunkatý"
+    }
+  },
+  {
+    "id": 43,
+    "latin_name": "Ailurus fulgens",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1463/0213cd9b4f89f7a6abdf7d7b88ad4b18-t1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      4,
+      7
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Red Panda",
+      "cs": "Panda červená"
+    }
+  },
+  {
+    "id": 44,
+    "latin_name": "Pelecanus conspicillatus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1520/0a6e5999e11dfed7c5707b8e43496e8c-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      3,
+      8
+    ],
+    "continents": [
+      6
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Australian Pelican",
+      "cs": "Pelikán australský"
+    }
+  },
+  {
+    "id": 45,
+    "latin_name": "Asarcornis scutulata",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1512/baf06cf5a73c951f22ff17d01c5fabae-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      3
+    ],
+    "continents": [
+      4
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "White-winged Duck",
+      "cs": "Pižmovka bělokřídlá"
+    }
+  },
+  {
+    "id": 46,
+    "latin_name": "Phoeniconaias minor",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1513/407298b1d134fc49f6af53c0cf644718-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      3
+    ],
+    "continents": [
+      1,
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Lesser Flamingo",
+      "cs": "Plameňák malý"
+    }
+  },
+  {
+    "id": 47,
+    "latin_name": "Phoenicopterus roseus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1522/402bc344b16ec04f2711970f04b02fdf-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      3
+    ],
+    "continents": [
+      1,
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Greater Flamingo",
+      "cs": "Plameňák růžový"
+    }
+  },
+  {
+    "id": 48,
+    "latin_name": "Rhinoptera jayakari",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-490/14cd031b762db25ed890f9c0cd846a33-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      9
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Oman Cownose Ray",
+      "cs": "Siba ománská"
+    }
+  },
+  {
+    "id": 49,
+    "latin_name": "Loxodonta africana",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1466/66d56e8d82e596fbc9d9dd77c17761d2-t1.jpeg",
+    "class_id": 1,
+    "order_id": 7,
+    "habitats": [
+      2,
+      3
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "African Elephant",
+      "cs": "Slon africký"
+    }
+  },
+  {
+    "id": 50,
+    "latin_name": "Gyps fulvus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1538/bdabf5774d7813dbb0980e099b5d57a7-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      2,
+      7
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Griffon Vulture",
+      "cs": "Sup bělohlavý"
+    }
+  },
+  {
+    "id": 51,
+    "latin_name": "Gyps himalayensis",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1539/3180ea7537a7bae3d56ffc79180c7bd3-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      7
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Himalayan Griffon",
+      "cs": "Sup himálajský"
+    }
+  },
+  {
+    "id": 52,
+    "latin_name": "Aegypius monachus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1540/2567f8d1f7309e1e6f6c1e852ecde987-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      2,
+      7
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Black Vulture",
+      "cs": "Sup hnědý"
+    }
+  },
+  {
+    "id": 53,
+    "latin_name": "Trigonoceps occipitalis",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-647/4c149a633b3a2d2c98b8aa7d11e4b51e-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      2
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "White-headed Vulture",
+      "cs": "Sup chocholatý"
+    }
+  },
+  {
+    "id": 54,
+    "latin_name": "Necrosyrtes monachus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1528/93482f7069aefa7246cea7684af535d5-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      2
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Hooded Vulture",
+      "cs": "Sup kapucín"
+    }
+  },
+  {
+    "id": 55,
+    "latin_name": "Neophron percnopterus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-648/8a2dedfdd778dab9c25e2ab80885f2bd-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      2,
+      7
+    ],
+    "continents": [
+      1,
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Egyptian Vulture",
+      "cs": "Sup mrchožravý"
+    }
+  },
+  {
+    "id": 56,
+    "latin_name": "Gyps rueppellii",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-649/5d78ade7cf6f2842c060cc546b088368-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      2,
+      7
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Rüppell's Vulture",
+      "cs": "Sup Rüppellův"
+    }
+  },
+  {
+    "id": 57,
+    "latin_name": "Suricata suricatta",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1485/271d4c6d7bb29f5109f1933a7a3dbc5b-t1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      6
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Meerkat",
+      "cs": "Surikata"
+    }
+  },
+  {
+    "id": 58,
+    "latin_name": "Saguinus bicolor",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1486/ede60c8c95ad3e2fc5473c6b85a9d58e-t1.jpeg",
+    "class_id": 1,
+    "order_id": 2,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Brazilian Bare-faced Tamarin",
+      "cs": "Tamarín pestrý"
+    }
+  },
+  {
+    "id": 59,
+    "latin_name": "Tapirus indicus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1521/b5fbcabf026a727b4ab6658099dd4034-t1.jpeg",
+    "class_id": 1,
+    "order_id": 6,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Malayan Tapir",
+      "cs": "Tapír čabrakový"
+    }
+  },
+  {
+    "id": 60,
+    "latin_name": "Tapirus terrestris",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1489/7989b81a4606050e12df98bb44f7f527-t1.jpeg",
+    "class_id": 1,
+    "order_id": 6,
+    "habitats": [
+      1,
+      3
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "South American Tapir",
+      "cs": "Tapír jihoamerický"
+    }
+  },
+  {
+    "id": 61,
+    "latin_name": "Spheniscus humboldti",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1524/c2999045951080a04a4a4e71d6fb1737-t1.jpeg",
+    "class_id": 2,
+    "order_id": 5,
+    "habitats": [
+      8
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Humboldt Penguin",
+      "cs": "Tučňák Humboldtův"
+    }
+  },
+  {
+    "id": 62,
+    "latin_name": "Panthera tigris altaica",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1504/bfacf956e16e85760d8da67f5973c133-t1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      4
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Siberian Tiger",
+      "cs": "Tygr ussurijský"
+    }
+  },
+  {
+    "id": 63,
+    "latin_name": "Camelus bactrianus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1518/4d6d541e6e7d9c07cb6e9536c2ec7ed9-t1.jpeg",
+    "class_id": 1,
+    "order_id": 6,
+    "habitats": [
+      6
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Bactrian Camel",
+      "cs": "Velbloud dvouhrbý"
+    }
+  },
+  {
+    "id": 64,
+    "latin_name": "Tamiops swinhoei",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1523/a096b9493b2d2bab30d0a82c060fc183-t1.jpeg",
+    "class_id": 1,
+    "order_id": 3,
+    "habitats": [
+      4
+    ],
+    "continents": [
+      4
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Swinhoe's Striped Squirrel",
+      "cs": "Veverka šedobřichá"
+    }
+  },
+  {
+    "id": 65,
+    "latin_name": "Vicugna vicugna",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1462/d146c6ed6c5c1df3de8e4b9d27b3c787-t1.jpeg",
+    "class_id": 1,
+    "order_id": 6,
+    "habitats": [
+      5,
+      7
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Vicugna",
+      "cs": "Vikuňa"
+    }
+  },
+  {
+    "id": 66,
+    "latin_name": "Cacicus cela",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1688/66952edb726ed08f6a5d6c26d16fdaef-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      4
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Yellow-rumped Cacique",
+      "cs": "Vlhovec žlutohřbetý"
+    }
+  },
+  {
+    "id": 67,
+    "latin_name": "Pteronura brasiliensis",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1460/85cd6bc06ee172d0938879ed4615eec8-t1.jpeg",
+    "class_id": 1,
+    "order_id": 1,
+    "habitats": [
+      3
+    ],
+    "continents": [
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Giant Otter",
+      "cs": "Vydra obrovská"
+    }
+  },
+  {
+    "id": 68,
+    "latin_name": "Bucorvus abyssinicus",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1529/ee5df0d8afd256d812a909ead66465c7-t1.jpeg",
+    "class_id": 2,
+    "order_id": 4,
+    "habitats": [
+      1
+    ],
+    "continents": [
+      2
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Abyssinian Ground Hornbill",
+      "cs": "Zoborožec havraní"
+    }
+  },
+  {
+    "id": 69,
+    "latin_name": "Manouria emys",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1659/6989a9c4df9cf9a325021d16707efea9-t1.jpeg",
+    "class_id": 3,
+    "order_id": 11,
+    "habitats": [
+      9
+    ],
+    "continents": [
+      1,
+      5
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Burmese Brown Tortoise",
+      "cs": "Želva mohutná"
+    }
+  },
+  {
+    "id": 70,
+    "latin_name": "Giraffa camelopardalis rothschildi",
+    "image_src": "https://www.zoozlin.eu/media/photos/animal/item/gallery/images-1487/0580c33de433853d2c641a06a7efed7c-t1.jpeg",
+    "class_id": 1,
+    "order_id": 6,
+    "habitats": [
+      2
+    ],
+    "continents": [
+      1
+    ],
+    "localities_url": "",
+    "names": {
+      "en": "Rothschild's Giraffe",
+      "cs": "Žirafa Rothschildova"
+    }
+  }
+]

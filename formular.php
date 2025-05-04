@@ -1,3 +1,154 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
+    <title>Zoo</title>
+    <script src="script.js"></script>
+    <link rel="icon" href="favicon-16x16.png" type="image/png">
+</head>
+<body>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include "header.php";
+
+require_once 'languages.php';
+
+$selectedLang = $_SESSION['language'];
+
+$languages = getLanguages();
+
+$translation = getTranslation($selectedLang);
+
+?>
+
+<form id="zoo-upload-form" class="zoo-form" action="" method="post" enctype="multipart/form-data">
+    <label for="contact_person"><?= $translation['contact']?> (e-mail):</label>
+    <input type="email" id="contact_person" name="contact_person" required><br><br>
+
+    <div id="name-fields">
+        <label><?= $translation['name_label']?></label><br>
+        <div class="translation-group">
+            <select name="name_lang[]">
+                <option value="cs">Čeština</option>
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+            </select>
+            <input type="text" name="name_text[]" placeholder="<?= $translation['placeholder_name']?>">
+        </div>
+    </div>
+    <div class="button-wrapper2">
+        <button type="button"  id="ff" onclick="addNameField()"><?= $translation['add_name']?></button>
+    </div>
+
+    <div id="desc-fields">
+        <label><?= $translation['desc_label']?></label><br>
+        <div class="translation-group">
+            <select name="desc_lang[]">
+                <option value="cs">Čeština</option>
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+            </select>
+            <textarea name="desc_text[]" placeholder="<?= $translation['placeholder_desc']?>"></textarea>
+        </div>
+    </div>
+    <div class="button-wrapper2">
+        <button type="button" id="ff" onclick="addDescField()"><?= $translation['add_description']?></button>
+    </div>
+
+    <label for="country"><?= $translation['country']?></label>
+        <input type="text" id="country" name="location[country]" required><br>
+        <label for="city"><?= $translation['city']?></label>
+        <input type="text" id="city" name="location[city]" required><br>
+    <label for="zoo_name"><?= $translation['zooTitle']?></label>
+    <input type="text" id="zoo_name" name="zoo_name" required><br><br>
+
+
+    <label for="data_format"><?= $translation['dataFormat']?></label>
+    <select id="data_format" name="data_format">
+        <option value="csv">CSV</option>
+        <option value="json">JSON</option>
+    </select><br><br>
+
+    <label for="continents"><?= $translation['addFile']?> continents (CSV/JSON):</label>
+    <input type="file" id="continents" name="continents" accept=".csv,.json" required>
+
+    <br><br>
+
+    <label for="habitats"><?= $translation['addFile']?> habitats (CSV/JSON):</label>
+    <input type="file" id="habitats" name="habitats" accept=".csv,.json" required>
+    <br><br>
+
+    <label for="classes"><?= $translation['addFile']?> classes (CSV/JSON):</label>
+    <input type="file" id="classes" name="classes" accept=".csv,.json" required>
+
+    <br><br>
+
+    <label for="orders"><?= $translation['addFile']?> orders (CSV/JSON):</label>
+    <input type="file" id="orders" name="orders" accept=".csv,.json" required>
+
+    <br><br>
+
+    <label for="animals"><?= $translation['addFile']?> animals (CSV/JSON):</label>
+    <input type="file" id="animals" name="animals" accept=".csv,.json" required>
+
+    <br><br>
+    <label for="default_language"><?= $translation['preferredLanguage']?></label>
+    <select id="default_language" name="default_language" required>
+        <option value="en">English</option>
+        <option value="cs">Čeština</option>
+        <option value="de">Deutsch</option>
+    </select><br><br>
+
+    <div class="button-wrapper2">
+        <button type="submit" id="ff"><?= $translation['submit']?></button>
+    </div>
+
+    <p style="text-align: center; margin-top: 30px; font-size: 0.95em; color: #555;">
+        <?= $translation['contactInfo']?> <a href="mailto:lucia.bielikova836@student.cuni.cz">lucia.bielikova836@student.cuni.cz</a>.
+    </p>
+
+</form>
+<?php
+include 'footer.php';
+?>
+</body>
+</html>
+
+
+<script>
+
+    function addNameField() {
+        const div = document.createElement('div');
+        div.className = 'translation-group';
+        div.innerHTML = `
+        <select name="name_lang[]">
+            <option value="en">English</option>
+            <option value="cs">Čeština</option>
+            <option value="de">Deutsch</option>
+        </select>
+        <input type="text" name="name_text[]" placeholder="<?= $translation['placeholder_name']?>">
+    `;
+        document.getElementById('name-fields').appendChild(div);
+    }
+
+    function addDescField() {
+        const div = document.createElement('div');
+        div.className = 'translation-group';
+        div.innerHTML = `
+        <select name="desc_lang[]">
+            <option value="en">English</option>
+            <option value="cs">Čeština</option>
+            <option value="de">Deutsch</option>
+        </select>
+        <textarea name="desc_text[]" placeholder="<?= $translation['placeholder_desc']?>"></textarea>
+    `;
+        document.getElementById('desc-fields').appendChild(div);
+    }
+</script>
 <?php
 
 function validate_csv($filepath, $expected_headers) {
@@ -110,7 +261,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $valid = false;
 
             if ($data_format === "csv") {
-               $valid = isset($structure["csv"]) ? validate_csv($file_tmp, $structure["csv"]) : false;
+                $valid = isset($structure["csv"]) ? validate_csv($file_tmp, $structure["csv"]) : false;
             } elseif ($data_format === "json") {
                 if (!empty($structure["json_translated"])) {
                     $extra_keys = $structure["required_keys"] ?? [];
@@ -138,117 +289,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload dát ZOO</title>
-    <style>
-        .tooltip {
-            display: inline-block;
-            position: relative;
-            cursor: pointer;
-        }
-        .tooltip .tooltip-text {
-            visibility: hidden;
-            width: 250px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .tooltip:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-        }
-    </style>
-</head>
-<body>
-<form action="" method="post" enctype="multipart/form-data">
-    <label for="contact_person">Kontaktná osoba (e-mail):</label>
-    <input type="email" id="contact_person" name="contact_person" required><br><br>
-
-    <!-- Názvy ZOO -->
-        <legend>Názov ZOO</legend>
-        <label>CS:</label> <input type="text" name="name[cs]" required><br>
-        <label>EN:</label> <input type="text" name="name[en]" required><br>
-        <label>DE:</label> <input type="text" name="name[de]" required><br>
-
-        <legend>Popis ZOO</legend>
-        <label>CS:</label> <textarea name="description[cs]"></textarea><br>
-        <label>EN:</label> <textarea name="description[en]"></textarea><br>
-        <label>DE:</label> <textarea name="description[de]"></textarea><br>
-
-        <label for="country">Krajina:</label>
-        <input type="text" id="country" name="location[country]" required><br>
-        <label for="city">Mesto:</label>
-        <input type="text" id="city" name="location[city]" required><br>
-    <label for="zoo_name">Názov ZOO:</label>
-    <input type="text" id="zoo_name" name="zoo_name" required><br><br>
-
-
-    <label for="data_format">Formát dát:</label>
-    <select id="data_format" name="data_format">
-        <option value="csv">CSV</option>
-        <option value="json">JSON</option>
-    </select><br><br>
-
-    <label for="continents">Nahrať súbor continents (CSV/JSON):</label>
-    <input type="file" id="continents" name="continents" accept=".csv,.json" required>
-    <span class="tooltip">❓
-            <span class="tooltip-text">Pre CSV: id,lang,name,description\nPre JSON: [{"id":1, "lang":"sk", "name":"Európa", "description":"Kontinent"}]</span>
-        </span>
-    <br><br>
-
-    <label for="habitats">Nahrať súbor habitats (CSV/JSON):</label>
-    <input type="file" id="habitats" name="habitats" accept=".csv,.json" required>
-    <span class="tooltip">❓
-            <span class="tooltip-text">Pre CSV: id,habitat_id,name,description\nPre JSON: [{"id":1, "habitat_id":1, "name":"Les", "description":"Zelený habitat"}]</span>
-        </span>
-    <br><br>
-
-    <label for="classes">Nahrať súbor classes (CSV/JSON):</label>
-    <input type="file" id="classes" name="classes" accept=".csv,.json" required>
-    <span class="tooltip">❓
-            <span class="tooltip-text">Pre CSV: id,class_id,name,description\nPre JSON: [{"id":1, "class_id":1, "name":"Les", "description":"Zelený habitat"}]</span>
-        </span>
-    <br><br>
-
-    <label for="orders">Nahrať súbor orders (CSV/JSON):</label>
-    <input type="file" id="orders" name="orders" accept=".csv,.json" required>
-    <span class="tooltip">❓
-            <span class="tooltip-text">Pre CSV: id,order_id,name,description\nPre JSON: [{"id":1, "order_id":1, "name":"Les", "description":"Zelený order"}]</span>
-        </span>
-    <br><br>
-
-    <label for="animals">Nahrať súbor animals (CSV/JSON):</label>
-    <input type="file" id="animals" name="animals" accept=".csv,.json" required>
-    <span class="tooltip">❓
-            <span class="tooltip-text">Pre CSV: "zoo","lang","id","latin_name","image_src","class_id","order_id","habitats","continents","localities_url","name","description","spread_note","food","food_note","proportions","reproduction","attractions","projects_note","breeding","localities_title"\nPre JSON: [{"id":1, "order_id":1, "name":"Les", "description":"Zelený order"}]</span>
-        </span>
-    <br><br>
-    <label for="default_language">Predvolený jazyk:</label>
-    <select id="default_language" name="default_language" required>
-        <option value="cs">Čeština</option>
-        <option value="en">English</option>
-        <option value="de">Deutsch</option>
-    </select><br><br>
-
-
-    <button type="submit">Odoslať</button>
-</form>
-</body>
-</html>
-
 

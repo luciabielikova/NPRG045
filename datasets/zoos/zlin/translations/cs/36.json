@@ -1,0 +1,13 @@
+{
+  "name": "Mravenečník velký",
+  "description": "Mravenečník velký je velký savec s dlouhým čumákem a huňatým ocasem, známý svou hmyzožravou stravou.",
+  "spread_note": "Vyskytuje se od Guatemaly po Argentinu.",
+  "food": "Mravenci a termiti.",
+  "food_note": "Dokáže zkonzumovat až 30 000 hmyzu denně.",
+  "proportions": "Délka: 1,8-2,2 m, ocas: 60-90 cm, hmotnost: 18-50 kg.",
+  "reproduction": "Březost trvá asi 6 měsíců, rodí se jedno mládě.",
+  "attractions": "Zajímavý v zoologických zahradách díky svému vzhledu a krmnému chování.",
+  "projects_note": "Zranitelný kvůli ztrátě prostředí; ochrana je aktivní.",
+  "breeding": "Chován v zajetí pro ochranu.",
+  "localities_title": "Guatemala po Argentinu"
+}

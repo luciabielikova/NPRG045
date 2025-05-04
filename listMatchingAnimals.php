@@ -5,26 +5,19 @@
 
 require_once 'db.php';
 
-$animalsFile = loadAnimalsGeojson();
-$animals = json_decode($animalsFile, true);
-
-
-$animalNames = [];
-
-foreach ($animals['features'] as $feature) {
-    if ($feature['properties']['name'] != null) {
-        array_push($animalNames,$feature['properties']['name']);
-    }
+function removeDiacritics($string) {
+    $normalized = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $string);
+    return strtolower($normalized);
 }
 
-$values = $animalNames;
+$animalNames = getAnimalTitles($_SESSION['zooID'], $_SESSION['language']);
 
 if (isset($_GET['query'])) {
     $query = $_GET['query'];
-
-
-    $filteredValues = array_filter($values, function($value) use ($query) {
-        return stripos($value, $query) !== false;
+    $filteredValues = array_filter($animalNames, function($value) use ($query) {
+        $normalizedValue = removeDiacritics($value);
+        $normalizedQuery = removeDiacritics($query);
+        return strpos($normalizedValue, $normalizedQuery) !== false;
     });
 
     header('Content-Type: application/json');

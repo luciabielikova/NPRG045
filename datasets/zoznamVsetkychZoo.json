@@ -1,0 +1,53 @@
+[
+  {
+    "id": "prague",
+    "default_language": "cs",
+    "name": {
+      "en": "Prague Zoo",
+      "cs": "Zoo Praha",
+      "de": "Zoo Prag"
+    },
+    "description": {
+      "en": "Prague Zoo is home to many exotic animals.",
+      "cs": "Zoo Praha je domovem mnoha exotických zvířat.",
+      "de": "Der Zoo Prag beherbergt viele exotische Tiere."
+    },
+    "location": {
+      "country": "Czech Republic",
+      "city": "Prague"
+    },
+    "data_path": "datasets/zoos/prague/",
+    "habitats_path": "datasets/zoos/prague/habitats.json",
+    "classes_path": "datasets/zoos/prague/classes.json",
+    "orders_path": "datasets/zoos/prague/orders.json",
+    "continents_path": "datasets/zoos/prague/continents.json",
+    "animals_path": "datasets/zoos/prague/animals.json",
+    "highways_path": "datasets/zoos/prague/highways.geojson",
+    "website": "https://www.zoopraha.cz"
+  },
+  {
+    "id": "zlin",
+    "default_language": "cs",
+    "name": {
+      "en": "Zlín Zoo",
+      "cs": "Zoo Zlín",
+      "de": "Zoo Zlín"
+    },
+    "description": {
+      "en": "Zlín Zoo is one of the most visited zoos in the Czech Republic, known for its beautiful park layout and themed habitats.",
+      "cs": "Zoo Zlín patří mezi nejnavštěvovanější zoologické zahrady v Česku. Zaujme krásným parkem a tematickými expozicemi.",
+      "de": "Der Zoo Zlín gehört zu den meistbesuchten Zoos in Tschechien und besticht durch seinen schönen Park und thematische Gehege."
+    },
+    "location": {
+      "country": "Czech Republic",
+      "city": "Zlín"
+    },
+    "data_path": "datasets/zoos/zlin/",
+    "habitats_path": "datasets/zoos/zlin/habitats.json",
+    "classes_path": "datasets/zoos/zlin/classes.json",
+    "orders_path": "datasets/zoos/zlin/orders.json",
+    "continents_path": "datasets/zoos/zlin/continents.json",
+    "animals_path": "datasets/zoos/zlin/animals.json",
+    "website": "https://www.zoozlin.eu"
+  }
+]

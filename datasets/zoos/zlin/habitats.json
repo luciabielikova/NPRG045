@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "translations": {
+      "cs": {
+        "name": "deštný prales",
+        "description": "Tropické oblasti s vysokými srážkami a hustým stromovým porostem."
+      },
+      "en": {
+        "name": "Rainforest",
+        "description": "Tropical regions with high rainfall and dense forest cover."
+      }
+    }
+  },
+  {
+    "id": 2,
+    "translations": {
+      "cs": {
+        "name": "savany",
+        "description": "Rozlehlé travnaté oblasti s řídkým stromovým porostem, často v Africe."
+      },
+      "en": {
+        "name": "Savanna",
+        "description": "Vast grasslands with scattered trees, often found in Africa."
+      }
+    }
+  },
+  {
+    "id": 3,
+    "translations": {
+      "cs": {
+        "name": "mokrady",
+        "description": "Oblasti s trvale nebo sezónně zaplavenou půdou, bohaté na život."
+      },
+      "en": {
+        "name": "Wetlands",
+        "description": "Areas with permanently or seasonally flooded soil, rich in life."
+      }
+    }
+  },
+  {
+    "id": 4,
+    "translations": {
+      "cs": {
+        "name": "lesy",
+        "description": "Oblasti s hustým porostem stromů a pestrou faunou."
+      },
+      "en": {
+        "name": "Forest",
+        "description": "Regions with dense tree cover and diverse wildlife."
+      }
+    }
+  },
+  {
+    "id": 5,
+    "translations": {
+      "cs": {
+        "name": "trávnaté oblasti",
+        "description": "Krajiny s převahou travin, vhodné pro býložravce."
+      },
+      "en": {
+        "name": "Grassland",
+        "description": "Landscapes dominated by grasses, suitable for herbivores."
+      }
+    }
+  },
+  {
+    "id": 6,
+    "translations": {
+      "cs": {
+        "name": "poušť",
+        "description": "Suché oblasti s minimem srážek a extrémními podmínkami."
+      },
+      "en": {
+        "name": "Desert",
+        "description": "Dry regions with minimal rainfall and harsh conditions."
+      }
+    }
+  },
+  {
+    "id": 7,
+    "translations": {
+      "cs": {
+        "name": "hory",
+        "description": "Vysoké nadmořské oblasti s chladnějším klimatem."
+      },
+      "en": {
+        "name": "Mountains",
+        "description": "High altitude areas with cooler climates."
+      }
+    }
+  },
+  {
+    "id": 8,
+    "translations": {
+      "cs": {
+        "name": "pobřeží",
+        "description": "Oblasti na rozhraní pevniny a moře."
+      },
+      "en": {
+        "name": "Coastal",
+        "description": "Regions at the boundary of land and sea."
+      }
+    }
+  },
+  {
+    "id": 9,
+    "translations": {
+      "cs": {
+        "name": "moře",
+        "description": "Slané vodní prostředí oceánů a moří."
+      },
+      "en": {
+        "name": "Sea",
+        "description": "A saltwater environment of oceans and seas."
+      }
+    }
+  },
+  {
+    "id": 10,
+    "translations": {
+      "cs": {
+        "name": "tundra",
+        "description": "Chladné oblasti bez stromů s krátkou vegetační sezónou."
+      },
+      "en": {
+        "name": "Tundra",
+        "description": "Cold, treeless regions with a short growing season."
+      }
+    }
+  }
+]

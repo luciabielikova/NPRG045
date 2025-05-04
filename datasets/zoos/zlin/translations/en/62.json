@@ -1,0 +1,13 @@
+{
+  "name": "Siberian Tiger",
+  "description": "The Siberian Tiger is the largest big cat, known for its thick fur and powerful build.",
+  "spread_note": "Found in eastern Russia and parts of China.",
+  "food": "Deer, boar, and smaller mammals.",
+  "food_note": "Ambushes prey, often in snowy terrain.",
+  "proportions": "Length: 2.7-3.3 m, height: 1-1.2 m, weight: 180-300 kg.",
+  "reproduction": "Gestation about 3.5 months, litters of 2-4 cubs.",
+  "attractions": "Major attraction in zoos for their majesty.",
+  "projects_note": "Endangered due to poaching and habitat loss; conservation is critical.",
+  "breeding": "Bred in captivity for population recovery.",
+  "localities_title": "Eastern Russia, China"
+}

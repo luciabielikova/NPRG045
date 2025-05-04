@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
-    <title>Navigace</title>
+    <title>Zoo</title>
+    <link rel="icon" href="favicon-16x16.png" type="image/png">
 </head>
 <?php
 include "header.php";

@@ -1,0 +1,13 @@
+{
+  "name": "Plameňák malý",
+  "description": "Plameňák malý je malý, zářivý pták známý svým růžovým peřím a filtrováním potravy.",
+  "spread_note": "Vyskytuje se ve východní Africe a částech Indie a Pákistánu.",
+  "food": "Řasy, korýši a drobný hmyz.",
+  "food_note": "Filtrováním se živí v alkalických jezerech, často ve velkých hejnech.",
+  "proportions": "Výška: 80-90 cm, rozpětí křídel: 90-105 cm, hmotnost: 1,5-2 kg.",
+  "reproduction": "Klade 1 vejce na hliněnou hromadu, inkubace trvá asi 28 dní.",
+  "attractions": "Oblíbený v zoologických zahradách díky svým barvám a sociálnímu chování.",
+  "projects_note": "Zranitelný kvůli ztrátě prostředí; ochrana se zaměřuje na jezera.",
+  "breeding": "Chován v zajetí pro ochranu.",
+  "localities_title": "Východní Afrika, Indie, Pákistán"
+}

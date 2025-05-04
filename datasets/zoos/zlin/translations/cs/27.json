@@ -1,0 +1,13 @@
+{
+  "name": "Kotinga tříbarvá",
+  "description": "Kotinga tříbarvá je jedinečný pták s lysou hlavou a voláním podobným krávám, známý svým zvláštním vzhledem.",
+  "spread_note": "Vyskytuje se v povodí Amazonky, včetně Brazílie, Guyany a Venezuely.",
+  "food": "Ovoce, hmyz a malí obratlovci.",
+  "food_note": "Hledá potravu ve smíšených hejnech v korunách lesů.",
+  "proportions": "Délka: 35-40 cm, hmotnost: 300-400 g.",
+  "reproduction": "Klade 2-3 vejce do hnízda na stromě, inkubace trvá asi 20 dní.",
+  "attractions": "Vzácná v zoologických zahradách kvůli specifickým potřebám, ale zajímavá svými zvuky.",
+  "projects_note": "Zranitelná kvůli odlesňování; ochrana se zaměřuje na zachování prostředí.",
+  "breeding": "Vzácně chována v zajetí.",
+  "localities_title": "Povodí Amazonky"
+}

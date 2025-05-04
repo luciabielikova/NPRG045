@@ -1,0 +1,13 @@
+{
+  "name": "Capuchin Bird",
+  "description": "The Capuchin Bird is a unique bird with a bald head and cow-like calls, known for its odd appearance.",
+  "spread_note": "Found in the Amazon Basin, including Brazil, Guyana, and Venezuela.",
+  "food": "Fruits, insects, and small vertebrates.",
+  "food_note": "Forages in mixed flocks in forest canopies.",
+  "proportions": "Length: 35-40 cm, weight: 300-400 g.",
+  "reproduction": "Lays 2-3 eggs in a tree nest, incubation about 20 days.",
+  "attractions": "Rare in zoos due to their specific habitat needs, but intriguing for their calls.",
+  "projects_note": "Vulnerable due to deforestation; conservation focuses on habitat protection.",
+  "breeding": "Rarely bred in captivity.",
+  "localities_title": "Amazon Basin"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Egyptian Vulture",
+  "description": "The Egyptian Vulture is a small scavenger with a white coat, known for using tools to break eggs.",
+  "spread_note": "Found in southern Europe, Africa, and parts of Asia.",
+  "food": "Carrion, eggs, and scraps.",
+  "food_note": "Notable for dropping stones to crack ostrich eggs.",
+  "proportions": "Wingspan: 1.5-1.8 m, length: 60-70 cm, weight: 1.6-2.2 kg.",
+  "reproduction": "Lays 1-2 eggs in a cliff nest, incubation about 42 days.",
+  "attractions": "Fascinating in zoos for their intelligence.",
+  "projects_note": "Endangered due to poisoning; conservation programs are critical.",
+  "breeding": "Bred in captivity for reintroduction.",
+  "localities_title": "Southern Europe, Africa, Asia"
+}

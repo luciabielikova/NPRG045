@@ -1,0 +1,13 @@
+{
+  "name": "Kasuár přilbový",
+  "description": "Kasuár přilbový je velký, nelétavý pták s výraznou přilbou a silnýma nohama.",
+  "spread_note": "Vyskytuje se na Nové Guineji a v severní Austrálii.",
+  "food": "Ovoce, houby a malá zvířata.",
+  "food_note": "Klíčový roznašeč semen v deštných pralesích.",
+  "proportions": "Výška: 1,5-2 m, hmotnost: 30-60 kg.",
+  "reproduction": "Klade 3-8 vajec do hnízda na zemi, samci inkubují asi 50 dní.",
+  "attractions": "Působivý v zoologických zahradách díky své velikosti a barevnosti.",
+  "projects_note": "Ohrožený kvůli ztrátě prostředí; ochrana je aktivní.",
+  "breeding": "Chován v zajetí pro podporu obnovy populace.",
+  "localities_title": "Nová Guinea, Severní Austrálie"
+}

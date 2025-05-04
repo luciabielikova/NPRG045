@@ -1,0 +1,13 @@
+{
+  "name": "Pelikán australský",
+  "description": "Pelikán australský je velký vodní pták s obrovským zobákem, známý svým kooperativním rybolovem.",
+  "spread_note": "Vyskytuje se po celé Austrálii, Nové Guineji a Indonésii.",
+  "food": "Ryby a korýši.",
+  "food_note": "Loví ve skupinách, používá vak k nabírání kořisti.",
+  "proportions": "Délka: 1,6-1,9 m, rozpětí křídel: 2,3-2,5 m, hmotnost: 4-13 kg.",
+  "reproduction": "Klade 1-3 vejce do hnízda na zemi, inkubace trvá asi 32-35 dní.",
+  "attractions": "Běžný v zoologických zahradách díky své velikosti a krmnému chování.",
+  "projects_note": "Není ohrožen, ale znečištění je problémem.",
+  "breeding": "Chován v zajetí pro vzdělávací účely.",
+  "localities_title": "Austrálie, Nová Guinea, Indonésie"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Hooded Vulture",
+  "description": "The Hooded Vulture is a small scavenger with a bare head, known for its adaptability.",
+  "spread_note": "Found across sub-Saharan Africa.",
+  "food": "Carrion, scraps, and insects.",
+  "food_note": "Thrives in varied environments, including near human settlements.",
+  "proportions": "Wingspan: 1.7-2 m, length: 65-75 cm, weight: 1.5-2.6 kg.",
+  "reproduction": "Lays 1 egg in a tree nest, incubation about 40 days.",
+  "attractions": "Common in zoos for their scavenging role.",
+  "projects_note": "Endangered due to poisoning and habitat loss; conservation is active.",
+  "breeding": "Bred in captivity for conservation.",
+  "localities_title": "Sub-Saharan Africa"
+}

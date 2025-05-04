@@ -42,17 +42,22 @@ $allOrders = getAllOrders($zooID,$language);
 
 $zooTitles = getZooTitles($language);
 
-$allZoos = getAllZoos();
 
-
+function removeDiacritics($string) {
+    $normalized = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $string);
+    return strtolower($normalized);
+}
 
 function getAnimalsBySearchedTitle($foundAnimals, $searchedTitle, $language)
 {
     $suitableAnimals = array();
+    $normalizedQuery = removeDiacritics($searchedTitle);
+
     foreach ($foundAnimals as $animal) {
         if (isset($animal['names'][$language])) {
-            $pattern = '/' . preg_quote($searchedTitle, '/') . '/i';
-            if (preg_match($pattern, $animal['names'][$language])) {
+            $animalName = $animal['names'][$language];
+            $normalizedAnimalName = removeDiacritics($animalName);
+            if (strpos($normalizedAnimalName, $normalizedQuery) !== false) {
                 $suitableAnimals[] = $animal;
             }
         }
@@ -65,7 +70,7 @@ function getCompleteAnimalDetail($animalID, $zooID, $language){
 
     if ($animal != null){
         $categories = getAnimalCategories($animalID, $zooID);
-
+        $animal['id'] = $animalID;
         $animal["image_src"] = $categories["image_src"];
         $animal["class_id"] = getClassByID($categories["class_id"]);
         $animal["order_id"] = getOrderByID($categories["order_id"]);

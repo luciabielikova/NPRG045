@@ -1,0 +1,13 @@
+{
+  "name": "Griffon Vulture",
+  "description": "The Griffon Vulture is a large scavenger with a white neck ruff, known for soaring flight.",
+  "spread_note": "Found in southern Europe, Africa, and parts of Asia.",
+  "food": "Carrion.",
+  "food_note": "Locates carcasses from high altitudes, feeding in groups.",
+  "proportions": "Wingspan: 2.3-2.8 m, length: 95-110 cm, weight: 6-11 kg.",
+  "reproduction": "Lays 1 egg in a cliff nest, incubation about 50-60 days.",
+  "attractions": "Impressive in zoos for their size and scavenging role.",
+  "projects_note": "Not endangered, but poisoning is a threat.",
+  "breeding": "Bred in captivity for reintroduction programs.",
+  "localities_title": "Southern Europe, Africa, Asia"
+}

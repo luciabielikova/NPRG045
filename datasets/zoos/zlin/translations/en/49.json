@@ -1,0 +1,13 @@
+{
+  "name": "African Elephant",
+  "description": "The African Elephant is the largest land mammal, known for its intelligence and social structure.",
+  "spread_note": "Found across sub-Saharan Africa.",
+  "food": "Grasses, leaves, and bark.",
+  "food_note": "Consumes up to 300 kg of food daily, foraging for hours.",
+  "proportions": "Height: 3-4 m, length: 6-7.5 m, weight: 2,000-7,000 kg.",
+  "reproduction": "Gestation about 22 months, one calf born.",
+  "attractions": "Iconic in zoos for their size and emotional displays.",
+  "projects_note": "Endangered due to poaching and habitat loss; conservation is critical.",
+  "breeding": "Bred in captivity, but challenging due to space needs.",
+  "localities_title": "Sub-Saharan Africa"
+}

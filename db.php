@@ -5,16 +5,17 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 function loadTranslations() {
-    $translationsFile = 'datasets/translations.json';
-    if (!file_exists($translationsFile)) {
+    $detailTemplateFile = 'datasets/detailTemplate.json';
+    if (!file_exists($detailTemplateFile)) {
         return [];
     }
-    $jsonContent = file_get_contents($translationsFile);
+    $jsonContent = file_get_contents($detailTemplateFile);
     return json_decode($jsonContent, true) ?: [];
 }
 
+
 function getZooTitles($language){
-    $zooTitleFile =  'datasets/allZoosList.json';
+    $zooTitleFile =  'datasets/zoznamVsetkychZoo.json';
     $zooData = json_decode(file_get_contents($zooTitleFile), true);
     $zooTitles = array();
 
@@ -29,16 +30,9 @@ function getZooTitles($language){
 
     return $zooTitles;
 }
-function getAllZoos()
-{
-    $zooTitleFile =  'datasets/allZoosList.json';
-    $zooData = json_decode(file_get_contents($zooTitleFile), true);
-
-
-}
 
 function getZooById( $id) {
-    $zooTitleFile =  'datasets/allZoosList.json';
+    $zooTitleFile =  'datasets/zoznamVsetkychZoo.json';
     $data = json_decode(file_get_contents($zooTitleFile), true);
 
     foreach ($data as $zoo) {
@@ -128,6 +122,25 @@ function getAnimalTitles($zooID = null, $language = "en") {
     return $filteredAnimals;
 }
 
+function getAnimalByNameAndLanguage( $name, $lang, $zooID = null, $language = "en") {
+    $zooData = getZooById($zooID);
+    $animalFile = $zooData["animals_path"];
+
+    $jsonString = file_get_contents($animalFile);
+    $animals = json_decode($jsonString, true);
+
+    foreach ($animals as $animal) {
+        if (isset($animal['names'][$lang]) && mb_strtolower($animal['names'][$lang]) === mb_strtolower($name)) {
+            return $animal;
+        }
+    }
+    return null;
+}
+
+
+
+
+
 function getAllAnimals($zooID = null) {
     $zooData = getZooById($zooID);
     $animalFile = $zooData["animals_path"];
@@ -212,10 +225,8 @@ function getAllOrders($zooID = null, $language = "en") {
 }
 
 
-function loadAnimalsGeojson(){
-    return file_get_contents('jsons/cs-prague/animals.geojson');
-}
 
-function loadHighways(){
-    return file_get_contents('jsons/cs-prague/highways.geojson');
+function loadHighways($zooID = null){
+    $zooData = getZooById($zooID);
+    return file_get_contents($zooData["highways_path"]);
 }

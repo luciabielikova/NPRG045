@@ -247,7 +247,7 @@ a:hover {
 
 .Map {
     max-width: 800px;
-    margin-left: calc((100% - 800px)/2);
+    margin-left: calc((100% - 840px)/2);
     margin-top: 20px;
 }
 
@@ -484,7 +484,22 @@ footer {
     padding-bottom: 15px;
     z-index: 1000;
     flex: 1;
+    margin-top: 50px;
 }
+
+
+.white-column {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    margin-top: 30px;
+    /*margin-bottom: 50px;*/
+}
+
+
 header {
     border-bottom: 3px solid rgba(65, 31, 2, 0.91);
     background-color: #96705f;
@@ -515,3 +530,101 @@ header {
 }
 
 
+
+
+form input[type="text"],
+form input[type="email"],
+form input[type="file"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form button:hover {
+    background-color: #1d6b20;
+}
+
+.button-wrapper2 {
+    display: flex;
+    justify-content: flex-end;
+}
+#zoo-upload-form {
+    max-width: 800px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.zoo-form label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
+
+form #ff
+{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px 12px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.label-input-wrapper {
+    position: relative; /* Potrebné pre absolutné pozicovanie výsledkov */
+}
+
+.results-container {
+    position: absolute;
+    top: 100%; /* Presne pod inputom */
+    left: 130px;
+    right: 0;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none; /* skryté štandardne */
+}
+
+
+.results-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.results-container li {
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.results-container li:hover {
+    background-color: #f0f0f0;
+}

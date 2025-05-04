@@ -34,13 +34,17 @@ $translation = getTranslation($selectedLang);
 
 <header>
     <?php
-    if (isset($_SESSION['zooID'])){
-        echo "<h1>". getZooById($_SESSION['zooID'])['name'][$_SESSION['language']]. "</h1>";
-        echo "<h3>". getZooById($_SESSION['zooID'])['description'][$_SESSION['language']]. "</h3>";
+    $currentPage = basename($_SERVER['PHP_SELF']);
+
+    if ($currentPage === 'index.php'){
+        echo "<h1>". $translation['welcome']. "</h1>";
+    }
+    elseif ($currentPage === 'formular.php'){
+        echo "<h1>". $translation['add_zoo']. "</h1>";
     }
     else{
-        echo "<h1>". $translation['welcome']. "</h1>";
-        echo "<h3> tu si dam copyright :D</h3>";
+        echo "<h1>". getZooById($_SESSION['zooID'])['name'][$_SESSION['language']]. "</h1>";
+        echo "<h3>". getZooById($_SESSION['zooID'])['description'][$_SESSION['language']]. "</h3>";
     }
 
     ?>

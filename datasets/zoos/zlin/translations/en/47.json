@@ -1,0 +1,13 @@
+{
+  "name": "Greater Flamingo",
+  "description": "The Greater Flamingo is a tall bird with pale pink plumage, known for its graceful stance.",
+  "spread_note": "Found in Africa, southern Europe, and parts of Asia.",
+  "food": "Algae, crustaceans, and small fish.",
+  "food_note": "Filter-feeds in shallow waters, often in large colonies.",
+  "proportions": "Height: 110-150 cm, wingspan: 140-165 cm, weight: 2-4 kg.",
+  "reproduction": "Lays 1 egg on a mud mound, incubation about 28-32 days.",
+  "attractions": "Common in zoos for their elegance and social displays.",
+  "projects_note": "Not endangered, but habitat degradation is a concern.",
+  "breeding": "Bred in captivity for zoos and conservation.",
+  "localities_title": "Africa, Southern Europe, Asia"
+}

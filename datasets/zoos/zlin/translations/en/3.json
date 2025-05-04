@@ -1,0 +1,13 @@
+{
+  "name": "Hyacinth Macaw",
+  "description": "The Hyacinth Macaw is the largest parrot species, recognized for its vibrant blue feathers and yellow eye patches.",
+  "spread_note": "Found primarily in Brazil, Bolivia, and Paraguay.",
+  "food": "Palm nuts, fruits, and seeds.",
+  "food_note": "Specialized beak allows them to crack hard nuts with ease.",
+  "proportions": "Length: up to 100 cm, wingspan: up to 140 cm, weight: 1.2-1.7 kg.",
+  "reproduction": "Monogamous, lays 1-2 eggs in tree cavities, incubation about 29 days.",
+  "attractions": "A highlight in zoos due to their size and striking color.",
+  "projects_note": "Endangered due to habitat loss and pet trade; conservation programs are active.",
+  "breeding": "Breeding in captivity is challenging but successful in some programs.",
+  "localities_title": "Brazil, Bolivia, Paraguay"
+}

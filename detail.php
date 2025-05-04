@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
     <title>Zoo</title>
+    <link rel="icon" href="favicon-16x16.png" type="image/png">
 </head>
 <body>
 <?php
@@ -38,6 +38,10 @@ include "header.php";
         $t = $translations[$language];
 
         $html = '<div class="animal">';
+
+        /*if (!empty($animal['id'])) {
+            $html .= '<p><b> id </b>' . htmlspecialchars($animal['id']) . '</p>';
+        }*/
         if (!empty($animal['image_src'])) {
             $html .= '<img src="' . htmlspecialchars($animal['image_src']) . '">';
         }
@@ -50,6 +54,7 @@ include "header.php";
         if (!empty($animal['class_id'])) {
             $html .= '<p><b>' . $t['class'] . ': </b>' . htmlspecialchars($animal['class_id']) . '</p>';
         }
+
         if (!empty($animal['order_id'])) {
             $html .= '<p><b>' . $t['order'] . ': </b>' . htmlspecialchars($animal['order_id']) . '</p>';
         }

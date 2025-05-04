@@ -1,0 +1,13 @@
+{
+  "name": "Tapír jihoamerický",
+  "description": "Tapír jihoamerický je býložravec s krátkým chobotem, známý svou schopností plavat.",
+  "spread_note": "Vyskytuje se v Jižní Americe, od Kolumbie po Brazílii.",
+  "food": "Listy, ovoce a vodní rostliny.",
+  "food_note": "Hledá potravu poblíž vody, často v noci.",
+  "proportions": "Délka: 1,8-2,5 m, výška: 80-110 cm, hmotnost: 200-350 kg.",
+  "reproduction": "Březost trvá asi 13 měsíců, rodí se jedno tele.",
+  "attractions": "Běžný v zoologických zahradách díky svému neobvyklému vzhledu.",
+  "projects_note": "Zranitelný kvůli ztrátě prostředí; ochrana je aktivní.",
+  "breeding": "Chován v zajetí pro zoologické zahrady a ochranu.",
+  "localities_title": "Jižní Amerika"
+}

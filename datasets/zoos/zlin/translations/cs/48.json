@@ -1,0 +1,13 @@
+{
+  "name": "Siba ománská",
+  "description": "Siba ománská je plochá, diskovitá ryba s výrazným čenichem, známá svým hejnovým chováním.",
+  "spread_note": "Vyskytuje se v Indickém oceánu, zejména kolem Ománu.",
+  "food": "Korýši, měkkýši a malé ryby.",
+  "food_note": "Hledá potravu podél mořského dna, často ve skupinách.",
+  "proportions": "Šířka: 80-100 cm, hmotnost: 10-20 kg.",
+  "reproduction": "Ovoviviparní, rodí 1-2 mláďata po 11-12 měsících.",
+  "attractions": "Vzácná v akváriích kvůli své velikosti, ale pozoruhodná svým elegantním plaváním.",
+  "projects_note": "Není ohrožena, ale rybolov je problémem.",
+  "breeding": "Vzácně chována v zajetí kvůli složitým potřebám.",
+  "localities_title": "Indický oceán, Omán"
+}

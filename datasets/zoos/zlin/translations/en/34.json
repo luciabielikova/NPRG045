@@ -1,0 +1,13 @@
+{
+  "name": "Sloth Bear",
+  "description": "The Sloth Bear is a medium-sized bear with a shaggy coat, known for its long snout and insect-heavy diet.",
+  "spread_note": "Found in India, Sri Lanka, and Nepal.",
+  "food": "Termites, fruits, and honey.",
+  "food_note": "Uses its lips to suck up insects like a vacuum.",
+  "proportions": "Length: 1.4-1.9 m, height: 60-90 cm, weight: 80-145 kg.",
+  "reproduction": "Gestation about 7 months, litters of 1-3 cubs.",
+  "attractions": "Unique in zoos for their distinctive feeding behavior.",
+  "projects_note": "Vulnerable due to habitat loss; conservation programs are active.",
+  "breeding": "Bred in captivity for conservation and display.",
+  "localities_title": "India, Sri Lanka, Nepal"
+}

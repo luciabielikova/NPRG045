@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "translations": {
+      "cs": {
+        "name": "Afrika",
+        "description": "Kontinent s rozmanitou faunou včetně savan, pouští i deštných pralesů."
+      },
+      "en": {
+        "name": "Africa",
+        "description": "A continent with diverse wildlife including savannas, deserts, and rainforests."
+      }
+    }
+  },
+  {
+    "id": 2,
+    "translations": {
+      "cs": {
+        "name": "Asie",
+        "description": "Rozsáhlý kontinent s různorodým klimatem a živočišnými druhy."
+      },
+      "en": {
+        "name": "Asia",
+        "description": "A vast continent with varied climates and animal species."
+      }
+    }
+  },
+  {
+    "id": 3,
+    "translations": {
+      "cs": {
+        "name": "Evropa",
+        "description": "Kontinent s mírným podnebím a řadou známých druhů."
+      },
+      "en": {
+        "name": "Europe",
+        "description": "A continent with a temperate climate and familiar animal species."
+      }
+    }
+  },
+  {
+    "id": 4,
+    "translations": {
+      "cs": {
+        "name": "Severní Amerika",
+        "description": "Kontinent s rozlehlými lesy, horami a stepmi."
+      },
+      "en": {
+        "name": "North America",
+        "description": "A continent with vast forests, mountains, and plains."
+      }
+    }
+  },
+  {
+    "id": 5,
+    "translations": {
+      "cs": {
+        "name": "Jižní Amerika",
+        "description": "Domov deštných pralesů, hor a jedinečné fauny."
+      },
+      "en": {
+        "name": "South America",
+        "description": "Home to rainforests, mountains, and unique wildlife."
+      }
+    }
+  },
+  {
+    "id": 6,
+    "translations": {
+      "cs": {
+        "name": "Austrálie",
+        "description": "Izolovaný kontinent s jedinečnými živočichy jako klokan či emu."
+      },
+      "en": {
+        "name": "Australia",
+        "description": "An isolated continent with unique animals like kangaroos and emus."
+      }
+    }
+  },
+  {
+    "id": 7,
+    "translations": {
+      "cs": {
+        "name": "Antarktida",
+        "description": "Ledový kontinent obývaný tučňáky a dalšími odolnými druhy."
+      },
+      "en": {
+        "name": "Antarctica",
+        "description": "An icy continent inhabited by penguins and other resilient species."
+      }
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "Humboldt Penguin",
+  "description": "The Humboldt Penguin is a medium-sized penguin with black and white markings.",
+  "spread_note": "Found along the Pacific coast of Peru and Chile.",
+  "food": "Fish, squid, and crustaceans.",
+  "food_note": "Dives to hunt, often in small groups.",
+  "proportions": "Height: 60-70 cm, weight: 3.5-6 kg.",
+  "reproduction": "Lays 1-2 eggs in a burrow or crevice, incubation about 40 days.",
+  "attractions": "Popular in zoos for their playful swimming.",
+  "projects_note": "Vulnerable due to overfishing and climate change; conservation is active.",
+  "breeding": "Commonly bred in captivity for zoos.",
+  "localities_title": "Pacific Coast, Peru, Chile"
+}

@@ -37,6 +37,7 @@ class Graph {
                 }
             }
         }
+
         return $closestPoint;
     }
 }
@@ -52,23 +53,20 @@ class Dijkstra {
         $this->graph = $graph;
     }
 
-
-
-
     public function shortestPath($start, $end) {
+        if (in_array($start, $this->notWanted) || in_array($end, $this->notWanted)) {
+            return [];
+        }
+
         $this->distances = [];
         $this->previous = [];
         $this->queue = [];
-        
+
         foreach ($this->graph->getVertices() as $vertex => $data) {
             if (in_array($vertex, $this->notWanted)) {
                 continue;
             }
-            if ($vertex === $start) {
-                $this->distances[$vertex] = 0;
-            } else {
-                $this->distances[$vertex] = INF;
-            }
+            $this->distances[$vertex] = ($vertex === $start) ? 0 : INF;
             $this->previous[$vertex] = null;
             $this->queue[$vertex] = $this->distances[$vertex];
         }
@@ -84,7 +82,6 @@ class Dijkstra {
             if (!isset($this->graph->getEdges()[$u])) {
                 continue;
             }
-
 
             foreach ($this->graph->getEdges()[$u] as $neighbor => $distance) {
                 if (in_array($neighbor, $this->notWanted)) {
@@ -144,11 +141,15 @@ class Dijkstra {
                     //echo $node; var_dump($closestPoint);
                     if ($closestPoint !== null) {
                         $this->notWanted[] = $closestPoint;
-                    }
-                }
+                    }}
             }
         }
+        //var_dump($this->notWanted);
+
     }
+
+
+
 }
 
 
@@ -157,7 +158,7 @@ function euclideanDistance($point1, $point2) {
 }
 
 
-$highwaysFile = loadHighways();
+$highwaysFile = loadHighways($_SESSION['zooID']);
 $highways = json_decode($highwaysFile, true);
 
 function createGraph() {
@@ -246,6 +247,7 @@ function get_path($start, $end, $wantedNodes = [], $notWantedNodes = []) {
         $dijkstra->setNotWantedNodes($notWantedNodes);
     }
 
+    // Mapujeme názvy uzlov na konkrétne vrcholy v grafe
     $nameMapping = [
         $closestToStart => $start,
         $closestToEnd => $end
