@@ -26,6 +26,7 @@ $translation = getTranslation($selectedLang);
 <!DOCTYPE html>
 <html lang="<?= $selectedLang ?>">
 <head>
+    <title>Zoo</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
@@ -39,7 +40,7 @@ $translation = getTranslation($selectedLang);
     if ($currentPage === 'index.php'){
         echo "<h1>". $translation['welcome']. "</h1>";
     }
-    elseif ($currentPage === 'formular.php'){
+    elseif ($currentPage === 'form.php'){
         echo "<h1>". $translation['add_zoo']. "</h1>";
     }
     else{

@@ -18,7 +18,7 @@ $translation = getTranslation($selectedLang);
             <a href="index.php"><?= $translation['change_zoo']  ?></a>
             <a href="searchDatabase.php"><?= $translation['searchDB']  ?></a>
             <a href="searchMap.php"><?= $translation['map']  ?></a>
-            <a href="formular.php"><?= $translation['add_zoo']  ?></a>
+            <a href="form.php"><?= $translation['add_zoo']  ?></a>
 
         </ul>
     </nav>
