@@ -1,10 +1,11 @@
 
 <?php
 
-//interactively chooses matching strings from search
+//interaktívne zobrazuje zvieratá ktoré vyhovujú vyhľadávanému reťazcu
 
 require_once 'db.php';
 
+//funkcia na odstránenie diakritiky
 function removeDiacritics($string) {
     $normalized = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $string);
     return strtolower($normalized);

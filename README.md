@@ -1,4 +1,5 @@
 # ZooApp
+In this repository you can find web application for zoo visitors. 
 
 ## Requirements
 - PHP 8.1 or higher

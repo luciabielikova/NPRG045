@@ -48,6 +48,8 @@ if (isset($_SESSION['filter_data'])) {
             </div>
 
             <div id="advancedSearch">
+                <!-- Dynamické generovanie filtrov podľa kontinentov, biotopov, tried a rádov zvierat -->
+                <!-- Každá sekcia má checkboxy a reset tlačidlo -->
                 <?php
                 global $allContinents, $allHabitats, $allOrders, $allClasses;
                 echo '<div class="filter-header">';
@@ -106,11 +108,6 @@ if (isset($_SESSION['filter_data'])) {
         </div>
     </div>
 </div>
-
-
-
-
-
 <?php
 include 'footer.php';
 ?>

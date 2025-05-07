@@ -19,12 +19,12 @@ require_once 'functions.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
+// Presmerovanie na info stránku, ak mapa pre danú ZOO nie je dostupná
 if (!isMapAvailable($_SESSION['zooID'])){
     header('Location: mapNotAvailable.php');
     exit;
 }
-
-
 
 $translation = getTranslation($_SESSION['language']);
 
@@ -42,6 +42,7 @@ $translation = getTranslation($_SESSION['language']);
     </div>
 </div>
 <div class="search-container-wanted">
+    <!-- Tu sa dynamicky zobrazia wanted/not-wanted inputy -->
     <div class="wanted-container" id="wanted-container"></div>
     <div class="resultsWanted" id="resultsWanted"></div>
 
@@ -57,6 +58,7 @@ $translation = getTranslation($_SESSION['language']);
 </div>
     <br>
     <div class="buttons-container">
+        <!-- Vyhľadanie trasy, pridanie povinných a zakázaných bodov, reset -->
         <button id="submitBtn"><?=$translation['search']?></button>
         <button onclick="addWanted()"><?=$translation['mandatory']?></button>
         <button onclick="addNotWanted()"><?=$translation['forbidden']?></button>
@@ -82,6 +84,7 @@ $translation = getTranslation($_SESSION['language']);
     let wantedCount = 0;
     let notWantedCount = 0;
 
+    // EventListener na vyhľadávanie počas písania
 
     searchInputFrom.addEventListener('input', (e) => {
         const query = e.target.value;
@@ -131,6 +134,7 @@ $translation = getTranslation($_SESSION['language']);
         }
     });
 
+    // Leaflet mapa – východzia pozícia nastavená podľa súradníc
     var map = L.map('mapid').setView([50.1173, 14.406], 16);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -143,31 +147,23 @@ $translation = getTranslation($_SESSION['language']);
             alert("<?=htmlspecialchars($translation['selectMax']) ?>" + maxCount + '.');
             return;
         }
-
-
         const parent = document.getElementById(parentId);
         const wrapper = document.createElement('div');
         wrapper.classList.add('label-input-wrapper');
-
         const label = document.createElement('label');
         label.textContent = labelText;
-
         const input = document.createElement('input');
         input.type = 'text';
         input.placeholder = "<?= htmlspecialchars($translation['search']) ?>..."
         input.name = inputName;
         input.className = inputClass;
         input.autocomplete = "off";
-
         const resultsContainer = document.createElement('div');
         resultsContainer.className = 'results-container';
         wrapper.appendChild(label);
         wrapper.appendChild(input);
         wrapper.appendChild(resultsContainer);
         parent.appendChild(wrapper);
-
-
-
         input.addEventListener('input', () => {
             fetchFunction(input.value, resultsContainer, input);
             resultsContainer.style.display = 'block';
@@ -178,7 +174,6 @@ $translation = getTranslation($_SESSION['language']);
                 resultsContainer.style.display = 'none';
             }
         });
-
     }
 
     function addWanted() {

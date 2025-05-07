@@ -291,6 +291,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]
     ];
 
+    $valid_files = [];
+    $errors = [];
+
     foreach ($schemas as $file_key => $structure) {
         if (isset($_FILES[$file_key]) && $_FILES[$file_key]['error'] == 0) {
 
@@ -328,7 +331,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
             if ($valid) {
-                move_uploaded_file($file_tmp, $target_file);
+                $valid_files[] = [
+                    "tmp" => $file_tmp,
+                    "target" => $target_file
+                ];
             } else {
                 $errors[] = $translation['file'].$file_name. $translation['notValidFormat'] . $data_format;
             }
@@ -339,9 +345,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if (empty($errors)) {
-        echo "<p>". $translation['formSuccessfullySent']."</p>";
+        foreach ($valid_files as $file) {
+            move_uploaded_file($file["tmp"], $file["target"]);
+        }
+        echo "<p>" . $translation['formSuccessfullySent'] . "</p>";
     } else {
-        echo "<p>". $translation['notValidFiles']."</p><ul><li>" . implode("</li><li>", $errors) . "</li></ul>";
+        echo "<p>" . $translation['notValidFiles'] . "</p><ul><li>" . implode("</li><li>", $errors) . "</li></ul>";
     }
 }
 ?>

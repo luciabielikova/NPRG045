@@ -1,11 +1,12 @@
 <?php
 
 require_once 'db.php';
-
+// Spustenie session ak ešte nie je aktívna
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+// Získanie ID zoo zo session alebo použitie predvoleného
 if (isset($_SESSION['zooID'])) {
     $zooID = $_SESSION['zooID'];
 }
@@ -13,12 +14,15 @@ else{
     $zooID = 'prague';
 }
 
+// Získanie jazykového nastavenia zo session alebo použitie predvoleného
 if (isset($_SESSION['language'])) {
     $language = $_SESSION['language'];
 }
 else{
     $language = 'en';
 }
+
+// Definovanie funkcie pre získanie prekladov, ak ešte neexistuje
 if (!function_exists('getTranslation')) {
     function getTranslation($language){
         $translations = loadTranslations();
@@ -27,27 +31,26 @@ if (!function_exists('getTranslation')) {
 }
 
 
-
+// Načítanie údajov zo súborov pre aktuálnu zoo a jazyk
 $allAnimals = getAllAnimals($zooID, $language);
-
 $allAnimalTitles = getAnimalTitles($zooID, $language);
-
 $allContinents = getAllContinents($zooID, $language);
-
 $allHabitats = getAllHabitats($zooID, $language);
-
 $allClasses = getAllClasses($zooID,$language);
-
 $allOrders = getAllOrders($zooID,$language);
-
 $zooTitles = getZooTitles($language);
 
-
+/**
+ * Odstráni diakritiku z reťazca (pre účely vyhľadávania)
+ */
 function removeDiacritics($string) {
     $normalized = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $string);
     return strtolower($normalized);
 }
 
+/**
+ * Vyfiltruje zvieratá podľa názvu (bez diakritiky)
+ */
 function getAnimalsBySearchedTitle($foundAnimals, $searchedTitle, $language)
 {
     $suitableAnimals = array();
@@ -65,6 +68,9 @@ function getAnimalsBySearchedTitle($foundAnimals, $searchedTitle, $language)
     return $suitableAnimals;
 }
 
+/**
+ * Získa kompletné detaily o zvierati vrátane kategórií a lokalít
+ */
 function getCompleteAnimalDetail($animalID, $zooID, $language){
     $animal = getAnimalDetail($animalID, $zooID, $language);
 
@@ -82,9 +88,9 @@ function getCompleteAnimalDetail($animalID, $zooID, $language){
     return $animal;
 }
 
-
-
-
+/**
+ * Vyfiltruje zvieratá podľa kontinentu
+ */
 function getAnimalsByContinent($foundAnimals, $wantedContinents)
 {
     $suitableAnimals = array();
@@ -104,6 +110,9 @@ function getAnimalsByContinent($foundAnimals, $wantedContinents)
     }
 }
 
+/**
+ * Vyfiltruje zvieratá podľa biotopu
+ */
 function getAnimalsByHabitat($foundAnimals,$wantedHabitats)
 {
     $suitableAnimals = array();
@@ -118,7 +127,9 @@ function getAnimalsByHabitat($foundAnimals,$wantedHabitats)
     return $suitableAnimals;
 }
 
-
+/**
+ * Vyfiltruje zvieratá podľa triedy
+ */
 function getAnimalsByClass($foundAnimals,$wantedClasses)
 {
     $suitableAnimals = array();
@@ -133,7 +144,9 @@ function getAnimalsByClass($foundAnimals,$wantedClasses)
 }
 
 
-
+/**
+ * Vyfiltruje zvieratá podľa rádu
+ */
 function getAnimalsByOrder($foundAnimals,$wantedOrders)
 {
     $suitableAnimals = array();
@@ -148,12 +161,17 @@ function getAnimalsByOrder($foundAnimals,$wantedOrders)
 }
 
 
-
+/**
+ * Vytvorí HTML odkaz na detail zvieraťa
+ */
 function createLinkToAnimal($id,$name){
 
     return '<li><a href="detail.php?animalID='.$id.'">'.$name .'</a></li>';
 }
 
+/**
+ * Vypíše zoznam nájdených zvierat ako odkazy (s prekladom ak nič nenájde)
+ */
 function listOfFoundAnimals($suitableAnimals, $language = 'en')
 {
     if (count($suitableAnimals) > 0) {
@@ -171,22 +189,9 @@ function listOfFoundAnimals($suitableAnimals, $language = 'en')
     }
 }
 
-
-function listOfAnimals($suitableAnimals)
-{
-    var_dump($suitableAnimals);
-    if (count($suitableAnimals) > 0) {
-        echo '<ol>';
-        foreach ($suitableAnimals as $id => $name) {
-            echo createLinkToAnimal($id, $name);
-        }
-        echo '</ol>';
-    }
-    else{
-        echo 'Pro zvolené kritériá nemáme zvířátko-.';
-    }
-}
-
+/**
+ * Aplikuje všetky filtre na zvieratá a vráti tie, ktoré vyhovujú
+ */
 function filterAnimals($searchedTitle,$chosenHabitats, $chosenContinents,$chosenOrders,$chosenClasses){
     global $allAnimals;
 
@@ -198,6 +203,9 @@ function filterAnimals($searchedTitle,$chosenHabitats, $chosenContinents,$chosen
     return $suitableAnimals ;
 }
 
+/**
+ * Spracuje vstup z vyhľadávacieho formulára a pripraví filtre
+ */
 function formHandlerSearchDB($id)
 {
     global $searchedTitle, $chosenHabitats, $chosenContinents, $chosenOrders, $chosenClasses, $allClasses, $allOrders, $allContinents, $allHabitats;
@@ -243,6 +251,9 @@ function formHandlerSearchDB($id)
     }
 }
 
+/**
+ * Skontroluje, či je pre danú zoo dostupný súbor s cestami (highways)
+ */
 function isMapAvailable($zooID)
 {
     return loadHighways($zooID) !== null;

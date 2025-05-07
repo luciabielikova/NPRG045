@@ -4,7 +4,7 @@ let endMarker = null;
 let midMarker = null;
 let waypointsMarkers = [];
 
-
+// Funkcia na odškrtnutie všetkých zaškrtávacích políčok
 function uncheckAll() {
     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(function (checkbox) {
@@ -12,6 +12,7 @@ function uncheckAll() {
     });
 }
 
+// Funkcia na odškrtnutie zaškrtávacích políčok podľa selektora
 function uncheck(selector) {
     var checkboxes = document.querySelectorAll(selector);
     checkboxes.forEach(function (checkbox) {
@@ -27,18 +28,19 @@ function uncheck(selector) {
     });
 }
 
-
+// Funkcia na vymazanie hodnoty zo vstupného poľa "search"
 function clearSearch() {
     return document.getElementById("search").value = "";
 }
 
+// Funkcia na vymazanie všetkých zaškrtávacích políčok a textu vo vyhľadávacom poli
 function clearAll() {
     uncheckAll();
     clearSearch();
 }
 
 
-//map style
+// Funkcia pre definovanie štýlu mapy
 function myStyle(feature) {
     return {
         weight: 1,
@@ -48,6 +50,7 @@ function myStyle(feature) {
     };
 }
 
+// Funkcia na získanie výsledkov z vyhľadávania (filtrovanie zvierat podľa dopytu)
 function fetchResults(query, container, input) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'listMatchingAnimals.php?query=' + encodeURIComponent(query), true);
@@ -60,6 +63,7 @@ function fetchResults(query, container, input) {
     xhr.send();
 }
 
+// Funkcia na zobrazenie výsledkov vyhľadávania v kontejneri
 function displayResults(results, container, input) {
     container.innerHTML = '';
     if (results.length > 0) {
@@ -80,7 +84,7 @@ function displayResults(results, container, input) {
     }
 }
 
-
+// Funkcie na získanie výsledkov pre rôzne vyhľadávacie poľa (from, to, wanted, not wanted)
 function fetchResultsFrom(query) {
     fetchResults(query, resultsFromContainer, searchInputFrom);
 }
@@ -114,7 +118,7 @@ function displayResultsNotWanted(results, input) {
     displayResults(results, resultsNotWantedContainer, input);
 }
 
-
+// Funkcia na spracovanie odoslania formulára a vyhľadávanie cesty medzi zvieratami
 function handleSubmit() {
     const fromValue = searchInputFrom.value;
     const toValue = searchInputTo.value;
@@ -148,22 +152,18 @@ function handleSubmit() {
                 const result = response.data.result;
                 drawPath(result);
             } catch (e) {
-                /*console.error("Server Error:", xhr.responseText);*/
                 alert("The requested path between the specified animals was not found.");
             }
         } else {
             alert("Chyba HTTP: " + xhr.status);
         }
     };
-
-
-
     console.log('Raw response:', xhr.responseText);
-
     const data = `from=${encodeURIComponent(fromValue)}&to=${encodeURIComponent(toValue)}&mandatory=${encodeURIComponent(wantedValues.join(','))}&forbidden=${encodeURIComponent(notWantedValues.join(','))}`;
     xhr.send(data);
 }
 
+// Funkcia na vymazanie všetkých vstupov
 function clearInputs() {
     searchInputFrom.value = '';
     searchInputTo.value = '';
@@ -176,7 +176,7 @@ function clearInputs() {
         input.value = '';
     });
 }
-
+// Funkcia na vykreslenie cesty na mape
 function drawPath(shortestPath) {
     if (polyline) {
         map.removeLayer(polyline);
@@ -208,10 +208,10 @@ function drawPath(shortestPath) {
                 waypointsMarkers.push(marker);
             }
         }
-
     }
 }
 
+// Funkcia na zmenu jazyka (zmena URL s parametrom 'language')
 document.addEventListener("DOMContentLoaded", function () {
     const languageDropdown = document.getElementById("language");
 
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+// Funkcia na nastavenie zooID pri kliknutí na tlačidlo a presmerovanie na mapu
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.zooButton').forEach(button => {
         button.addEventListener('click', function() {

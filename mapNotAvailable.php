@@ -14,6 +14,9 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+//prázdna stránka s chybovou hláškou v hlavičke
+
+
 include "header.php";
 
 require_once 'languages.php';
@@ -23,7 +26,6 @@ $selectedLang = $_SESSION['language'];
 $languages = getLanguages();
 
 $translation = getTranslation($selectedLang);
-
 
 
 ?>

@@ -19,20 +19,22 @@ include "header.php";
 <div class="wrapper">
     <div class="content">
         <div class="container">
-        <?php
-
-        include "functions.php";
-        require_once "languages.php";
-            global $zooTitles;
-
-            $currentLanguage = isset($_SESSION['language']) ? $_SESSION['language'] : 'en';
-
-            echo '<script>let selectedLanguage = "' . htmlspecialchars($currentLanguage, ENT_QUOTES) . '";</script>';
+            <?php
+                // Načítanie funkcií a jazykových prekladov
+                include "functions.php";
+                require_once "languages.php";
+                // Prístup ku globálnej premennej s názvami zoo (už načítané vo functions.php)
+                global $zooTitles;
+                // Nastavenie aktuálneho jazyka
+                $currentLanguage = isset($_SESSION['language']) ? $_SESSION['language'] : 'en';
+                // Preposlanie jazyka do JavaScriptu
+                echo '<script>let selectedLanguage = "' . htmlspecialchars($currentLanguage, ENT_QUOTES) . '";</script>';
+                // Vygenerovanie tlačidiel pre každú zoo
                 foreach ($zooTitles as $id => $title) {
                     echo '<button class="zooButton" data-zooid="' . htmlspecialchars($id) . '">' . htmlspecialchars($title) . '</button>';
-                }
-        ?>
-    </div>
+                    }
+            ?>
+        </div>
     </div>
 </div>
 <?php

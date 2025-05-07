@@ -2,28 +2,30 @@
 
 require_once 'db.php';
 
-
+// Trieda reprezentujúca graf
 class Graph {
     private $vertices = [];
     private $edges = [];
 
+    //pridanie vrcholu do grafu
     public function addVertex($name, $longitude, $latitude) {
         $this->vertices[$name] = ['lon' => $longitude, 'lat' => $latitude];
     }
 
+    // Pridanie hrany do grafu
     public function addEdge($start, $end, $distance) {
         $this->edges[$start][$end] = $distance;
         $this->edges[$end][$start] = $distance;
     }
-
+    // Získanie zoznamu vrcholov
     public function getVertices() {
         return $this->vertices;
     }
-
+    // Získanie zoznamu hrán
     public function getEdges() {
         return $this->edges;
     }
-
+    // Nájde najbližší vrchol v grafe k daným súradniciam
     public function findClosestPoint($wanted) {
         $closestPoint = null;
         $dist = PHP_INT_MAX;
@@ -42,6 +44,7 @@ class Graph {
     }
 }
 
+// Implementácia Dijkstrovho algoritmu
 class Dijkstra {
     private $graph;
     private $distances = [];
@@ -53,6 +56,7 @@ class Dijkstra {
         $this->graph = $graph;
     }
 
+    // Nájde najkratšiu cestu medzi dvoma bodmi
     public function shortestPath($start, $end) {
         if (in_array($start, $this->notWanted) || in_array($end, $this->notWanted)) {
             return [];
@@ -62,6 +66,7 @@ class Dijkstra {
         $this->previous = [];
         $this->queue = [];
 
+        // Inicializácia vzdialeností a fronty
         foreach ($this->graph->getVertices() as $vertex => $data) {
             if (in_array($vertex, $this->notWanted)) {
                 continue;
@@ -70,7 +75,7 @@ class Dijkstra {
             $this->previous[$vertex] = null;
             $this->queue[$vertex] = $this->distances[$vertex];
         }
-
+        // Hlavný cyklus algoritmu
         while (!empty($this->queue)) {
             $u = array_search(min($this->queue), $this->queue);
             if ($u === $end) {
@@ -95,7 +100,7 @@ class Dijkstra {
                 }
             }
         }
-
+        // Rekonštrukcia cesty
         $path = [];
         $u = $end;
         while (isset($this->previous[$u])) {
@@ -106,7 +111,7 @@ class Dijkstra {
         if (!empty($path)) {
             array_unshift($path, $start);
         }
-
+        // Pridanie súradníc k ceste
         $pathWithCoordinates = [];
         $lastPoint = null;
         foreach ($path as $vertex) {
@@ -127,7 +132,7 @@ class Dijkstra {
 
         return $pathWithCoordinates;
     }
-
+    // Nastavenie zakázaných uzlov podľa názvu zvieraťa
     function setNotWantedNodes($nodes) {
         global $graph;
 
@@ -144,28 +149,24 @@ class Dijkstra {
                     }}
             }
         }
-        //var_dump($this->notWanted);
-
     }
-
-
-
 }
 
-
+// Výpočet euklidovskej vzdialenosti medzi dvoma bodmi
 function euclideanDistance($point1, $point2) {
     return sqrt(pow($point1[0] - $point2[0], 2) + pow($point1[1] - $point2[1], 2));
 }
 
-
+// Načítanie dát a vytvorenie grafu zo súboru ciest (napr. cestičky v ZOO)
 $highwaysFile = loadHighways($_SESSION['zooID']);
 $highways = json_decode($highwaysFile, true);
 
+// Vytvára a inicializuje graf na základe dát z GeoJSON
 function createGraph() {
     global $highways;
     $graph = new Graph();
     $counter = 1;
-
+    // Pridanie všetkých bodov ako vrcholov
     foreach ($highways['features'] as $feature) {
         if ($feature['geometry']['type'] === 'LineString') {
             $coordinates = $feature['geometry']['coordinates'];
@@ -175,7 +176,7 @@ function createGraph() {
             }
         }
     }
-
+    // Pridanie hrán medzi po sebe idúcimi bodmi
     foreach ($highways['features'] as $feature) {
         if ($feature['geometry']['type'] === 'LineString') {
             $coordinates = $feature['geometry']['coordinates'];
@@ -207,6 +208,7 @@ $graph = createGraph();
 
 $dijkstra = new Dijkstra($graph);
 
+// Získanie prvej súradnice daného zvieraťa
 function getFirstCoordinateFromName($name){
     $animal = getAnimalByNameAndLanguage($name, $_SESSION['language'], $_SESSION['zooID']);
     if (isset($animal['coords'])) {
@@ -217,6 +219,7 @@ function getFirstCoordinateFromName($name){
     }
 }
 
+// Získanie všetkých súradníc daného zvieraťa
 function getCoordsFromName($name){
     $animal = getAnimalByNameAndLanguage($name, $_SESSION['language'], $_SESSION['zooID']);
     if (isset($animal['coords'])) {
@@ -227,7 +230,7 @@ function getCoordsFromName($name){
     }
 }
 
-
+// Získanie optimalizovanej cesty medzi dvoma bodmi s možnosťou prechodu cez niektoré body a vynechania iných
 function get_path($start, $end, $wantedNodes = [], $notWantedNodes = []) {
     global $graph, $dijkstra;
 
@@ -247,7 +250,7 @@ function get_path($start, $end, $wantedNodes = [], $notWantedNodes = []) {
         $dijkstra->setNotWantedNodes($notWantedNodes);
     }
 
-    // Mapujeme názvy uzlov na konkrétne vrcholy v grafe
+    // Mapa premenovania vrcholov na zmysluplné mená
     $nameMapping = [
         $closestToStart => $start,
         $closestToEnd => $end
@@ -263,6 +266,7 @@ function get_path($start, $end, $wantedNodes = [], $notWantedNodes = []) {
             $waypointNodes[] = $closestWaypoint;
         }
     }
+    // Permutácie medzibodov pre nájdenie najkratšej možnej trasy
     $nodePermutations = permute($waypointNodes);
     $shortestPath = null;
     $minDistance = INF;
@@ -289,16 +293,18 @@ function get_path($start, $end, $wantedNodes = [], $notWantedNodes = []) {
         if (empty($finalSegment)) {
             continue;
         }
+        // Finálny segment do cieľa
         $finalSegmentDistance = array_sum(array_column($finalSegment, 'distance') ?? []);
         $totalDistance += $finalSegmentDistance;
         $fullPath = array_merge($fullPath, $finalSegment);
 
+        // Aktualizácia najkratšej cesty
         if ($totalDistance < $minDistance) {
             $minDistance = $totalDistance;
             $shortestPath = $fullPath;
         }
     }
-
+    // Nahradenie ID vrcholov späť na názvy
     foreach ($shortestPath as &$point) {
         if (isset($nameMapping[$point['vertex']])) {
             $point['vertex'] = $nameMapping[$point['vertex']];
@@ -307,6 +313,7 @@ function get_path($start, $end, $wantedNodes = [], $notWantedNodes = []) {
     return $shortestPath;
 }
 
+// Pomocná funkcia na generovanie všetkých permutácií
 function permute($items, $perms = []) {
     if (empty($items)) {
         return [$perms];

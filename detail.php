@@ -22,22 +22,21 @@ include "header.php";
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
+    // Získanie ID zvieraťa z URL
     $animalID = isset($_GET['animalID']) ? $_GET['animalID'] : '';
-
+    // Získanie kompletného detailu zvieraťa (včetne kategórií) pre aktuálny jazyk a zoo
     $animal = getCompleteAnimalDetail($animalID, $_SESSION['zooID'], $_SESSION['language']);
     echo createAnimalHTML($animal, $_SESSION['language']);
-
+    /**
+     * Funkcia na vytvorenie HTML zobrazenia detailu zvieraťa
+     */
     function createAnimalHTML($animal, $language = 'cs')
     {
+        // Načítanie jazykových prekladov
         $translations = loadTranslations();
-
         $t = $translations[$language];
-
         $html = '<div class="animal">';
 
-        /*if (!empty($animal['id'])) {
-            $html .= '<p><b> id </b>' . htmlspecialchars($animal['id']) . '</p>';
-        }*/
         if (!empty($animal['image_src'])) {
             $html .= '<img src="' . htmlspecialchars($animal['image_src']) . '">';
         }
