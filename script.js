@@ -136,16 +136,28 @@ function handleSubmit() {
     xhr.open('POST', 'handleMapSearch.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
+
     xhr.onload = function () {
         if (xhr.status === 200) {
-            console.log(xhr.responseText);
-            const response = JSON.parse(xhr.responseText);
-            const result = response.data.result;
-
-            console.log(result);
-            drawPath(result);
+            try {
+                const response = JSON.parse(xhr.responseText);
+                if (response.error) {
+                    alert(response.error);
+                    return;
+                }
+                const result = response.data.result;
+                drawPath(result);
+            } catch (e) {
+                /*console.error("Server Error:", xhr.responseText);*/
+                alert("The requested path between the specified animals was not found.");
+            }
+        } else {
+            alert("Chyba HTTP: " + xhr.status);
         }
     };
+
+
+
     console.log('Raw response:', xhr.responseText);
 
     const data = `from=${encodeURIComponent(fromValue)}&to=${encodeURIComponent(toValue)}&mandatory=${encodeURIComponent(wantedValues.join(','))}&forbidden=${encodeURIComponent(notWantedValues.join(','))}`;

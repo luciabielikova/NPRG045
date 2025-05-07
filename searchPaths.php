@@ -37,7 +37,7 @@ $translation = getTranslation($_SESSION['language']);
     <div class="search-container-from">
     <div class="label-input-wrapper">
         <label><?=$translation['from'] . ":" ?></label>
-        <input type="text" id="searchFrom" placeholder= <?=$translation['search']?>...>
+        <input type="text" id="searchFrom" autocomplete="off" placeholder= <?=$translation['search']?>...>
         <div class="resultsFrom" id="resultsFrom"></div>
     </div>
 </div>
@@ -51,7 +51,7 @@ $translation = getTranslation($_SESSION['language']);
 <div class="search-container-to">
     <div class="label-input-wrapper">
         <label><?=$translation['to'] . ":" ?></label>
-        <input type="text" id="searchTo" placeholder=<?=$translation['search']?>...>
+        <input type="text" id="searchTo" autocomplete="off" placeholder=<?=$translation['search']?>...>
         <div class="resultsTo" id="resultsTo"></div>
     </div>
 </div>
@@ -157,6 +157,7 @@ $translation = getTranslation($_SESSION['language']);
         input.placeholder = "<?= htmlspecialchars($translation['search']) ?>..."
         input.name = inputName;
         input.className = inputClass;
+        input.autocomplete = "off";
 
         const resultsContainer = document.createElement('div');
         resultsContainer.className = 'results-container';
