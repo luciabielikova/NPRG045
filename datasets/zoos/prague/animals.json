@@ -1493,6 +1493,7 @@
     "id": 53,
     "latin_name": "Chrysolophus pictus",
     "class_id": 2,
+    "image_src": "https://zooliberec.cz/wp-content/uploads/2020/12/bazant_zlaty_1.jpg",
     "order_id": 37,
     "habitats": [
       6
@@ -3052,6 +3053,7 @@
     "latin_name": "Threskiornis spinicollis",
     "class_id": 2,
     "order_id": 58,
+    "image_src": "https://www.zoopraha.cz/images/lexikon/ibis_zlutokrky_DSC_1490.jpg",
     "habitats": [
       4
     ],
@@ -5156,13 +5158,13 @@
     "latin_name": "Gypaetus barbatus",
     "class_id": 2,
     "order_id": 46,
+    "image_src":"https://www.zoopraha.cz/images/lexikon/Orlosup_bradaty_DSC_0389.jpg",
     "habitats": [
       5
     ],
     "continents": [
       7
     ],
-    "localities_url": "http://www.zoopraha.cz/zvirata-a-expozice/kam-v-zoo/areal/8660-dolni-cast-arealu",
     "names": {
       "en": "Bearded Vulture",
       "cs": "Orlosup bradatý",
@@ -6318,6 +6320,7 @@
     "latin_name": "Garrulax bicolor",
     "class_id": 2,
     "order_id": 18,
+    "image_src": "https://www.zoopraha.cz/images/lexikon/Sojkovec_dvoubarvy.jpg",
     "habitats": [
       7
     ],
