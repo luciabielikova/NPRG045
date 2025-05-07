@@ -49,7 +49,12 @@
     "preferredLanguage": "Předvolený jazyk",
     "contactInfo": "V případě dotazů nebo problémů nás neváhejte kontaktovat na ",
     "preparingData": "Pro tuto zoologickou zahradu data připravujeme.",
-    "pathNotFound": "Hledaná trasa mezi zadanými zvířaty nebyla nalezena."
+    "pathNotFound": "Hledaná trasa mezi zadanými zvířaty nebyla nalezena.",
+    "formSuccessfullySent": "Všechny soubory byli validované a úspěšně odeslány!",
+    "notValidFiles": "Soubory se nepodařilo nahrát:",
+    "file": "Soubor ",
+    "notValidFormat": " nemá správnou strukturu pro formát ",
+    "notSent": " nebyl úspěšně nahrán."
   },
   "en": {
     "attractions": "Interesting Facts",
@@ -101,6 +106,11 @@
     "preferredLanguage": "Preffered Language",
     "contactInfo": "If you have any questions or issues, please don't hesitate to contact us at ",
     "preparingData": "We are currently preparing data for this zoo.",
-    "pathNotFound": "The requested path between the specified animals was not found."
+    "pathNotFound": "The requested path between the specified animals was not found.",
+    "formSuccessfullySent": "All files are valid and successfully sent!",
+    "notValidFiles": "Files could not be sent:",
+    "file": "File ",
+    "notValidFormat": " is not valid ",
+    "notSent": " was not sent."
   }
 }

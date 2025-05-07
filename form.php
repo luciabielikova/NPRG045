@@ -35,7 +35,6 @@ $translation = getTranslation($selectedLang);
             <select name="name_lang[]">
                 <option value="cs">Čeština</option>
                 <option value="en">English</option>
-                <option value="de">Deutsch</option>
             </select>
             <input type="text" name="name_text[]" placeholder="<?= $translation['placeholder_name']?>">
         </div>
@@ -50,7 +49,6 @@ $translation = getTranslation($selectedLang);
             <select name="desc_lang[]">
                 <option value="cs">Čeština</option>
                 <option value="en">English</option>
-                <option value="de">Deutsch</option>
             </select>
             <textarea name="desc_text[]" placeholder="<?= $translation['placeholder_desc']?>"></textarea>
         </div>
@@ -100,7 +98,6 @@ $translation = getTranslation($selectedLang);
     <select id="default_language" name="default_language" required>
         <option value="en">English</option>
         <option value="cs">Čeština</option>
-        <option value="de">Deutsch</option>
     </select><br><br>
 
     <div class="button-wrapper2">
@@ -128,7 +125,6 @@ include 'footer.php';
         <select name="name_lang[]">
             <option value="en">English</option>
             <option value="cs">Čeština</option>
-            <option value="de">Deutsch</option>
         </select>
         <input type="text" name="name_text[]" placeholder="<?= $translation['placeholder_name']?>">
     `;
@@ -142,7 +138,6 @@ include 'footer.php';
         <select name="desc_lang[]">
             <option value="en">English</option>
             <option value="cs">Čeština</option>
-            <option value="de">Deutsch</option>
         </select>
         <textarea name="desc_text[]" placeholder="<?= $translation['placeholder_desc']?>"></textarea>
     `;
@@ -178,23 +173,36 @@ function validate_json_simple($filepath, $expected_keys) {
     return true;
 }
 
-function validate_json_with_translations($filepath, $required_langs = ["cs", "en", "de"], $extra_required_keys = []) {
-    $data = json_decode(file_get_contents($filepath), true);
-    if (!is_array($data)) return false;
+
+function validate_json_with_translations($filepath, $languages = ["cs", "en"], $required_top_level_keys = [], $required_translation_keys = ["name", "description"]) {
+    $content = file_get_contents($filepath);
+    $data = json_decode($content, true);
+
+    if (!is_array($data)) {
+        return false;
+    }
 
     foreach ($data as $item) {
-        if (!isset($item['id']) || !is_int($item['id'])) return false;
-
-        foreach ($extra_required_keys as $key) {
-            if (!isset($item[$key])) return false;
+        foreach ($required_top_level_keys as $key) {
+            if (!array_key_exists($key, $item)) {
+                return false;
+            }
         }
 
-        if (!isset($item['translations']) || !is_array($item['translations'])) return false;
+        if (!isset($item['translations']) || !is_array($item['translations'])) {
+            return false;
+        }
 
-        foreach ($required_langs as $lang) {
-            if (!isset($item['translations'][$lang])) return false;
-            $t = $item['translations'][$lang];
-            if (!isset($t['name']) || !isset($t['description'])) return false;
+        foreach ($languages as $lang) {
+            if (!isset($item['translations'][$lang]) || !is_array($item['translations'][$lang])) {
+                return false;
+            }
+
+            foreach ($required_translation_keys as $trans_key) {
+                if (!array_key_exists($trans_key, $item['translations'][$lang])) {
+                    return false;
+                }
+            }
         }
     }
 
@@ -202,27 +210,57 @@ function validate_json_with_translations($filepath, $required_langs = ["cs", "en
 }
 
 
+
+
+
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $city = $_POST['city'] ?? '';
+    $city = $_POST['city'] ?? 'newZoo';
     $contact_person = $_POST['contact_person'] ?? '';
     $data_format = $_POST['data_format'] ?? '';
     $default_language = $_POST['default_language'] ?? 'en';
     $name = $_POST['name'] ?? [];
     $description = $_POST['description'] ?? [];
     $location = $_POST['location'] ?? [];
+
+    $name = [];
+    if (!empty($_POST['name_lang']) && !empty($_POST['name_text'])) {
+        foreach ($_POST['name_lang'] as $index => $lang) {
+            $text = $_POST['name_text'][$index] ?? '';
+            if ($lang && $text) {
+                $name[$lang] = $text;
+            }
+        }
+    }
+
+    $description = [];
+    if (!empty($_POST['desc_lang']) && !empty($_POST['desc_text'])) {
+        foreach ($_POST['desc_lang'] as $index => $lang) {
+            $text = $_POST['desc_text'][$index] ?? '';
+            if ($lang && $text) {
+                $description[$lang] = $text;
+            }
+        }
+    }
+
+
     $zoo_metadata = [
         "default_language" => $default_language,
         "name" => $name,
         "description" => $description,
         "location" => $location
     ];
+    $upload_dir = "uploads/" .$location['city'] . "/";
 
-    file_put_contents("uploads/zoo_info.json", json_encode($zoo_metadata, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-
-    $upload_dir = "uploads/" . $city . "/";
     if (!is_dir($upload_dir)) {
         mkdir($upload_dir, 0777, true);
     }
+
+    file_put_contents($upload_dir . "zooInfo.json", json_encode($zoo_metadata, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+
+
 
     $errors = [];
 
@@ -246,8 +284,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "required_keys" => ["id", "class_id"]
         ],
         "animals" => [
-            "csv" => ["lang", "id", "latin_name", "image_src", "class_id", "order_id", "habitats", "continents", "localities_url", "name", "description", "spread_note", "food", "food_note", "proportions", "reproduction", "attractions", "projects_note", "breeding", "localities_title"],
-            "json" => ["id", "order_id", "name", "description"]
+            "csv" => ["lang", "id", "latin_name", "image_src", "class_id", "order_id", "habitats", "continents", "name", "description", "spread_note", "food", "food_note", "proportions", "reproduction", "attractions", "projects_note", "breeding", "coordinates"],
+            "json" => ["id", "class_id", "order_id", "habitats", "continents", "coordinates","latin_name", "image_src", "translations"],
+            "json_translated" => true,
+            "required_keys" => ["id", "class_id", "order_id", "habitats", "continents", "coordinates", "latin_name", "image_src", "translations"]
         ]
     ];
 
@@ -265,27 +305,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } elseif ($data_format === "json") {
                 if (!empty($structure["json_translated"])) {
                     $extra_keys = $structure["required_keys"] ?? [];
-                    $valid = validate_json_with_translations($file_tmp, ["cs", "en", "de"], $extra_keys);
+
+                    $required_trans_keys = ["name", "description"];
+
+                    if ($file_key === "animals") {
+                        $required_trans_keys = [
+                            "name", "description", "spread_note", "food", "food_note",
+                            "proportions", "reproduction", "attractions", "projects_note", "breeding"
+                        ];
+                    }
+
+                    $valid = validate_json_with_translations(
+                        $file_tmp,
+                        ["cs", "en"],
+                        $extra_keys,
+                        $required_trans_keys
+                    );
+
                 } elseif (isset($structure["json"])) {
                     $valid = validate_json_simple($file_tmp, $structure["json"]);
                 }
             }
 
             if ($valid) {
-                move_uploaded_file($file_tmp, $target_file); // <== až po validácii
+                move_uploaded_file($file_tmp, $target_file);
             } else {
-                $errors[] = "Súbor '$file_name' nemá správnu štruktúru pre formát $data_format.";
+                $errors[] = $translation['file'].$file_name. $translation['notValidFormat'] . $data_format;
             }
         } else {
-            $errors[] = "Súbor '$file_key' nebol úspešne nahraný.";
+            $errors[] = $translation['file'] . $file_key. $translation['notSent'];
         }
     }
 
 
     if (empty($errors)) {
-        echo "<p>Formulár bol úspešne odoslaný a všetky súbory boli validované!</p>";
+        echo "<p>". $translation['formSuccessfullySent']."</p>";
     } else {
-        echo "<p>Chyby pri validácii súborov:</p><ul><li>" . implode("</li><li>", $errors) . "</li></ul>";
+        echo "<p>". $translation['notValidFiles']."</p><ul><li>" . implode("</li><li>", $errors) . "</li></ul>";
     }
 }
 ?>

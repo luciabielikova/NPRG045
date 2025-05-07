@@ -1,0 +1,166 @@
+[
+  {
+    "id": 1,
+    "class_id": 1,
+    "order_id": 30,
+    "habitats": [
+      7
+    ],
+    "continents": [
+      2
+    ],
+    "coordinates": [
+      [
+        14.4097789,
+        50.1185216
+      ],
+      [
+        14.4093591,
+        50.1181416
+      ],
+      [
+        14.4094895,
+        50.1183497
+      ]
+    ],
+    "latin_name": "Panthera leo persica",
+    "image_src": "https://zoopraha.cz/images/lexikon-images/lev_indickz_03_-_archiv_zoo.jpg",
+    "translations": {
+      "en": {
+        "name": "Indian Lion",
+        "description": "The Indian lion is the only big cat species with significant sexual dimorphism. Males are not only larger than females but also have a typical mane. Cubs are spotted and only turn the adult tan color at three years old. A distinctive feature is the tail tip, which is covered with long hairs.",
+        "spread_note": "Gir Forest Reserve in western India",
+        "food": "Live prey",
+        "food_note": "Vertebrates up to the size of a buffalo",
+        "image_alt": "Lev indický, foto: archiv Zoo Praha",
+        "proportions": "Body length 1.4-2.5 m; tail length 90-105 cm; shoulder height 1-1.2 m; weight 120-250 kg",
+        "reproduction": "Females are pregnant for 100-119 days, giving birth to 1-6 cubs.",
+        "attractions": "Lions are the only big cats that live in groups. African lions are led by one or two dominant males who do not participate in hunting. The hunt is mainly done by females, some of whom wait in ambush while others drive the prey towards them. Males feed first on the kill. Most lions live alone or in small groups, often only young or old males. Indian lions, in contrast, are solitary hunters and only join females for mating or when large prey is taken down.",
+        "projects_note": "Lions once inhabited not only Africa but also Asia and Southern Europe. A small population of Indian lions remains in the Gir Forest Reserve in India. In recent years, conservation efforts have focused on these critically endangered lions, with several zoos, including Prague Zoo, contributing to their preservation. Prague Zoo has housed Indian lions since 2004.",
+        "breeding": "Lions, including African ones, have been housed in Prague Zoo since before it was open to the public. The first lion, a small female named Šárka, was a gift from the director of the Rebernigg circus and lived in the villa of the zoo's founder, Prof. Jiří Janda, from March 1930."
+      },
+      "cs": {
+        "name": "Lev indický",
+        "description": "Lev indický je jedinou kočkovitou šelmou s výraznou pohlavní dvojtvárností. Samce jsou větší než samice a mají typickou hřívu. Mláďata mají skvrny a barva dospělých je plavá hnědá.",
+        "spread_note": "Rezervace Gírský les v západní Indii",
+        "food": "Živá kořist",
+        "food_note": "Obratlovci do velikosti buvola",
+        "proportions": "Délka těla 1,4-2,5 m; délka ocasu 90-105 cm; výška v kohoutku 1-1,2 m; hmotnost 120-250 kg",
+        "reproduction": "Samice je březí 100-119 dní, rodí 1-6 mláďat.",
+        "attractions": "Lvi jsou jedinými kočkovitými šelmami, které žijí ve skupinách. U lvů afrických vedou rodinnou skupinu jeden nebo dva nejsilnější samci, kteří se však lovu neúčastní. Ten je záležitostí lvic, z nichž některé číhají v záloze a jiné jim kořist nadhánějí. Z úlovku se nejprve nasytí vedoucí samci. Samotářsky žijí většinou jen staří samci nebo naopak mladí lvi, kteří nedokážou skupinu samic účinně obránit před jinými samci. Naproti tomu u lvů indických žijí samci mimo smečku, tedy samotářsky, a sami aktivně loví.",
+        "projects_note": "Lvi kdysi obývali nejen Afriku, ale také Asii a jižní Evropu. Z asijské populace zbyl nepatrný počet lvů v rezervaci Gírský les v Indii. Právě na kriticky ohrožené lvy indické se v posledních letech soustředily snahy zoologických zahrad o jejich záchranu. V rámci Evropského záchovného programu (EEP) se do tohoto úsilí zapojila i pražská zoo.",
+        "breeding": "Lvi, i když ti afričtí, však byli v pražské zoo chováni už dávno předtím – vlastně ještě dříve, než byla otevřena pro veřejnost. Prvním z nich se stala malá lvice Šárka, dar ředitele cirkusu Rebernigg, která žila od března 1930 ve vile zakladatele zoo prof. Jiřího Jandy."
+      }
+    }
+  },
+  {
+    "id": 3,
+    "class_id": 1,
+    "order_id": 4,
+    "habitats": [
+      3
+    ],
+    "continents": [
+      1
+    ],
+    "latin_name": "Addax nasomaculatus",
+    "image_src": "https://zoopraha.cz/images/lexikon-images/adax.jpg",
+    "coordinates":[
+      [
+      14.409391,
+      50.1182389
+      ],
+      [
+        14.4093243,
+        50.1182133
+      ],
+      [
+        14.409781,
+        50.1184991
+      ]
+    ],
+    "translations": {
+      "en": {
+        "name": "Addax",
+        "description": "The Addax has a pale coat adapted to desert environments, living in arid landscapes with little water.",
+        "spread_note": "Originally throughout the Sahara, now only a small area in Niger",
+        "food": "Plant parts",
+        "food_note": "Herbs, shrub leaves, grass",
+        "image_alt": "Addax, photo: Prague Zoo",
+        "proportions": "Body length 1.2–1.8 m; tail length 25–35 cm; shoulder height 1–1.1 m; weight 60–125 kg",
+        "reproduction": "Gestation lasts 257–264 days, usually one calf is born.",
+        "attractions": "Highly adapted to arid conditions, addaxes can survive on the moisture in their food. They are nocturnal, traveling at night to find food.",
+        "projects_note": "Once widespread across the Sahara, their numbers have dwindled drastically. Conservation efforts include reintroduction from zoo populations, including those bred at Prague Zoo.",
+        "breeding": "Prague Zoo has kept addaxes since 1979."
+      },
+      "cs": {
+        "name": "Adax",
+        "description": "Světlé zbarvení srsti adaxe napovídá, že žije v poušti, vyprahlé krajině plné kamení a písku, daleko od vody.",
+        "spread_note": "Původně celá Sahara, dnes malé území v Nigeru",
+        "food": "Části rostlin",
+        "food_note": "Byliny, listy keřů, tráva",
+        "image_alt": "Adax, foto: Zoo Praha",
+        "proportions": "Délka těla 1,2–1,8 m; délka ocasu 25–35 cm; výška v kohoutku 1–1,1 m; hmotnost 60–125 kg",
+        "reproduction": "Březost 257–264 dní, počet mláďat 1.",
+        "attractions": "Adaxové jsou dokonale přizpůsobeni životu v nehostinném prostředí. Nepotřebují pít každý den, protože dokážou hospodařit s vodou obsaženou v potravě.",
+        "projects_note": "Adaxové kdysi obývali téměř celou Saharu, ale za posledních sto let jich drasticky ubylo. V zoologických zahradách se jim daří a probíhají programy na jejich návrat do přírody.",
+        "breeding": "Zoo Praha chová adaxy od roku 1979."
+      }
+    }
+  },
+  {
+    "id": 5,
+    "class_id": 2,
+    "order_id": 42,
+    "habitats": [
+      6
+    ],
+    "continents": [
+      3
+    ],
+    "latin_name": "Amazona festiva",
+    "image_src": "https://zoopraha.cz/images/lexikon/amazo%C5%88an_modrobrad%C3%BD__1.jpg",
+    "coordinates":[
+      [
+        14.4096331,
+        50.1184964
+      ],
+      [
+        14.4093387,
+        50.1182348
+      ],
+      [
+        14.4094514,
+        50.1182395
+      ]
+    ],
+    "translations": {
+      "en": {
+        "name": "Festive Amazon",
+        "description": "A predominantly green parrot with a short tail. It has a red forehead and a blue stripe over its eye and under its chin.",
+        "spread_note": "Brazil, Colombia, Ecuador, Guyana, Venezuela, Peru",
+        "food": "Plant parts",
+        "food_note": "Nuts, seeds, succulent fruits, shoots, flowers",
+        "image_alt": "Festive Amazon, photo: Prague Zoo",
+        "proportions": "Body length 20-24 cm, tail length 10 cm, wing length 12-13 cm, weight 370 g",
+        "reproduction": "Nests in tree cavities, laying 2-3 eggs, incubation lasts 26-28 days.",
+        "attractions": "Lives in permanent pairs and forms small flocks. It is an important seed disperser in its native habitat and is also popular as a pet.",
+        "projects_note": "Originally from eggs seized from smugglers and hatched in an incubator at Prague Zoo.",
+        "breeding": "Came to the zoo from rescued eggs confiscated from smugglers."
+      },
+      "cs": {
+        "name": "Amazoňan modrobradý",
+        "description": "Převážně zelený papoušek s krátkým ocasem. Má červené čelo a modrý proužek přes oko a podbradek.",
+        "spread_note": "Brazílie, Kolumbie, Ekvádor, Guyana, Venezuela, Peru",
+        "food": "Části rostlin",
+        "food_note": "Ořechy, semena, šťavnaté plody, výhonky, květy",
+        "image_alt": "Amazoňan modrobradý, foto: Zoo Praha",
+        "proportions": "Délka těla 20-24 cm, délka ocasu 10 cm, délka křídla 12-13 cm, hmotnost 370 g",
+        "reproduction": "Hnízdí ve stromových dutinách, snáší 2-3 vejce, inkubace trvá 26-28 dní.",
+        "attractions": "Žije v trvalých párech a tvoří malá hejna. Ve své domovině je významným šiřitelem semen.",
+        "projects_note": "Pochází z vajec zabavených pašerákům a vylíhl se v inkubátoru Zoo Praha.",
+        "breeding": "Pochází z vajec zachráněných před pašeráky."
+      }
+    }
+  }
+]
