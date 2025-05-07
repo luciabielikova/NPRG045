@@ -208,7 +208,7 @@ $graph = createGraph();
 $dijkstra = new Dijkstra($graph);
 
 function getFirstCoordinateFromName($name){
-    $animal = getAnimalByNameAndLanguage($name, $_SESSION['language'], "prague");
+    $animal = getAnimalByNameAndLanguage($name, $_SESSION['language'], $_SESSION['zooID']);
     if (isset($animal['coords'])) {
         return $animal['coords'][0];
     }
@@ -218,7 +218,7 @@ function getFirstCoordinateFromName($name){
 }
 
 function getCoordsFromName($name){
-    $animal = getAnimalByNameAndLanguage($name, $_SESSION['language'], "prague");
+    $animal = getAnimalByNameAndLanguage($name, $_SESSION['language'], $_SESSION['zooID']);
     if (isset($animal['coords'])) {
         return $animal['coords'];
     }

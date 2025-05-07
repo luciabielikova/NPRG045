@@ -72,15 +72,10 @@ include "header.php";
         if (!empty($animal['attractions'])) {
             $html .= '<p><b>' . $t['attractions'] . ':</b><br>' . htmlspecialchars($animal['attractions']) . '</p>';
         }
-        if (!empty($animal['coordinates'])) {
-            $html .= '<div id="mapid" class="detailPage"></div>';
-        }
         $html .= '</div>';
 
         return $html;
     }
-
-    displayCoordinates($animal);
 
     ?>
 

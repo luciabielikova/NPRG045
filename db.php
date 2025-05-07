@@ -228,5 +228,10 @@ function getAllOrders($zooID = null, $language = "en") {
 
 function loadHighways($zooID = null){
     $zooData = getZooById($zooID);
-    return file_get_contents($zooData["highways_path"]);
+    if (isset($zooData["highways_path"])){
+        return file_get_contents($zooData["highways_path"]);
+    }
+    else {
+        return null;
+    }
 }

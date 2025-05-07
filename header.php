@@ -43,6 +43,14 @@ $translation = getTranslation($selectedLang);
     elseif ($currentPage === 'form.php'){
         echo "<h1>". $translation['add_zoo']. "</h1>";
     }
+    elseif ($currentPage === 'mapNotAvailable.php'){
+        echo "<h1>". getZooById($_SESSION['zooID'])['name'][$_SESSION['language']]. "</h1>";
+        echo "<h3>". $translation['preparingData']. "</h3>";
+    }
+    elseif(!isset($_SESSION['zooID'])){
+        echo "<h1>". $translation['zooNotSet']. "</h1>";
+        echo "<h3>". $translation['curPragueZoo']. "</h3>";
+    }
     else{
         echo "<h1>". getZooById($_SESSION['zooID'])['name'][$_SESSION['language']]. "</h1>";
         echo "<h3>". getZooById($_SESSION['zooID'])['description'][$_SESSION['language']]. "</h3>";

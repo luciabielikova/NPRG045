@@ -11,5 +11,10 @@ function getLanguages(){
 
 function getTranslation($language){
     $translations = loadTranslations();
-    return $translations[$language];
+    if (array_key_exists($language, $translations)) {
+        return $translations[$language];
+    } else {
+        $_SESSION['language'] = 'en';
+        return $translations['en'];
+    }
 }

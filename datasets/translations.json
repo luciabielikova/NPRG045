@@ -21,13 +21,15 @@
     "spread": "Rozšíření",
     "to": "Kam",
     "from": "Odkud",
-    "animal_not_found": "Pro zvolené kritériá nemáme zvířátko :(",
+    "animal_not_found": "Pro zvolené kritéria nemáme zvířátko :(",
     "by_title": "Vyhledat podle názvu...",
     "lexicon": "Lexikon zvířat",
     "clear": "Vyčistit",
     "searchDB": "Najít",
     "forbidden": "Nechci vidět",
     "selectMax": "Vyberte nejvíc ",
+    "zooNotSet": "Není vybrána žádná Zoo",
+    "curPragueZoo": "Zobrazují se informace Pražské Zoo.",
     "add_zoo": "Přidat zoo",
     "welcome": "Vítejte na stránce zoo",
     "add_name": "Přidat překlad názvu",
@@ -39,13 +41,14 @@
     "language_select": "Jazyk",
     "placeholder_name": "Zadejte název",
     "placeholder_desc": "Zadejte popis",
-    "country": "Krajina",
+    "country": "Stát",
     "city": "Město",
     "zooTitle": "Název zoo",
     "dataFormat": "Formát dat",
     "addFile": "Nahrát soubor",
     "preferredLanguage": "Předvolený jazyk",
-    "contactInfo": "V případě dotazů nebo problémů nás neváhejte kontaktovat na "
+    "contactInfo": "V případě dotazů nebo problémů nás neváhejte kontaktovat na ",
+    "preparingData": "Pro tuto zoologickou zahradu data připravujeme."
   },
   "en": {
     "attractions": "Interesting Facts",
@@ -76,6 +79,8 @@
     "search": "Search",
     "forbidden": "Don´t want to see",
     "selectMax": "Select a maximum of ",
+    "zooNotSet": "Zoo is not set",
+    "curPragueZoo": "Currently showing Prague Zoo data.",
     "add_zoo": "Add Zoo",
     "welcome": "Welcome to Zoo page",
     "add_name": "Add name translation",
@@ -93,6 +98,7 @@
     "dataFormat": "Data Format",
     "addFile": "Add file",
     "preferredLanguage": "Preffered Language",
-    "contactInfo": "If you have any questions or issues, please don't hesitate to contact us at "
+    "contactInfo": "If you have any questions or issues, please don't hesitate to contact us at ",
+    "preparingData": "We are currently preparing data for this zoo."
   }
 }

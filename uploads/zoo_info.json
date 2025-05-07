@@ -1,6 +1,9 @@
 {
-    "default_language": "en",
+    "default_language": "cs",
     "name": [],
     "description": [],
-    "location": []
+    "location": {
+        "country": "dg",
+        "city": "rf"
+    }
 }

@@ -14,9 +14,17 @@
 <?php
 
 include "header.php";
+require_once 'functions.php';
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+if (!isMapAvailable($_SESSION['zooID'])){
+    header('Location: mapNotAvailable.php');
+    exit;
+}
+
+
 
 $translation = getTranslation($_SESSION['language']);
 
@@ -130,42 +138,6 @@ $translation = getTranslation($_SESSION['language']);
     }).addTo(map);
 
 
-
-
-   /* function addInputField(containerId, className, inputName, labelText, fetchFunction, counter, maxCount, resultsContainer) {
-        if (counter < maxCount) {
-            counter++;
-            let container = document.getElementById(containerId);
-            let wrapper = document.createElement('div');
-            wrapper.className = 'label-input-wrapper';
-
-            let label = document.createElement('label');
-            let labelNode = document.createTextNode(labelText);
-            let input = document.createElement('input');
-            input.type = 'text';
-            input.placeholder = "<?= htmlspecialchars($translation['search']) ?>..."
-            input.className = className;
-            input.name = inputName;
-            label.appendChild(labelNode);
-            wrapper.appendChild(label);
-            wrapper.appendChild(input);
-            container.appendChild(wrapper);
-
-            input.addEventListener('input', (e) => {
-                const query = e.target.value;
-                if (query) {
-                    fetchFunction(query, input);
-                } else {
-                    resultsContainer.innerHTML = '';
-                    resultsContainer.style.display = 'none';
-                }
-            });
-        } else {
-            alert("<?=htmlspecialchars($translation['selectMax']) ?>" + maxCount + '.');
-        }
-    }*/
-
-
     function addInputField(parentId, inputClass, inputName, labelText, fetchFunction, count, maxCount) {
         if (count >= maxCount) {
             alert("<?=htmlspecialchars($translation['selectMax']) ?>" + maxCount + '.');
@@ -186,7 +158,6 @@ $translation = getTranslation($_SESSION['language']);
         input.name = inputName;
         input.className = inputClass;
 
-        // Vytvoríme kontajner pre výsledky špecifický pre tento input
         const resultsContainer = document.createElement('div');
         resultsContainer.className = 'results-container';
         wrapper.appendChild(label);
@@ -196,13 +167,11 @@ $translation = getTranslation($_SESSION['language']);
 
 
 
-        // Pridáme listener pre input
         input.addEventListener('input', () => {
             fetchFunction(input.value, resultsContainer, input);
-            resultsContainer.style.display = 'block'; // Zobrazí sa výsledky
+            resultsContainer.style.display = 'block';
         });
 
-        // Skryť výsledky pri kliknutí mimo
         document.addEventListener('click', (event) => {
             if (!wrapper.contains(event.target)) {
                 resultsContainer.style.display = 'none';
@@ -210,10 +179,6 @@ $translation = getTranslation($_SESSION['language']);
         });
 
     }
-
-
-
-
 
     function addWanted() {
         addInputField('wanted-container', 'wanted-input', 'wanted[]', '<?= $translation["mandatory"].":"?>', fetchResultsWanted, wantedCount, 3, resultsWantedContainer);
@@ -229,7 +194,6 @@ $translation = getTranslation($_SESSION['language']);
 </script>
 </div>
     <?php
-    require_once 'functions.php';
     include 'footer.php';
 
     ?>

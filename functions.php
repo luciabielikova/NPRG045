@@ -243,36 +243,9 @@ function formHandlerSearchDB($id)
     }
 }
 
-
-function displayCoordinates($animal){
-    //If set, coordinates will be displayed on the map
-    if (isset($animal['coordinates'])) {
-        ?>
-        <script>
-            document.getElementById('mapid').style.height = '500px'
-
-            var map = L.map('mapid').setView(<?php echo $animal['coordinates']; ?>, 24);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: '© OpenStreetMap contributors'
-            }).addTo(map);
-            var marker = L.marker(<?php echo $animal['coordinates']; ?>).addTo(map);
-
-
-            fetch('loadGeojson.php')
-                .then(response => response.json())
-                .then(data => {
-                    L.geoJSON(data, {
-                        style: myStyle,
-                        pointToLayer: function (feature, latlng) {
-                            return null;
-                        }
-                    }).addTo(map);
-                });
-        </script>
-        <?php
-    }
-    else return;
+function isMapAvailable($zooID)
+{
+    return loadHighways($zooID) !== null;
 }
 
 ?>
